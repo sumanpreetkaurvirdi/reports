@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Progress</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <style>
+    
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+   * {
+    box-sizing: border-box;
+    font-family: Poppins,sans-serif;
+}
+    body{
+        padding: 0;
+        margin: 0;
+        background-color: #f5f5f5;
+    }
+    
+p {
+    font-size: 14px;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4, h5 {
+    margin: 0;
+}
+
+h2 {
+    font-weight: 700;
+    font-style: normal;
+}
+
+    section{
+    display: flex;
+    border-radius: 4px;
+    }
+    .container{
+        width: 100%;
+        max-width:1200px;
+        margin: auto;
+
+}
+.progress-content, .progress-list, .stats h4{
+    display: flex;
+    flex-direction: column;
+
+}
+.progress-content{
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,.12);
+    border-radius: 10px;
+}
+.progress-content h2{
+    
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+.progress-item{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 5px solid;
+    box-shadow: 0 0 10px rgba(0,0,0,.12);
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 2rem;
+}
+
+.progress-item .increased{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #7acaa6;
+}
+.progress-item .increased img,
+.progress-item .decreased img{
+ 
+    width: 12px;
+}
+.progress-item .decreased{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #CC0202;
+}
+.stats{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+}
+.stats::before{
+    content: '';
+    width: 1px;
+    height: 84%;
+    background-color: lightgrey;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+}
+.stats h4 span{
+    color: lightgrey;
+    font-size: 12px;
+    font-weight: 400;
+}
+.stats h4{
+    font-weight: 600;
+}
+
+.booked{
+    border-color:  #8795de;
+}
+.booked .stats .stats-complete{
+    color: #8795de;
+}
+.booked .progress-bar{
+    background-color: #8795de;
+}
+.booked .progress-bar>span{
+    background-color: #8795de;
+}
+.completed {
+    border-color: #7acaa6;
+}
+.completed .stats .stats-complete{
+    color: #7acaa6;
+}
+.completed .progress-bar{
+    background-color: #7acaa6;
+}
+.completed .progress-bar>span{
+    background-color: #7acaa6;
+}
+.sales{
+    border-color: orange;
+}
+.sales .stats .stats-complete{
+    color: orange;
+}
+.sales .progress-bar{
+    background-color: orange;
+}
+.sales .progress-bar>span{
+    background-color: orange;
+}
+
+.purple{
+    border-color: #b43ec1;
+}
+.purple .stats .stats-complete{
+    color: #b43ec1;
+}
+.purple .progress-bar{
+    background-color: #b43ec1;
+}
+.purple .progress-bar>span{
+    background-color: #b43ec1;
+}
+.progress-bg{
+    display: flex;
+    height: 15px;
+    background-color: #f5f5f5;
+    margin: 1.5rem 0 1rem;
+    border-radius: 5px;
+    width: 100%;
+}
+.progress-bg .progress-bar{
+   width: 0;
+    height: 100%;
+    transition: 1s all;
+    border-radius: 5px;
+    position: relative;
+}
+.progress-bg .progress-bar > span{
+    position: absolute;
+    right: -10px;
+    font-size: 10px;
+    color: white;
+    padding: 3px 5px;
+    bottom: 17px;
+    border-radius: 5px;
+}
+
+
+@media (min-width:768px){
+    .progress-list, .table-container{
+    flex-flow: wrap;
+    gap: 2rem;
+    }
+    .progress-item,.table-container > div{
+        width: 30%;
+    }
+}
+@media (min-width:1024px){
+    .progress-list.four-items .progress-item{
+        width: 22%;
+    }
+}
+.table-container{
+display: flex;
+flex-wrap: wrap;
+    margin-top: 2rem;
+}
+.table-container h3{
+    color: white;
+    padding: 6px 16px;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+.table-green h3{
+    background-color: #7acaa6;
+}
+.table-orange h3{
+    background-color: orange;
+}
+.table-blue h3{
+    background-color: #8795de;
+}
+table{
+    width: 100%;
+    font-weight: 600;
+    font-size: 14px;
+    border-collapse: collapse;
+}
+table td{
+    padding: 6px 10px;
+
+}
+table tr:nth-child(odd){
+    background-color: white;
+}
+table tr:nth-child(even){
+    background-color: #f5f5f5;
+}
+    </style>
+    <body>
+        <section>
+            <div class="container">
+                <div class="progress-content">
+                    <h2>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            version="1.1"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="40"
+                            height="40"
+                            x="0"
+                            y="0"
+                            viewBox="0 0 682.667 682.667"
+                            style="enable-background:new 0 0 512 512"
+                            xml:space="preserve"
+                            class=""
+                        >
+                            <g>
+                                <defs>
+                                    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+                                        <path
+                                            d="M0 512h512V0H0Z"
+                                            fill="#000000"
+                                            opacity="1"
+                                            data-original="#000000"
+                                        ></path>
+                                    </clipPath>
+                                </defs>
+                                <g clip-path="url(#a)" transform="matrix(1.33333 0 0 -1.33333 0 682.667)">
+                                    <path
+                                        d="M0 0c0 44.939 36.754 81.294 81.842 80.645 43.675-.628 79.188-36.446 79.465-80.124.154-24.46-10.584-46.414-27.646-61.305-1.801-1.571-1.541-4.439.516-5.656l15.197-8.992c2.457-1.454 1.426-5.22-1.429-5.22l-68.818.017C35.288-79.82 0-44.033 0 0"
+                                        style="fill-opacity:1;fill-rule:nonzero;stroke:none"
+                                        transform="translate(3.806 431.346)"
+                                        fill="#7acaa6"
+                                        data-original="#7acaa6"
+                                    ></path>
+                                    <path
+                                        d="m0 0-15.197 8.992c-2.046 1.21-2.33 4.074-.539 5.636 17.257 15.05 28.051 37.322 27.66 62.108-.678 42.873-35.378 78.066-78.238 79.315a81.219 81.219 0 0 1-17.727-1.42c37.048-7.101 65.281-39.757 65.527-78.678.119-18.849-6.229-36.209-16.956-49.996-6.477-8.326-4.372-20.397 4.706-25.769l.318-.188c2.43-1.437 1.444-5.132-1.339-5.212l30.356-.008C1.426-5.22 2.457-1.454 0 0"
+                                        style="fill-opacity:1;fill-rule:nonzero;stroke:none"
+                                        transform="translate(153.18 355.914)"
+                                        fill="#57be92"
+                                        data-original="#57be92"
+                                    ></path>
+                                    <path
+                                        d="M0 0h-182.966c-45.698 0-70.705 53.256-41.518 88.419l1.623 1.956a86.309 86.309 0 0 1 19.896 55.123v35.283c0 61.842 50.132 111.974 111.974 111.974 61.842 0 111.974-50.132 111.974-111.974v-36.474a86.308 86.308 0 0 1 20.289-55.593C70.824 53.622 45.878 0 0 0"
+                                        style="fill-opacity:1;fill-rule:nonzero;stroke:none"
+                                        transform="translate(396.792 219.245)"
+                                        fill="#c59191"
+                                        data-original="#c59191"
+                                        class=""
+                                    ></path>
+                                    <path
+                                        d="M0 0v-120.96h-375.319V-.91c0 27.18 16.289 51.71 41.33 62.25l60.59 26.34L-253 96.55c15.48 6.73 25.49 22 25.49 38.88v7.83h79.691v-7.43c0-16.95 10.109-32.28 25.699-38.96l81.95-35.13C-15.75 50.92 0 26.72 0 0"
+                                        style="fill-opacity:1;fill-rule:nonzero;stroke:none"
+                                        transform="translate(492.97 128.57)"
+                                        fill="#ffffff"
+                                        data-original="#ffffff"
+                                    ></path>
+                                    <path
+                                        d="M0 0a290.525 290.525 0 0 1 88.217-12.12 290.485 290.485 0 0 1 83.27 13.727l9.88 23.527-30.087 12.895a42.392 42.392 0 0 0-25.691 38.964v7.424H45.898v-7.828a42.39 42.39 0 0 0-25.489-38.876L-3.958 27.118Z"
+                                        style="fill-opacity:1;fill-rule:nonzero;stroke:none"
+                                        transform="translate(219.565 187.41)"
+                                        fill="#ffcebf"
+                                        data-original="#ffcebf"
+                                        class=""
+                                    ></path>
+                                    <path
+                                        d="m0 0-61.731 26.459-.011-.001v-209.161H40.176v120.958C40.176-35.029 24.426-10.823 0 0"
+                                        style="fill-opacity:1;fill-rule:nonzero;stroke:none"
+                                        transform="translate(452.796 190.315)"
+                                        fill="#8795de"
+                                        data-original="#8795de"
+                                        class=""
+                                    ></path>
+                                    <path
+                                        d="M0 0v-208.64h-101.92v120.05c0 27.18 16.289 51.71 41.33 62.25z"
+                                        style="fill-opacity:1;fill-rule:nonzero;stroke:none"
+                                        transform="translate(219.57 216.25)"
+                                        fill="#8795de"
+                                        data-original="#8795de"
+                                        class=""
+                                    ></path>
+                                    <path
+                                        d="M0 0a67.033 67.033 0 0 1 25.868 5.163 42.387 42.387 0 0 0-13.646 31.152v7.424h-79.691v-7.828a42.32 42.32 0 0 0-3.711-17.332C-59.113 7.076-42.788 0-24.801 0Z"
+                                        style="fill-opacity:1;fill-rule:nonzero;stroke:none"
+                                        transform="translate(332.933 228.088)"
+                                        fill="#ffb09e"
+                                        data-original="#ffb09e"
+                                    ></path>
+                                    <path
+                                        d="M0 0v-65.925c0-37.139-30.107-67.247-67.247-67.247h-24.801c-37.139 0-67.247 30.108-67.247 67.247V0c0 24.161 19.586 43.748 43.747 43.748h71.8C-19.587 43.748 0 24.161 0 0"
+                                        style="fill-opacity:1;fill-rule:nonzero;stroke:none"
+                                        transform="translate(384.957 391.707)"
+                                        fill="#ffcebf"
+                                        data-original="#ffcebf"
+                                        class=""
+                                    ></path>
+                                    <path
+                                        d="M0 0c-.03-.091-.066-.179-.094-.272-2.431-8.395-8.81-24.253-24.228-36.142-7.18-5.536-15.368-9.537-24.339-11.891a7.612 7.612 0 0 1 3.863-14.724c10.953 2.874 20.969 7.773 29.772 14.56A81.423 81.423 0 0 1-.045-33.397c.016.59.045 1.177.045 1.771z"
+                                        style="fill-opacity:1;fill-rule:nonzero;stroke:none"
+                                        transform="translate(384.957 357.407)"
+                                        fill="#7a6d79"
+                                        data-original="#7a6d79"
+                                    ></path>
+                                    <path
+                                        d="M0 0h-17.837c-8.119 0-14.701 6.582-14.701 14.701 0 8.118 6.582 14.7 14.701 14.7H0c8.119 0 14.701-6.582 14.701-14.7C14.701 6.582 8.119 0 0 0"
+                                        style="fill-opacity:1;fill-rule:nonzero;stroke:none"
+                                        transform="translate(327.948 288.06)"
+                                        fill="#685e68"
+                                        data-original="#685e68"
+                                    ></path>
+                                    <path
+                                        d="M0 0c1.708 21.54 22.33 35.835 42.066 43.239 32.65-19.564 54.508-55.285 54.508-96.116v-7.698a92.202 92.202 0 0 0-5.377-.975c-10.873-1.624-20.133-.922-26.458 0C23.977-56.12-2.063-26.015 0 0"
+                                        style="fill-opacity:1;fill-rule:nonzero;stroke:none"
+                                        transform="translate(321.201 452.903)"
+                                        fill="#b98080"
+                                        data-original="#b98080"
+                                        class=""
+                                    ></path>
+                                    <path
+                                        d="M0 0c25.288 0 48.616-8.386 67.36-22.525-9.35-16.271-30.822-48.441-71.086-72.257-29.889-17.681-58.073-23.622-75.43-25.865h-32.818v8.673C-111.974-50.132-61.842 0 0 0"
+                                        style="fill-opacity:1;fill-rule:nonzero;stroke:none"
+                                        transform="translate(305.8 512)"
+                                        fill="#c59191"
+                                        data-original="#c59191"
+                                        class=""
+                                    ></path>
+                                    <path
+                                        d="M0 0h-243.655l-13.439 126.776c-.953 8.992 6.096 16.828 15.138 16.828H-1.699c9.042 0 16.092-7.836 15.137-16.828z"
+                                        style="fill-opacity:1;fill-rule:nonzero;stroke:none"
+                                        transform="translate(430.972 7.611)"
+                                        fill="#efedef"
+                                        data-original="#efedef"
+                                    ></path>
+                                    <path
+                                        d="M0 0h-30.446c9.043 0 16.092-7.836 15.138-16.828l-13.439-126.776H1.699L15.138-16.828C16.091-7.836 9.042 0 0 0"
+                                        style="fill-opacity:1;fill-rule:nonzero;stroke:none"
+                                        transform="translate(429.272 151.215)"
+                                        fill="#e5e1e5"
+                                        data-original="#e5e1e5"
+                                    ></path>
+                                    <path
+                                        d="M0 0h-497a7.5 7.5 0 0 0-7.5 7.5A7.5 7.5 0 0 0-497 15H0a7.5 7.5 0 0 0 7.5-7.5A7.5 7.5 0 0 0 0 0"
+                                        style="fill-opacity:1;fill-rule:nonzero;stroke:none"
+                                        transform="translate(504.5)"
+                                        fill="#c9bfc8"
+                                        data-original="#c9bfc8"
+                                    ></path>
+                                    <path
+                                        d="M0 0c0-11.771-9.542-21.312-21.312-21.312-11.77 0-21.312 9.541-21.312 21.312s9.542 21.312 21.312 21.312C-9.542 21.312 0 11.771 0 0"
+                                        style="fill-opacity:1;fill-rule:nonzero;stroke:none"
+                                        transform="translate(330.456 79.413)"
+                                        fill="#c9bfc8"
+                                        data-original="#c9bfc8"
+                                    ></path>
+                                    <path
+                                        d="M0 0a7.61 7.61 0 0 0-7.611-7.611 7.611 7.611 0 1 0 0 15.223A7.611 7.611 0 0 0 0 0"
+                                        style="fill-opacity:1;fill-rule:nonzero;stroke:none"
+                                        transform="translate(61.625 431.347)"
+                                        fill="#ffffff"
+                                        data-original="#ffffff"
+                                    ></path>
+                                    <path
+                                        d="M0 0a7.61 7.61 0 0 0-7.611-7.611 7.611 7.611 0 1 0 0 15.223A7.612 7.612 0 0 0 0 0"
+                                        style="fill-opacity:1;fill-rule:nonzero;stroke:none"
+                                        transform="translate(92.071 431.347)"
+                                        fill="#ffffff"
+                                        data-original="#ffffff"
+                                    ></path>
+                                    <path
+                                        d="M0 0a7.611 7.611 0 0 0-7.612-7.611A7.612 7.612 0 1 0 0 0"
+                                        style="fill-opacity:1;fill-rule:nonzero;stroke:none"
+                                        transform="translate(122.518 431.347)"
+                                        fill="#ffffff"
+                                        data-original="#ffffff"
+                                    ></path>
+                                </g>
+                            </g>
+                        </svg>
+                        Call Center
+                    </h2>
+                    <div class="progress-list">
+                        <div class="progress-item booked">
+                            <p>
+                                Booked
+                            </p>
+                            <div class="increased">
+                               <img src="increased.png" alt="increased">75%
+                            </div>
+                            <span class="progress-bg">
+                                <span class="progress-bar">
+                                    
+                                <span data-value="50">50%</span>
+                                </span>
+                            </span>
+                            <div class="stats">
+                                <h4 class="stats-complete">
+                                    <span>
+                                        Completed
+                                    </span>
+                                    350
+                                </h4>
+                                <h4>
+                                    <span>
+                                        Target
+                                    </span>
+                                    700.22
+                                </h4>
+                            </div>
+                        </div>
+                    
+                        <div class="progress-item completed">
+                            <p>
+                                Completed
+                            </p>
+                            <div class="decreased">
+                               <img src="decreased.png" alt="decreased">25%
+                            </div>
+                            <span class="progress-bg">
+                                <span class="progress-bar">
+                                    
+                                <span data-value="9.5">9.5%</span>
+                                </span>
+                            </span>
+                            <div class="stats">
+                                <h4 class="stats-complete">
+                                    <span>
+                                        Completed
+                                    </span>
+                                    20
+                                </h4>
+                                <h4>
+                                    <span>
+                                        Target
+                                    </span>
+                                    210.07
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="progress-item sales">
+                            <p>
+                                Sales
+                            </p>
+                            <span class="progress-bg">
+                                <span class="progress-bar">
+                                    
+                                <span data-value="9.1">9.1%</span>
+                                </span>
+                            </span>
+                            <div class="stats">
+                                <h4 class="stats-complete">
+                                    <span>
+                                        Completed
+                                    </span>
+                                    3
+                                </h4>
+                                <h4>
+                                    <span>
+                                        Target
+                                    </span>
+                                    33.12
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="table-container">
+                        <div class="table-blue">
+                            <h3>
+                                Booked Per Day
+                            </h3>
+                            <table>
+                                <tr>
+                                    <td>
+                                        Completed
+                                    </td>
+                                    <td>
+                                        XYZ
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Target
+                                    </td>
+                                    <td>
+                                        XYZ
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Average
+                                    </td>
+                                    <td>
+                                        XYZ
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="table-green">
+                            <h3>
+                                Completed Per Day
+                            </h3>
+                            <table>
+                                <tr>
+                                    <td>
+                                        Completed
+                                    </td>
+                                    <td>
+                                        XYZ
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Target
+                                    </td>
+                                    <td>
+                                        XYZ
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Average
+                                    </td>
+                                    <td>
+                                        XYZ
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="table-orange">
+                            <h3>
+                                Sales Per Day
+                            </h3>
+                            <table>
+                                <tr>
+                                    <td>
+                                        Completed
+                                    </td>
+                                    <td>
+                                        XYZ
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Target
+                                    </td>
+                                    <td>
+                                        XYZ
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Average
+                                    </td>
+                                    <td>
+                                        XYZ
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-content">
+                    <h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path fill="#eb966d" d="M127.465 32.955h257.07V512h-257.07z" opacity="1" data-original="#eb966d"></path><path fill="#e8834d" d="M365.954 32.955h18.581V512h-18.581z" opacity="1" data-original="#e8834d"></path><path fill="#a95118" d="M99.662 0a5.15 5.15 0 0 0-5.151 5.151v501.698A5.15 5.15 0 0 0 99.662 512h27.803V32.955h257.07V512h27.803a5.15 5.15 0 0 0 5.151-5.151V5.151A5.15 5.15 0 0 0 412.338 0z" opacity="1" data-original="#a95118"></path><path fill="#994916" d="M108.884 512h18.581V32.955h-13.419a5.161 5.161 0 0 0-5.161 5.161V512zM398.909 0v512h13.429a5.15 5.15 0 0 0 5.151-5.151V5.151A5.15 5.15 0 0 0 412.338 0z" opacity="1" data-original="#994916"></path><path fill="#d56723" d="M336.365 246.735h-165.88V80.102a5.15 5.15 0 0 1 5.151-5.151h160.729a5.15 5.15 0 0 1 5.151 5.151v161.482a5.15 5.15 0 0 1-5.151 5.151z" opacity="1" data-original="#d56723"></path><path fill="#b6591e" d="M322.935 74.951v171.784h13.429a5.15 5.15 0 0 0 5.151-5.151V80.102a5.15 5.15 0 0 0-5.151-5.151z" opacity="1" data-original="#b6591e"></path><path fill="#d56723" d="M336.365 470.004h-160.73a5.15 5.15 0 0 1-5.151-5.151V303.371a5.15 5.15 0 0 1 5.151-5.151h160.729a5.15 5.15 0 0 1 5.151 5.151v161.482a5.15 5.15 0 0 1-5.15 5.151z" opacity="1" data-original="#d56723"></path><path fill="#b6591e" d="M322.935 298.219v171.785h13.429a5.15 5.15 0 0 0 5.151-5.151V303.371a5.15 5.15 0 0 0-5.151-5.151h-13.429z" opacity="1" data-original="#b6591e"></path><path fill="#994916" d="M366.318 271.994c0-7.822-6.364-14.186-14.186-14.186-5.06 0-9.498 2.672-12.01 6.671H322.19a7.515 7.515 0 1 0 0 15.03h17.932c2.512 3.999 6.949 6.671 12.01 6.671 7.822 0 14.186-6.364 14.186-14.186z" opacity="1" data-original="#994916"></path></g></svg>
+                        Canvacing   
+                    </h2>
+                    <div class="progress-list">
+                        <div class="progress-item booked">
+                            <p>
+                                Booked
+                            </p>
+                            <span class="progress-bg">
+                                <span class="progress-bar">
+                                    
+                                <span data-value="100.5">100.5%</span>
+                                </span>
+                            </span>
+                            <div class="stats">
+                                <h4 class="stats-complete">
+                                    <span>
+                                        Completed
+                                    </span>
+                                    117
+                                </h4>
+                                <h4>
+                                    <span>
+                                        Target
+                                    </span>
+                                    116.38
+                                </h4>
+                            </div>
+                        </div>
+                    
+                        <div class="progress-item completed">
+                            <p>
+                              Canvas  Completed
+                            </p>
+                            <span class="progress-bg">
+                                <span class="progress-bar">
+                                    
+                                <span data-value="77.3">77.3%</span>
+                                </span>
+                            </span>
+                            <div class="stats">
+                                <h4 class="stats-complete">
+                                    <span>
+                                        Completed
+                                    </span>
+                                    30
+                                </h4>
+                                <h4>
+                                    <span>
+                                        Target
+                                    </span>
+                                    38.79
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="progress-item sales">
+                            <p>
+                                Sales
+                            </p>
+                            <span class="progress-bg">
+                                <span class="progress-bar">
+                                    
+                                <span data-value="12.9">12.9%</span>
+                                </span>
+                            </span>
+                            <div class="stats">
+                                <h4 class="stats-complete">
+                                    <span>
+                                        Completed
+                                    </span>
+                                    1
+                                </h4>
+                                <h4>
+                                    <span>
+                                        Target
+                                    </span>
+                                    7.76
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-content">
+                    <h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" x="0" y="0" viewBox="0 0 28662 28267" style="enable-background:new 0 0 512 512" xml:space="preserve" fill-rule="evenodd" class=""><g><path fill="#ffc42e" d="M17780 12878h6709v1359h-6709z" opacity="1" data-original="#ffc42e"></path><path fill="#ffd861" d="M17780 13036h635v984h-635z" opacity="1" data-original="#ffd861"></path><path fill="#ffd147" d="M17780 12878h6709v158h-6709z" opacity="1" data-original="#ffd147"></path><path fill="#faaa20" d="M23642 13136c20 145 30 294 30 446 0 150-10 296-29 438h846v-884z" opacity="1" data-original="#faaa20"></path><path fill="#ffaf26" d="M17780 13136h6709v-100h-6709z" opacity="1" data-original="#ffaf26"></path><path fill="#ffc42e" d="M17780 13036h635v100h-635z" opacity="1" data-original="#ffc42e"></path><path fill="#ffaf26" d="M17780 14020h6709v217h-6709z" opacity="1" data-original="#ffaf26"></path><path fill="#ffc42e" d="M18496 14237h6709v1360h-6709z" opacity="1" data-original="#ffc42e"></path><path fill="#ffd861" d="M18496 14396h634v984h-634z" opacity="1" data-original="#ffd861"></path><path fill="#ffd147" d="M18496 14237h6709v159h-6709z" opacity="1" data-original="#ffd147"></path><path fill="#faaa20" d="M24358 14496c20 144 30 293 30 446 0 149-10 296-29 438h846v-884z" opacity="1" data-original="#faaa20"></path><path fill="#ffaf26" d="M18496 14496h6709v-100h-6709z" opacity="1" data-original="#ffaf26"></path><path fill="#ffc42e" d="M18496 14396h634v100h-634z" opacity="1" data-original="#ffc42e"></path><path fill="#ffaf26" d="M18496 15380h6709v217h-6709z" opacity="1" data-original="#ffaf26"></path><path fill="#ffc42e" d="M17780 15597h6709v1360h-6709z" opacity="1" data-original="#ffc42e"></path><path fill="#ffd861" d="M17780 15756h635v984h-635z" opacity="1" data-original="#ffd861"></path><path fill="#ffd147" d="M17780 15597h6709v159h-6709z" opacity="1" data-original="#ffd147"></path><path fill="#faaa20" d="M23642 15855c20 145 30 294 30 446 0 150-10 296-29 439h846v-885z" opacity="1" data-original="#faaa20"></path><path fill="#ffaf26" d="M17780 15855h6709v-99h-6709z" opacity="1" data-original="#ffaf26"></path><path fill="#ffc42e" d="M17780 15756h635v99h-635z" opacity="1" data-original="#ffc42e"></path><path fill="#ffaf26" d="M17780 16740h6709v217h-6709z" opacity="1" data-original="#ffaf26"></path><path fill="#ffc42e" d="M17780 16957h6709v1360h-6709z" opacity="1" data-original="#ffc42e"></path><path fill="#ffd861" d="M17780 17115h635v985h-635z" opacity="1" data-original="#ffd861"></path><path fill="#ffd147" d="M17780 16957h6709v158h-6709z" opacity="1" data-original="#ffd147"></path><path fill="#faaa20" d="M23642 17215c20 145 30 294 30 446 0 150-10 296-29 439h846v-885z" opacity="1" data-original="#faaa20"></path><path fill="#ffaf26" d="M17780 17215h6709v-100h-6709z" opacity="1" data-original="#ffaf26"></path><path fill="#ffc42e" d="M17780 17115h635v100h-635z" opacity="1" data-original="#ffc42e"></path><path fill="#ffaf26" d="M17780 18100h6709v217h-6709z" opacity="1" data-original="#ffaf26"></path><path fill="#ffc42e" d="M17249 18317h6709v1359h-6709z" opacity="1" data-original="#ffc42e"></path><path fill="#ffd861" d="M17249 18475h635v984h-635z" opacity="1" data-original="#ffd861"></path><path fill="#ffd147" d="M17249 18317h6709v158h-6709z" opacity="1" data-original="#ffd147"></path><path fill="#faaa20" d="M23112 18575c19 145 29 294 29 446 0 149-9 296-28 438h845v-884z" opacity="1" data-original="#faaa20"></path><path fill="#ffaf26" d="M17249 18575h6709v-100h-6709z" opacity="1" data-original="#ffaf26"></path><path fill="#ffc42e" d="M17249 18475h635v100h-635z" opacity="1" data-original="#ffc42e"></path><path fill="#ffaf26" d="M17249 19459h6709v217h-6709z" opacity="1" data-original="#ffaf26"></path><path fill="#ffc42e" d="M17780 19676h6709v1360h-6709z" opacity="1" data-original="#ffc42e"></path><path fill="#ffd861" d="M17780 19835h635v984h-635z" opacity="1" data-original="#ffd861"></path><path fill="#ffd147" d="M17780 19676h6709v159h-6709z" opacity="1" data-original="#ffd147"></path><path fill="#faaa20" d="M23642 19934c20 145 30 294 30 447 0 149-10 296-29 438h846v-885z" opacity="1" data-original="#faaa20"></path><path fill="#ffaf26" d="M17780 19934h6709v-99h-6709z" opacity="1" data-original="#ffaf26"></path><path fill="#ffc42e" d="M17780 19835h635v99h-635z" opacity="1" data-original="#ffc42e"></path><path fill="#ffaf26" d="M17780 20819h6709v217h-6709z" opacity="1" data-original="#ffaf26"></path><path fill="#ffc42e" d="M17190 21036h6709v1360h-6709z" opacity="1" data-original="#ffc42e"></path><path fill="#ffd861" d="M17190 21195h634v984h-634z" opacity="1" data-original="#ffd861"></path><path fill="#ffd147" d="M17190 21036h6709v159h-6709z" opacity="1" data-original="#ffd147"></path><path fill="#faaa20" d="M23052 21294c19 145 30 294 30 446 0 150-10 296-29 439h846v-885z" opacity="1" data-original="#faaa20"></path><path fill="#ffaf26" d="M17190 21294h6709v-99h-6709z" opacity="1" data-original="#ffaf26"></path><path fill="#ffc42e" d="M17190 21195h634v99h-634z" opacity="1" data-original="#ffc42e"></path><path fill="#ffaf26" d="M17190 22179h6709v217h-6709z" opacity="1" data-original="#ffaf26"></path><path fill="#ffc42e" d="M17780 22396h6709v1359h-6709z" opacity="1" data-original="#ffc42e"></path><path fill="#ffd861" d="M17780 22554h635v985h-635z" opacity="1" data-original="#ffd861"></path><path fill="#ffd147" d="M17780 22396h6709v158h-6709z" opacity="1" data-original="#ffd147"></path><path fill="#faaa20" d="M23642 22654c20 145 30 294 30 446 0 149-10 296-29 439h846v-885z" opacity="1" data-original="#faaa20"></path><path fill="#ffaf26" d="M17780 22654h6709v-100h-6709z" opacity="1" data-original="#ffaf26"></path><path fill="#ffc42e" d="M17780 22554h635v100h-635z" opacity="1" data-original="#ffc42e"></path><path fill="#ffaf26" d="M17780 23539h6709v216h-6709z" opacity="1" data-original="#ffaf26"></path><path fill="#ffc42e" d="M18210 11518h6709v1360h-6709z" opacity="1" data-original="#ffc42e"></path><path fill="#ffd861" d="M18210 11677h635v984h-635z" opacity="1" data-original="#ffd861"></path><path fill="#ffd147" d="M18210 11518h6709v159h-6709z" opacity="1" data-original="#ffd147"></path><path fill="#faaa20" d="M24072 11776c20 145 30 294 30 446 0 150-10 296-29 439h846v-885z" opacity="1" data-original="#faaa20"></path><path fill="#ffaf26" d="M18210 11776h6709v-99h-6709z" opacity="1" data-original="#ffaf26"></path><path fill="#ffc42e" d="M18210 11677h635v99h-635z" opacity="1" data-original="#ffc42e"></path><path fill="#ffaf26" d="M18210 12661h6709v217h-6709z" opacity="1" data-original="#ffaf26"></path><path fill="#ffc42e" d="M10195 16957h6709v1360h-6709z" opacity="1" data-original="#ffc42e"></path><path fill="#ffd861" d="M10195 17115h635v985h-635z" opacity="1" data-original="#ffd861"></path><path fill="#ffd147" d="M10195 16957h6709v158h-6709z" opacity="1" data-original="#ffd147"></path><path fill="#faaa20" d="M16057 17215c20 145 30 294 30 446 0 150-10 296-29 439h846v-885z" opacity="1" data-original="#faaa20"></path><path fill="#ffaf26" d="M10195 17215h6709v-100h-6709z" opacity="1" data-original="#ffaf26"></path><path fill="#ffc42e" d="M10195 17115h635v100h-635z" opacity="1" data-original="#ffc42e"></path><path fill="#ffaf26" d="M10195 18100h6709v217h-6709z" opacity="1" data-original="#ffaf26"></path><path fill="#ffc42e" d="M8950 18317h6709v1359H8950z" opacity="1" data-original="#ffc42e"></path><path fill="#ffd861" d="M8950 18475h635v984h-635z" opacity="1" data-original="#ffd861"></path><path fill="#ffd147" d="M8950 18317h6709v158H8950z" opacity="1" data-original="#ffd147"></path><path fill="#faaa20" d="M14812 18575c20 145 30 294 30 446 0 149-10 296-29 438h846v-884z" opacity="1" data-original="#faaa20"></path><path fill="#ffaf26" d="M8950 18575h6709v-100H8950z" opacity="1" data-original="#ffaf26"></path><path fill="#ffc42e" d="M8950 18475h635v100h-635z" opacity="1" data-original="#ffc42e"></path><path fill="#ffaf26" d="M8950 19459h6709v217H8950z" opacity="1" data-original="#ffaf26"></path><path fill="#ffc42e" d="M9626 19676h6709v1360H9626z" opacity="1" data-original="#ffc42e"></path><path fill="#ffd861" d="M9626 19835h635v984h-635z" opacity="1" data-original="#ffd861"></path><path fill="#ffd147" d="M9626 19676h6709v159H9626z" opacity="1" data-original="#ffd147"></path><path fill="#faaa20" d="M15488 19934c20 145 30 294 30 447 0 149-10 296-29 438h846v-885z" opacity="1" data-original="#faaa20"></path><path fill="#ffaf26" d="M9626 19934h6709v-99H9626z" opacity="1" data-original="#ffaf26"></path><path fill="#ffc42e" d="M9626 19835h635v99h-635z" opacity="1" data-original="#ffc42e"></path><path fill="#ffaf26" d="M9626 20819h6709v217H9626z" opacity="1" data-original="#ffaf26"></path><path fill="#ffc42e" d="M9035 21036h6709v1360H9035z" opacity="1" data-original="#ffc42e"></path><path fill="#ffd861" d="M9035 21195h635v984h-635z" opacity="1" data-original="#ffd861"></path><path fill="#ffd147" d="M9035 21036h6709v159H9035z" opacity="1" data-original="#ffd147"></path><path fill="#faaa20" d="M14898 21294c19 145 30 294 30 446 0 150-10 296-29 439h845v-885z" opacity="1" data-original="#faaa20"></path><path fill="#ffaf26" d="M9035 21294h6709v-99H9035z" opacity="1" data-original="#ffaf26"></path><path fill="#ffc42e" d="M9035 21195h635v99h-635z" opacity="1" data-original="#ffc42e"></path><path fill="#ffaf26" d="M9035 22179h6709v217H9035z" opacity="1" data-original="#ffaf26"></path><path fill="#ffc42e" d="M9626 22396h6709v1359H9626z" opacity="1" data-original="#ffc42e"></path><path fill="#ffd861" d="M9626 22554h635v985h-635z" opacity="1" data-original="#ffd861"></path><path fill="#ffd147" d="M9626 22396h6709v158H9626z" opacity="1" data-original="#ffd147"></path><path fill="#faaa20" d="M15488 22654c20 145 30 294 30 446 0 149-10 296-29 439h846v-885z" opacity="1" data-original="#faaa20"></path><path fill="#ffaf26" d="M9626 22654h6709v-100H9626z" opacity="1" data-original="#ffaf26"></path><path fill="#ffc42e" d="M9626 22554h635v100h-635z" opacity="1" data-original="#ffc42e"></path><path fill="#ffaf26" d="M9626 23539h6709v216H9626z" opacity="1" data-original="#ffaf26"></path><path fill="#ffc42e" d="M1398 19676h6709v1360H1398z" opacity="1" data-original="#ffc42e"></path><path fill="#ffd861" d="M1398 19835h635v984h-635z" opacity="1" data-original="#ffd861"></path><path fill="#ffd147" d="M1398 19676h6709v159H1398z" opacity="1" data-original="#ffd147"></path><path fill="#faaa20" d="M7260 19934c20 145 30 294 30 447 0 149-10 296-29 438h846v-885z" opacity="1" data-original="#faaa20"></path><path fill="#ffaf26" d="M1398 19934h6709v-99H1398z" opacity="1" data-original="#ffaf26"></path><path fill="#ffc42e" d="M1398 19835h635v99h-635z" opacity="1" data-original="#ffc42e"></path><path fill="#ffaf26" d="M1398 20819h6709v217H1398z" opacity="1" data-original="#ffaf26"></path><path fill="#ffc42e" d="M1775 21036h6709v1360H1775z" opacity="1" data-original="#ffc42e"></path><path fill="#ffd861" d="M1775 21195h635v984h-635z" opacity="1" data-original="#ffd861"></path><path fill="#ffd147" d="M1775 21036h6709v159H1775z" opacity="1" data-original="#ffd147"></path><path fill="#faaa20" d="M7637 21294c20 145 30 294 30 446 0 150-10 296-29 439h846v-885z" opacity="1" data-original="#faaa20"></path><path fill="#ffaf26" d="M1775 21294h6709v-99H1775z" opacity="1" data-original="#ffaf26"></path><path fill="#ffc42e" d="M1775 21195h635v99h-635z" opacity="1" data-original="#ffc42e"></path><path fill="#ffaf26" d="M1775 22179h6709v217H1775z" opacity="1" data-original="#ffaf26"></path><path fill="#ffc42e" d="M1095 22396h6709v1359H1095z" opacity="1" data-original="#ffc42e"></path><path fill="#ffd861" d="M1095 22554h635v985h-635z" opacity="1" data-original="#ffd861"></path><path fill="#ffd147" d="M1095 22396h6709v158H1095z" opacity="1" data-original="#ffd147"></path><path fill="#faaa20" d="M6958 22654c19 145 29 294 29 446 0 149-9 296-28 439h845v-885z" opacity="1" data-original="#faaa20"></path><path fill="#ffaf26" d="M1095 22654h6709v-100H1095z" opacity="1" data-original="#ffaf26"></path><path fill="#ffc42e" d="M1095 22554h635v100h-635z" opacity="1" data-original="#ffc42e"></path><path fill="#ffaf26" d="M1095 23539h6709v216H1095z" opacity="1" data-original="#ffaf26"></path><path fill="#faaa20" d="M17780 20339c1887 0 3417 1529 3417 3416s-1530 3417-3417 3417-3417-1530-3417-3417 1530-3416 3417-3416z" opacity="1" data-original="#faaa20"></path><path fill="#fce379" d="M17780 21064c1486 0 2691 1205 2691 2691 0 1487-1205 2692-2691 2692s-2691-1205-2691-2692c0-1486 1205-2691 2691-2691z" opacity="1" data-original="#fce379"></path><path fill="#f7cf56" d="M17780 21064c576 0 1110 181 1548 490-398-233-862-367-1357-367-1486 0-2691 1205-2691 2692 0 909 452 1714 1143 2201-798-467-1334-1333-1334-2325 0-1486 1205-2691 2691-2691z" opacity="1" data-original="#f7cf56"></path><path fill="#faaa20" d="M16909 22879c0-236 53-427 157-572 105-145 262-239 471-282v-260h486v260c213 40 373 132 479 277s159 337 159 577v110h-562v-145c0-126-26-215-78-267-53-52-126-77-219-77-94 0-167 25-219 77-53 52-79 141-79 267 0 120 29 223 87 310 57 87 130 168 216 243 87 74 179 148 278 219 100 72 192 153 279 243 86 90 159 194 216 312 58 118 87 261 87 427 0 240-54 433-163 580-108 147-268 240-481 280v255h-486v-255c-217-40-378-133-484-280-107-147-160-340-160-580v-240h563v275c0 127 27 215 83 265s131 75 225 75c93 0 168-25 224-75s84-138 84-265c0-120-29-223-87-310-57-86-129-167-216-242-86-75-179-148-278-220-99-71-192-152-279-242-86-90-158-194-216-312-58-119-87-261-87-428z" opacity="1" data-original="#faaa20"></path><path fill="#ecf0f1" d="m18668 10415 174 928 929 175-929 174-174 929-175-929-928-174 928-175zM15410 19970l147 1177 1178 147-1178 147-147 1178-147-1178-1177-147 1177-147z" opacity="1" data-original="#ecf0f1"></path><path fill="#61bf6b" d="m3434 19676 4155-6642 1508 8-5028 6634z" opacity="1" data-original="#61bf6b"></path><path fill="#72cf7b" d="m7589 13034 3657 3923h1480l-3629-3915z" opacity="1" data-original="#72cf7b" class=""></path><path fill="#61bf6b" d="m15824 6679-4578 10278h1480l5195-10278z" opacity="1" data-original="#61bf6b"></path><path fill="#72cf7b" d="m15824 6679 4423 4839h2412l-4738-4839z" opacity="1" data-original="#72cf7b" class=""></path><g fill="#61bf6b"><path d="m23940 4242-3728 7276h2447l3549-6696z" fill="#61bf6b" opacity="1" data-original="#61bf6b"></path><path d="m26846 1099-4278 3134 4998 1278z" fill="#61bf6b" opacity="1" data-original="#61bf6b"></path></g></g></svg>
+                        Sales   
+                    </h2>
+                    <div class="progress-list">
+                        <div class="progress-item booked">
+                            <p>
+                                Self Gen
+                            </p>
+                            <span class="progress-bg">
+                                <span class="progress-bar">
+                                    
+                                <span data-value="4.2">4.2%</span>
+                                </span>
+                            </span>
+                            <div class="stats">
+                                <h4 class="stats-complete">
+                                    <span>
+                                        Completed
+                                    </span>
+                                    1
+                                </h4>
+                                <h4>
+                                    <span>
+                                        Target
+                                    </span>
+                                    23.94
+                                </h4>
+                            </div>
+                        </div>
+                    
+                        <div class="progress-item completed">
+                            <p>
+                              E Sage
+                            </p>
+                            <span class="progress-bg">
+                                <span class="progress-bar">
+                                    
+                                <span data-value="2.6">2.6%</span>
+                                </span>
+                            </span>
+                            <div class="stats">
+                                <h4 class="stats-complete">
+                                    <span>
+                                        Completed
+                                    </span>
+                                    1
+                                </h4>
+                                <h4>
+                                    <span>
+                                        Target
+                                    </span>
+                                    38.79
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="progress-item sales">
+                            <p>
+                               TPS Sales
+                            </p>
+                            <span class="progress-bg">
+                                <span class="progress-bar">
+                                    
+                                <span data-value="71.4">71.4%</span>
+                                </span>
+                            </span>
+                            <div class="stats">
+                                <h4 class="stats-complete">
+                                    <span>
+                                        Completed
+                                    </span>
+                                    20
+                                </h4>
+                                <h4>
+                                    <span>
+                                        Target
+                                    </span>
+                                    28
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-list four-items">
+                        <div class="progress-item booked">
+                            <p>
+                                PPW Goal (Average)
+
+                            </p>
+                            <span class="progress-bg">
+                                <span class="progress-bar">
+                                    
+                                <span data-value="97.7">97.7%
+                                </span>
+                                </span>
+                            </span>
+                            <div class="stats">
+                                <h4 class="stats-complete">
+                                    <span>
+                                        Completed
+                                    </span>
+                                    $2.98
+                                </h4>
+                                <h4>
+                                    <span>
+                                        Target
+                                    </span>
+                                    $3.05
+
+                                </h4>
+                            </div>
+                        </div>
+                    
+                        <div class="progress-item completed">
+                            <p>
+                                Internal - Sales
+                            </p>
+                            <span class="progress-bg">
+                                <span class="progress-bar">
+                                    
+                                <span data-value="29.0">29.0%</span>
+                                </span>
+                            </span>
+                            <div class="stats">
+                                <h4 class="stats-complete">
+                                    <span>
+                                        Completed
+                                    </span>
+                                    20
+                                </h4>
+                                <h4>
+                                    <span>
+                                        Target
+                                    </span>
+                                    68.96
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="progress-item sales">
+                            <p>
+                              Internal - Pending
+                            </p>
+                            <span class="progress-bg">
+                                <span class="progress-bar">
+                                    
+                                <span data-value="1.2">1.2%</span>
+                                </span>
+                            </span>
+                            <div class="stats">
+                                <h4 class="stats-complete">
+                                    <span>
+                                        Completed
+                                    </span>
+                                    2
+                                </h4>
+                                <h4>
+                                    <span>
+                                        Target
+                                    </span>
+                                    162.27
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="progress-item purple">
+                            <p>
+                              Sales - Result
+                            </p>
+                            <span class="progress-bg">
+                                <span class="progress-bar">
+                                    
+                                <span data-value="41.3">41.3%</span>
+                                </span>
+                            </span>
+                            <div class="stats">
+                                <h4 class="stats-complete">
+                                    <span>
+                                        Completed
+                                    </span>
+                                    40
+                                </h4>
+                                <h4>
+                                    <span>
+                                        Target
+                                    </span>
+                                    96.96
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $( ".progress-bar" ).each(function() {
+            var value= $(this).children('span').attr('data-value');
+            $(this).css('width',value+'%');
+        });
+    </script>
+</html>
