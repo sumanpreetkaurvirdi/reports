@@ -294,7 +294,8 @@ table td{
 .table-blue tr:nth-child(odd),.table-green tr:nth-child(odd), .table-orange tr:nth-child(odd){
     background-color: white;
 }
-.table-blue tr:nth-child(even),.table-green tr:nth-child(even),.table-orange tr:nth-child(even){
+.table-blue tr:nth-child(even),.table-green tr:nth-child(even),.table-orange tr:nth-child(even),
+.table-orange >table> tbody> tr:nth-child(3n){
     background-color: #f5f5f5;
 }
 .inner-table{
@@ -465,6 +466,14 @@ table td, table th{
     
     width: 100%;
     margin-bottom: 8px;
+}
+.hidden-row{
+    background-color: #cccccc!important;
+    display: none;
+}
+.expand-table{
+    cursor: pointer;
+    color: #40af36;
 }
     </style>
     <body class="mode mode--day">
@@ -1011,6 +1020,195 @@ table td, table th{
                             </div>
                         </div>
                     </div>
+                    
+                    <div class="table-container">
+                        <div class="table-blue">
+                            <h3>
+                                Booked Per Day
+                            </h3>
+                            <table>
+                                <tr>
+                                    <td>
+                                        Completed
+                                    </td>
+                                    <td>
+                                        XYZ
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Target
+                                    </td>
+                                    <td>
+                                        XYZ
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Average
+                                    </td>
+                                    <td>
+                                        XYZ
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="table-orange">
+                            <h3>
+                                Completed Per Day
+                            </h3>
+                            <table>
+                                <tr>
+                                    <td>
+                                        Completed
+                                    </td>
+                                    <td>
+                                        XYZ
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Target
+                                    </td>
+                                    <td>
+                                        XYZ
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Average
+                                    </td>
+                                    <td>
+                                        XYZ
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="table-green">
+                            <h3>
+                                Sales Per Day
+                            </h3>
+                            <table>
+                                <tr>
+                                    <td>
+                                        Completed
+                                    </td>
+                                    <td>
+                                        XYZ
+                                        <i class="fa-solid fa-plus expand-table"></i>
+                                    </td>
+                                </tr>
+                                <tr class="hidden-row">
+                                    <td colspan="2">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    Sales Rep
+                                                </td>
+                                                <td>
+                                                    Count
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    John Doe
+                                                </td>
+                                                <td>
+                                                    1
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    John Doe
+                                                </td>
+                                                <td>
+                                                    3
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Target
+                                    </td>
+                                    <td>
+                                        XYZ
+                                        <i class="fa-solid fa-plus expand-table"></i>
+                                    </td>
+                                </tr>
+                                <tr class="hidden-row">
+                                    <td colspan="2">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    Sales Rep
+                                                </td>
+                                                <td>
+                                                    Count
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    John Doe
+                                                </td>
+                                                <td>
+                                                    1
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    John Doe
+                                                </td>
+                                                <td>
+                                                    3
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Average
+                                    </td>
+                                    <td>
+                                        XYZ
+                                        <i class="fa-solid fa-plus expand-table"></i>
+                                    </td>
+                                </tr>
+                                <tr class="hidden-row">
+                                    <td colspan="2">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    Sales Rep
+                                                </td>
+                                                <td>
+                                                    Count
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    John Doe
+                                                </td>
+                                                <td>
+                                                    1
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    John Doe
+                                                </td>
+                                                <td>
+                                                    3
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1051,6 +1249,19 @@ $( ".custom-calendar div:nth-child(13)" ).css('opacity','.4');
 $( ".custom-calendar div:nth-child(15)" ).css('opacity','.8');
 $( ".custom-calendar div:nth-child(17),.custom-calendar div:nth-child(18),.custom-calendar div:nth-child(19),.custom-calendar div:nth-child(20),.custom-calendar div:nth-child(21),.custom-calendar div:nth-child(22)" ).css('opacity','.5');
 //End Custom Calendar
+
+
+//Start Expand table 
+$('.expand-table').click(function(){
+    $(this).parents('tr').next('.hidden-row').slideToggle();
+    $(this).toggleClass('fa-plus fa-minus');
+})
+// End Expand table
+
+
+
+
+
 // Start chart js
         const ctx = document.getElementById('myChart');
       
@@ -1066,5 +1277,8 @@ $( ".custom-calendar div:nth-child(17),.custom-calendar div:nth-child(18),.custo
           }
         });
         // End chart js
+
+
+        
       </script>
 </html>
