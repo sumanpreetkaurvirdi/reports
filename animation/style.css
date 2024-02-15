@@ -43,6 +43,6 @@
   }
 
   svg ellipse{
-    rx:0;
+    fill:none;
   }
  

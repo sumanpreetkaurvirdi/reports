@@ -51,9 +51,9 @@
     $('ellipse').each(function(i){
   var row = $(this);
   setTimeout(function() {
-    var value= row.attr('rx');
+    var value= row.attr('fill');
     console.log(value);
-    row.css('rx', value);
+    row.css('fill', value);
   }, 250*i);
 });
 </script>
