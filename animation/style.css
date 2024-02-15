@@ -38,3 +38,11 @@
     align-items: center;
     justify-content: center;
   }
+  svg ellipse{
+    transition: 1s all;
+  }
+
+  svg ellipse{
+    rx:0;
+  }
+ 

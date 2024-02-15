@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metrics</title>
-    <link href="bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="logo">
@@ -19,7 +19,42 @@
         <img src="logo-text.png" alt="">
         
     </div>
+    <div class="logo">
+        <svg width="100" height="100" viewBox="0 0 61 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="48.2249" cy="33.1247" rx="10" ry="1.77703" transform="rotate(-0.866294 48.2249 33.1247)" fill="#66BC6C"/>
+            <ellipse cx="48.9802" cy="43.6011" rx="12.2818" ry="1.9358" transform="rotate(27.595 48.9802 43.6011)" fill="#66BC6C"/>
+            <ellipse cx="41.0231" cy="52.8665" rx="13.5084" ry="2.1448" transform="rotate(58.8503 41.0231 52.8665)" fill="#66BC6C"/>
+            <ellipse cx="29.9025" cy="46.8818" rx="5.64786" ry="1.56118" transform="rotate(88.5507 29.9025 46.8818)" fill="#66BC6C"/>
+            <ellipse cx="21.5537" cy="46.3625" rx="6.18121" ry="1.56118" transform="rotate(118.906 21.5537 46.3625)" fill="#66BC6C"/>
+            <ellipse cx="15.3248" cy="41.0993" rx="7.37062" ry="1.56118" transform="rotate(149.104 15.3248 41.0993)" fill="#B1D636"/>
+            <ellipse cx="11.0687" cy="32.3544" rx="9.79413" ry="1.94002" transform="rotate(-179.231 11.0687 32.3544)" fill="#B1D636"/>
+            <ellipse cx="11.3741" cy="22.2735" rx="11.9953" ry="1.95343" transform="rotate(-150.113 11.3741 22.2735)" fill="#B1D636"/>
+            <ellipse cx="18.1672" cy="12.7458" rx="13.6328" ry="1.95343" transform="rotate(-120.417 18.1672 12.7458)" fill="#B1D636"/>
+            <ellipse cx="29.7416" cy="18.055" rx="5.7472" ry="1.31214" transform="rotate(-89.7686 29.7416 18.055)" fill="url(#paint0_linear_3302_14)"/>
+            <ellipse cx="37.182" cy="19.7788" rx="5.83632" ry="1.31214" transform="rotate(-60.9278 37.182 19.7788)" fill="#66BC6C"/>
+            <ellipse cx="44.0021" cy="24.4629" rx="7.25273" ry="1.47647" transform="rotate(-31.103 44.0021 24.4629)" fill="#66BC6C"/>
+            <defs>
+            <linearGradient id="paint0_linear_3302_14" x1="25.9807" y1="16.7429" x2="26.3812" y2="20.0271" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#BEDB2E"/>
+            <stop offset="0.398694" stop-color="#BBDA2F"/>
+            <stop offset="1" stop-color="#50B47B"/>
+            </linearGradient>
+            </defs>
+            </svg>
+        <img src="logo-text.png" alt="">
+        
+    </div>
 
-
+ 
 </body>
+<script>
+    $('ellipse').each(function(i){
+  var row = $(this);
+  setTimeout(function() {
+    var value= row.attr('rx');
+    console.log(value);
+    row.css('rx', value);
+  }, 250*i);
+});
+</script>
 </html>
