@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Personal Information</title>
+	<title>Select Payment Method</title>
 	<link rel="stylesheet" href="style.css">
 </head>
 
@@ -18,24 +18,46 @@
          <h2 class="text-center">Select Payment Method <span class="text-primary-50">Payment Method</span></h2>
          <h3 class="sub-heading text-center">Select any one of the following</h3>
               <div class="flex justify-between payment-list my-6">
-                  <div class="payment-item">
+                  <div class="payment-item" data-target="v-card">
                      V-Card (Immediate
                      Access To Funds)
                   </div>
-                  <div class="payment-item">
+                  <div class="payment-item" data-target="ach-standard">
                      ACH (Standard
                      ACH 2-3 Business Days)
                   </div>
-                  <div class="payment-item">
+                  <div class="payment-item" data-target="check-week">
                      Check (2-3
                      Weeks)
                   </div>
               </div>
               <div class="payment-content">
-               <div class="content-item">
-
+               <div class="content-item" id="v-card">
+                  <div class="v-card-inner">
+                     <h3 class="flex justify-between w-full" style="
+                     font-weight: 600;">
+                        Available Balance: <span>$0.01</span>
+                     </h3>
+                     <div class="flex justify-between mt-3 w-full" style="    align-items: center;">
+                        <div>
+                           <h4>
+                              5313 2300 1051 5090
+                           </h4>
+                           <div class="flex">
+                              <strong>
+                                 CVV 575
+                              </strong>  
+                              <strong>
+                                 EXP 03/25
+                              </strong>  
+                           </div> 
+                        </div>
+                        <img src="images/debit.png" alt="debit" style="
+                        max-width: 56px;">
+                     </div>
+                  </div>
                </div>
-               <div class="content-item">
+               <div class="content-item" id="ach-standard">
                   <form action="" class="mt-6 rowwise-form">
                      <div class="relative mb-3">
                         <label for="email" class="block c-label">Routing Number <span class="text-red-700">*</span></label>
@@ -57,7 +79,7 @@
                      <button type="button" class="btn btn-secondary w-full mt-6">SUBMIT</button>
                   </form>
                </div>
-               <div class="content-item">
+               <div class="content-item" id="check-week">
                   <form action="" class="mt-6 rowwise-form">
                      <div class="relative mb-3">
                         <label for="email" class="block c-label">Verify Number <span class="text-red-700">*</span></label>
@@ -142,8 +164,15 @@
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="script.js"></script>
-
-
+<script>
+   
+$('.payment-item').click(function(){
+   $(this).addClass('active').siblings().removeClass('active');
+   var target= $(this).attr('data-target');
+   console.log(target);
+   $('#' + target).slideToggle().siblings().slideUp();
+});
+</script>
 </body>
 
 </html>

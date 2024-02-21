@@ -3281,7 +3281,7 @@ table.card-info td:not(:last-child) {
 .payment-list .payment-item{
   width: 30%;
   text-align: center;
-  padding: 2rem 2rem;
+  padding: 2rem;
   border-radius: 10px;
   border: 2px solid #1c355d;
   color: #1c355d;
@@ -3292,4 +3292,15 @@ table.card-info td:not(:last-child) {
 .payment-list .payment-item:hover{
   background-color: #1c355d;
   color: white;
+}
+.content-item{
+  display: none;
+}
+.v-card-inner{
+    color: #1c355d;
+    border: 2px solid #1c355d;
+    padding: 2rem;
+    border-radius: 10px;
+    flex-flow: wrap;
+    display: flex;
 }
