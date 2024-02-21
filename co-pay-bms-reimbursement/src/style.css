@@ -3261,3 +3261,35 @@ table.card-info td:not(:last-child) {
   display: flex;
   justify-content: space-between;
 }
+.numeric-list-style{
+  
+  list-style: number;
+  margin-left: 1rem;
+}
+.numeric-list-style > li{
+  
+  margin-bottom: .5rem;
+}
+.numeric-list-style ul li{
+  list-style: disc;
+  margin-left: 1rem;
+  margin-top: .3rem;
+}
+.payment-list{
+  flex-flow: wrap;
+}
+.payment-list .payment-item{
+  width: 30%;
+  text-align: center;
+  padding: 2rem 2rem;
+  border-radius: 10px;
+  border: 2px solid #1c355d;
+  color: #1c355d;
+  cursor: pointer;
+  font-weight: 600;
+}
+.payment-list .payment-item.active,
+.payment-list .payment-item:hover{
+  background-color: #1c355d;
+  color: white;
+}
