@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BMS Patient Affordability</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/vnd.microsoft.icon" href="images/favicon.ico" /></link>
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="images/favicon.ico" /></link>
+</head>
+
+<body>
+
+<section class="flex flex-col flex-wrap my-10 px-4">
+
+	<img class="mb-8" src="images/logo.svg" alt="logo">
+	<div class="w-full max-w-[550px] bg-white border mx-auto sm:p-8 p-6 rounded-2xl relative c-transition">
+
+      <div class="relative normal-step">
+         <h2 class="text-center">WELCOME, <span class="text-primary-50">MARK</span></h2>
+         <h3 class="sub-heading text-center">Enter the following information to access the reimbursement program</h3>
+         <form action="" class="mt-6">
+            <div class="relative mb-3">
+               <label for="email" class="block c-label">Enter Email</label>
+               <input type="email" id="email" class="block c-input w-full">
+            </div>
+            <div class="relative mb-3">
+               <label for="birthdate" class="block c-label">Enter Birthdate</label>
+               <input type="text" id="birthdate" class="block c-input w-full">
+            </div>
+            <div class="relative">
+               <label for="lname" class="block c-label">Enter Last Name</label>
+               <input type="text" id="lname" class="block c-input w-full">
+            </div>
+            <button type="button" class="btn btn-secondary w-full mt-6">SUBMIT</button>
+         </form>
+      </div>
+
+      <div class="relative normal-step2">
+         <a class="btn btn-primary mb-2 movetocopay" href="#!">I would like to use the virtual debit card.</a>
+         <a class="btn btn-primary movetoreimbursement" href="#!">I would like to submit reimbursement requests for my past purchases.</a>
+      </div>
+
+      <!-- Reimbursement Steps -->
+      <div class="relative reimbursement-step2">
+         <h2 class="text-center"><span class="text-primary-50">2022</span> REIMBURSEMENT SUMMARY</h2>
+
+         <div class="flex content-between divide-x py-6 bg-[#f5f6fd] my-6 rounded-xl">
+            <div class="flex flex-col items-center w-full">
+               <span class="text-2xl font-bold">$605.29</span>
+               <span class="text-sm text-primary-50 font-medium">PENDING PAYMENT</span>
+            </div>
+            <div class="flex flex-col items-center w-full">
+               <span class="text-2xl font-bold">$12,623.10</span>
+               <span class="text-sm text-primary-50 font-medium">TOTAL BENEFITS</span>
+            </div>
+         </div>
+
+         <h3 class="mb-2 text-center sub-heading">TRANSACTIONS DURING BENEFIT<br class="hidden md:block"> PERIOD: 2022</h3>
+         <div class="transactions-table">
+            <div class="transaction-detail">
+               <div class="flex gap-x-3 base items-baseline mt-6">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 stroke-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+                   </svg>
+                  <p class="sub-heading text-gray-400">There are no historical transactions to display.</p>
+               </div>
+            </div>
+         </div>
+
+         <button type="button" class="btn btn-secondary w-full">
+            <span>SUBMIT NEW RECEIPT</span>
+         </button>
+      </div>
+
+      <div class="relative reimbursement-step3">
+         <h2 class="text-center"><span class="text-primary-50">2022</span> REIMBURSEMENT SUMMARY</h2>
+
+         <div class="flex content-between divide-x py-6 bg-[#f5f6fd] my-6 rounded-xl">
+            <div class="flex flex-col items-center w-full">
+               <span class="text-2xl font-bold">$605.29</span>
+               <span class="text-sm text-primary-50 font-medium">PENDING PAYMENT</span>
+            </div>
+            <div class="flex flex-col items-center w-full">
+               <span class="text-2xl font-bold">$12,623.10</span>
+               <span class="text-sm text-primary-50 font-medium">TOTAL BENEFITS</span>
+            </div>
+         </div>
+
+         <h3 class="mb-2 text-center sub-heading">TRANSACTIONS DURING BENEFIT<br class="hidden md:block"> PERIOD: 2022</h3>
+         <div class="transactions-table">
+            <div class="transaction-detail">
+               <div class="transaction-date">22 Jul 2021</div>
+               <div class="flex justify-between flex-wrap">
+                  <div class="flex items-center">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="transaction-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                      </svg>
+                     <div class="g-trigger">
+                        <p class="transaction-type">RECEIPT CAPTURED</p>
+                        <p class="transaction-label">ALLIANCE RX WALGREENS P00B00965415</p>
+                     </div>
+                  </div>
+                  <div class="transaction-amount credit-amount">$500.00</div>
+               </div>
+            </div>
+            <div class="transaction-detail">
+               <div class="transaction-date">22 Jul 2021</div>
+               <div class="flex justify-between flex-wrap">
+                  <div class="flex items-center">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="transaction-icon fill-current" viewBox="0 0 699.405 699.405">
+                        <path id="Path_1" data-name="Path 1" d="M32,176H402.8l-57.38,57.38a31.988,31.988,0,0,0,0,45.25,31.934,31.934,0,0,0,45.2-.005l112-112a31.988,31.988,0,0,0,0-45.25l-112-112a32,32,0,0,0-45.25,45.25L402.8,112H32a32,32,0,0,0,0,64ZM480,336H109.3l57.38-57.38a32,32,0,1,0-45.25-45.25l-112,112a31.988,31.988,0,0,0,0,45.25l112,112A31.5,31.5,0,0,0,144,512a32,32,0,0,0,22.62-54.625L109.3,400H480a32,32,0,0,0,0-64Z" transform="translate(0 256) rotate(-30)"/>
+                      </svg>
+                     <div>
+                        <p class="transaction-type">PAYMENT SENT</p>
+                        <p class="transaction-label">ALLIANCE RX WALGREENS P00B00965415</p>
+                     </div>
+                  </div>
+                  <div class="transaction-amount">-$500.00</div>
+               </div>
+            </div>
+            <div class="transaction-detail">
+               <div class="transaction-date">22 Jul 2021</div>
+               <div class="flex justify-between flex-wrap">
+                  <div class="flex items-center">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="transaction-icon fill-current" viewBox="0 0 699.405 699.405">
+                        <path id="Path_1" data-name="Path 1" d="M32,176H402.8l-57.38,57.38a31.988,31.988,0,0,0,0,45.25,31.934,31.934,0,0,0,45.2-.005l112-112a31.988,31.988,0,0,0,0-45.25l-112-112a32,32,0,0,0-45.25,45.25L402.8,112H32a32,32,0,0,0,0,64ZM480,336H109.3l57.38-57.38a32,32,0,1,0-45.25-45.25l-112,112a31.988,31.988,0,0,0,0,45.25l112,112A31.5,31.5,0,0,0,144,512a32,32,0,0,0,22.62-54.625L109.3,400H480a32,32,0,0,0,0-64Z" transform="translate(0 256) rotate(-30)"/>
+                      </svg>
+                     <div>
+                        <p class="transaction-type">PAYMENT SENT</p>
+                        <p class="transaction-label">ALLIANCE RX WALGREENS P00B00965415</p>
+                     </div>
+                  </div>
+                  <div class="transaction-amount">-$500.00</div>
+               </div>
+            </div>
+            <div class="transaction-detail">
+               <div class="transaction-date">22 Jul 2021</div>
+               <div class="flex justify-between flex-wrap">
+                  <div class="flex items-center">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="transaction-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                      </svg>
+                     <div>
+                        <p class="transaction-type">RECEIPT CAPTURED</p>
+                        <p class="transaction-label">ALLIANCE RX WALGREENS P00B00965415</p>
+                     </div>
+                  </div>
+                  <div class="transaction-amount credit-amount">$500.00</div>
+               </div>
+            </div>
+            <div class="transaction-detail">
+               <div class="transaction-date">22 Jul 2021</div>
+               <div class="flex justify-between flex-wrap">
+                  <div class="flex items-center">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="transaction-icon fill-current" viewBox="0 0 699.405 699.405">
+                        <path id="Path_1" data-name="Path 1" d="M32,176H402.8l-57.38,57.38a31.988,31.988,0,0,0,0,45.25,31.934,31.934,0,0,0,45.2-.005l112-112a31.988,31.988,0,0,0,0-45.25l-112-112a32,32,0,0,0-45.25,45.25L402.8,112H32a32,32,0,0,0,0,64ZM480,336H109.3l57.38-57.38a32,32,0,1,0-45.25-45.25l-112,112a31.988,31.988,0,0,0,0,45.25l112,112A31.5,31.5,0,0,0,144,512a32,32,0,0,0,22.62-54.625L109.3,400H480a32,32,0,0,0,0-64Z" transform="translate(0 256) rotate(-30)"/>
+                      </svg>
+                     <div>
+                        <p class="transaction-type">PAYMENT SENT</p>
+                        <p class="transaction-label">ALLIANCE RX WALGREENS P00B00965415</p>
+                     </div>
+                  </div>
+                  <div class="transaction-amount">-$500.00</div>
+               </div>
+            </div>
+            <div class="transaction-detail">
+               <div class="transaction-date">22 Jul 2021</div>
+               <div class="flex justify-between flex-wrap">
+                  <div class="flex items-center">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="transaction-icon fill-current" viewBox="0 0 699.405 699.405">
+                        <path id="Path_1" data-name="Path 1" d="M32,176H402.8l-57.38,57.38a31.988,31.988,0,0,0,0,45.25,31.934,31.934,0,0,0,45.2-.005l112-112a31.988,31.988,0,0,0,0-45.25l-112-112a32,32,0,0,0-45.25,45.25L402.8,112H32a32,32,0,0,0,0,64ZM480,336H109.3l57.38-57.38a32,32,0,1,0-45.25-45.25l-112,112a31.988,31.988,0,0,0,0,45.25l112,112A31.5,31.5,0,0,0,144,512a32,32,0,0,0,22.62-54.625L109.3,400H480a32,32,0,0,0,0-64Z" transform="translate(0 256) rotate(-30)"/>
+                      </svg>
+                     <div>
+                        <p class="transaction-type">PAYMENT SENT</p>
+                        <p class="transaction-label">ALLIANCE RX WALGREENS P00B00965415</p>
+                     </div>
+                  </div>
+                  <div class="transaction-amount">-$500.00</div>
+               </div>
+            </div>
+            <div class="transaction-detail">
+               <div class="transaction-date">22 Jul 2021</div>
+               <div class="flex justify-between flex-wrap">
+                  <div class="flex items-center">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="transaction-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                      </svg>
+                     <div>
+                        <p class="transaction-type">RECEIPT CAPTURED</p>
+                        <p class="transaction-label">ALLIANCE RX WALGREENS P00B00965415</p>
+                     </div>
+                  </div>
+                  <div class="transaction-amount credit-amount">$500.00</div>
+               </div>
+            </div>
+            <div class="transaction-detail">
+               <div class="transaction-date">22 Jul 2021</div>
+               <div class="flex justify-between flex-wrap">
+                  <div class="flex items-center">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="transaction-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                      </svg>
+                     <div>
+                        <p class="transaction-type">RECEIPT CAPTURED</p>
+                        <p class="transaction-label">ALLIANCE RX WALGREENS P00B00965415</p>
+                     </div>
+                  </div>
+                  <div class="transaction-amount credit-amount">$500.00</div>
+               </div>
+            </div>
+         </div>
+
+         <button type="button" class="btn btn-secondary w-full">
+            <span>SUBMIT NEW RECEIPT</span>
+         </button>
+      </div>
+
+      <div class="relative reimbursement-step4 pt-4">
+         <button type="button" class="close-button">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+               <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+             </svg>
+         </button>
+         <h2 class="text-center">UPLOAD RECEIPT INFO</h2>
+         <h3 class="sub-heading text-center">Enter details to begin the reimbursement process</h3>
+
+         <form action="" class="mt-6">
+            <div class="md:flex gap-x-4">
+               <div class="relative mb-3 w-full">
+                  <label for="date" class="block c-label">Date of Transaction</label>
+                  <input type="text" id="date" class="block c-input w-full">
+               </div>
+               <div class="relative mb-3 w-full">
+                  <label for="amount" class="block c-label">Amount</label>
+                  <input type="number" id="amount" class="block c-input w-full">
+               </div>
+            </div>
+            <div class="md:flex gap-x-4">
+               <div class="relative mb-3 w-full">
+                  <label for="location" class="block c-label">Pharmacy Location</label>
+                  <input type="text" id="location" class="block c-input w-full">
+               </div>
+               <div class="w-full md:mt-7 mb-3 md:mb-0">
+                  <p class="text-base font-medium m-0 p-0">CVS SPECIALTY NEW YORK</p>
+                  <span class="text-xs">123 main street, New York, NY 11201.</span>
+               </div>
+            </div>
+            <div class="md:flex gap-x-4">
+               <div class="relative mb-3 w-full">
+                  <label for="prescribers-lname" class="block c-label">Prescribers Last Name</label>
+                  <input type="text" id="prescribers-lname" class="block c-input w-full">
+               </div>
+               <div class="w-full md:mt-7 mb-3 md:mb-0">
+                  <p class="text-base font-medium m-0 p-0">Dr. John Doe</p>
+                  <span class="text-xs truncate">123 main street, New York, NY 11201.</span>
+               </div>
+            </div>
+
+            <p class="c-label">Receipt Image</p>
+            <div class="border border-2 border-dashed p-6 mb-4 rounded-md">
+               <div class="flex items-center">
+                  <label class="block">
+                     <span class="sr-only">Choose profile photo</span>
+                     <input type="file" class="block w-full text-sm text-black
+                     file:mr-4 file:py-2 file:px-4
+                     file:rounded-md file:border-0
+                     file:text-sm file:font-semibold
+                     file:bg-secondary-50 file:text-white
+                     hover:file:bg-secondary-100
+                     "/>
+                  </label>
+               </div>
+            </div>
+            <p class="c-label">Prescription Image:</p>
+            <div class="border border-2 border-dashed p-6 mb-6 rounded-md">
+               <div class="flex items-center">
+                  <label class="block">
+                     <span class="sr-only">Choose profile photo</span>
+                     <input type="file" class="block w-full text-sm text-black
+                     file:mr-4 file:py-2 file:px-4
+                     file:rounded-md file:border-0
+                     file:text-sm file:font-semibold
+                     file:bg-secondary-50 file:text-white
+                     hover:file:bg-secondary-100
+                     "/>
+                  </label>
+               </div>
+            </div>
+
+            <button type="button" class="btn btn-secondary w-full">SUBMIT</button>
+         </form>
+
+      </div>
+
+      <div class="relative reimbursement-step5">
+         <h2 class="text-center mb-6">RECEIPT RECEIVED</h2>
+
+         <div class="text-center">
+            <div class='checkmark'>
+               <svg class='confetti' height='19' viewBox='0 0 19 19' width='19' xmlns='http://www.w3.org/2000/svg'>
+                 <path d='M8.296.747c.532-.972 1.393-.973 1.925 0l2.665 4.872 4.876 2.66c.974.532.975 1.393 0 1.926l-4.875 2.666-2.664 4.876c-.53.972-1.39.973-1.924 0l-2.664-4.876L.76 10.206c-.972-.532-.973-1.393 0-1.925l4.872-2.66L8.296.746z'>
+               </svg>
+               <svg class='confetti' height='19' viewBox='0 0 19 19' width='19' xmlns='http://www.w3.org/2000/svg'>
+                 <path d='M8.296.747c.532-.972 1.393-.973 1.925 0l2.665 4.872 4.876 2.66c.974.532.975 1.393 0 1.926l-4.875 2.666-2.664 4.876c-.53.972-1.39.973-1.924 0l-2.664-4.876L.76 10.206c-.972-.532-.973-1.393 0-1.925l4.872-2.66L8.296.746z'>
+               </svg>
+               <svg class='confetti' height='19' viewBox='0 0 19 19' width='19' xmlns='http://www.w3.org/2000/svg'>
+                 <path d='M8.296.747c.532-.972 1.393-.973 1.925 0l2.665 4.872 4.876 2.66c.974.532.975 1.393 0 1.926l-4.875 2.666-2.664 4.876c-.53.972-1.39.973-1.924 0l-2.664-4.876L.76 10.206c-.972-.532-.973-1.393 0-1.925l4.872-2.66L8.296.746z'>
+               </svg>
+               <svg class='confetti' height='19' viewBox='0 0 19 19' width='19' xmlns='http://www.w3.org/2000/svg'>
+                 <path d='M8.296.747c.532-.972 1.393-.973 1.925 0l2.665 4.872 4.876 2.66c.974.532.975 1.393 0 1.926l-4.875 2.666-2.664 4.876c-.53.972-1.39.973-1.924 0l-2.664-4.876L.76 10.206c-.972-.532-.973-1.393 0-1.925l4.872-2.66L8.296.746z'>
+               </svg>
+               <svg class='confetti' height='19' viewBox='0 0 19 19' width='19' xmlns='http://www.w3.org/2000/svg'>
+                 <path d='M8.296.747c.532-.972 1.393-.973 1.925 0l2.665 4.872 4.876 2.66c.974.532.975 1.393 0 1.926l-4.875 2.666-2.664 4.876c-.53.972-1.39.973-1.924 0l-2.664-4.876L.76 10.206c-.972-.532-.973-1.393 0-1.925l4.872-2.66L8.296.746z'>
+               </svg>
+               <svg class='confetti' height='19' viewBox='0 0 19 19' width='19' xmlns='http://www.w3.org/2000/svg'>
+                 <path d='M8.296.747c.532-.972 1.393-.973 1.925 0l2.665 4.872 4.876 2.66c.974.532.975 1.393 0 1.926l-4.875 2.666-2.664 4.876c-.53.972-1.39.973-1.924 0l-2.664-4.876L.76 10.206c-.972-.532-.973-1.393 0-1.925l4.872-2.66L8.296.746z'>
+               </svg>
+               <svg class='checkmark__check' height='36' viewBox='0 0 48 36' width='40' xmlns='http://www.w3.org/2000/svg'>
+                 <path d='M47.248 3.9L43.906.667a2.428 2.428 0 0 0-3.344 0l-23.63 23.09-9.554-9.338a2.432 2.432 0 0 0-3.345 0L.692 17.654a2.236 2.236 0 0 0 .002 3.233l14.567 14.175c.926.894 2.42.894 3.342.01L47.248 7.128c.922-.89.922-2.34 0-3.23'>
+               </svg>
+               <svg class='checkmark__back' height='115' viewBox='0 0 120 115' width='90' xmlns='http://www.w3.org/2000/svg'>
+                 <path d='M107.332 72.938c-1.798 5.557 4.564 15.334 1.21 19.96-3.387 4.674-14.646 1.605-19.298 5.003-4.61 3.368-5.163 15.074-10.695 16.878-5.344 1.743-12.628-7.35-18.545-7.35-5.922 0-13.206 9.088-18.543 7.345-5.538-1.804-6.09-13.515-10.696-16.877-4.657-3.398-15.91-.334-19.297-5.002-3.356-4.627 3.006-14.404 1.208-19.962C10.93 67.576 0 63.442 0 57.5c0-5.943 10.93-10.076 12.668-15.438 1.798-5.557-4.564-15.334-1.21-19.96 3.387-4.674 14.646-1.605 19.298-5.003C35.366 13.73 35.92 2.025 41.45.22c5.344-1.743 12.628 7.35 18.545 7.35 5.922 0 13.206-9.088 18.543-7.345 5.538 1.804 6.09 13.515 10.696 16.877 4.657 3.398 15.91.334 19.297 5.002 3.356 4.627-3.006 14.404-1.208 19.962C109.07 47.424 120 51.562 120 57.5c0 5.943-10.93 10.076-12.668 15.438z'>
+               </svg>
+             </div>
+         </div>
+
+         <p class="text-center mb-12">Success, your receipt has been received and upon verification <strong>$1234.56</strong> will be sent to your <strong>Citibank</strong> account via ACH.</p>
+
+         <button type="button" class="flex justify-center items-center mx-auto my-3 gap-x-1 hover:text-primary-50 editbank">
+            <span>
+               <svg xmlns="http://www.w3.org/2000/svg" class="w-6 fill-current" viewBox="0 0 512 512">
+                  <path d="M490.3 40.4C512.2 62.27 512.2 97.73 490.3 119.6L460.3 149.7L362.3 51.72L392.4 21.66C414.3-.2135 449.7-.2135 471.6 21.66L490.3 40.4zM172.4 241.7L339.7 74.34L437.7 172.3L270.3 339.6C264.2 345.8 256.7 350.4 248.4 353.2L159.6 382.8C150.1 385.6 141.5 383.4 135 376.1C128.6 370.5 126.4 361 129.2 352.4L158.8 263.6C161.6 255.3 166.2 247.8 172.4 241.7V241.7zM192 63.1C209.7 63.1 224 78.33 224 95.1C224 113.7 209.7 127.1 192 127.1H96C78.33 127.1 64 142.3 64 159.1V416C64 433.7 78.33 448 96 448H352C369.7 448 384 433.7 384 416V319.1C384 302.3 398.3 287.1 416 287.1C433.7 287.1 448 302.3 448 319.1V416C448 469 405 512 352 512H96C42.98 512 0 469 0 416V159.1C0 106.1 42.98 63.1 96 63.1H192z"></path>
+               </svg>
+            </span>
+            <span>EDIT BANK DETAILS</span>
+         </button>
+
+         <button type="button" class="btn btn-secondary w-full">
+            <span>
+               <svg xmlns="http://www.w3.org/2000/svg" class="w-6" viewBox="0 0 576 512"><path d="M279.6 160.4C282.4 160.1 285.2 160 288 160C341 160 384 202.1 384 256C384 309 341 352 288 352C234.1 352 192 309 192 256C192 253.2 192.1 250.4 192.4 247.6C201.7 252.1 212.5 256 224 256C259.3 256 288 227.3 288 192C288 180.5 284.1 169.7 279.6 160.4zM480.6 112.6C527.4 156 558.7 207.1 573.5 243.7C576.8 251.6 576.8 260.4 573.5 268.3C558.7 304 527.4 355.1 480.6 399.4C433.5 443.2 368.8 480 288 480C207.2 480 142.5 443.2 95.42 399.4C48.62 355.1 17.34 304 2.461 268.3C-.8205 260.4-.8205 251.6 2.461 243.7C17.34 207.1 48.62 156 95.42 112.6C142.5 68.84 207.2 32 288 32C368.8 32 433.5 68.84 480.6 112.6V112.6zM288 112C208.5 112 144 176.5 144 256C144 335.5 208.5 400 288 400C367.5 400 432 335.5 432 256C432 176.5 367.5 112 288 112z" class="fill-current"/></svg>
+            </span>
+            <span>VIEW SUMMARY</span>
+         </button>
+      </div>
+
+      <div class="relative reimbursement-step6 pt-4">
+         <button type="button" class="close-button">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+               <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+             </svg>
+         </button>
+         <h2 class="text-center">VERIFY BANK DETAILS FOR REIMBURSEMENT</h2>
+         <h3 class="mb-6 text-center sub-heading">Citibank</h3>
+
+         <div class="relative mb-4">
+            <label for="routingnumber" class="block c-label">Enter bank account routing number</label>
+            <div class="relative">
+               <input type="number" id="routingnumber" class="block c-input w-full noarrow disabled:bg-slate-50" value="02100089" disabled>
+               <svg xmlns="http://www.w3.org/2000/svg" class="editable-routingnumber h-6 w-6 cursor-pointer absolute right-4 inset-y-1/4" viewBox="0 0 512 512">
+                  <path d="M490.3 40.4C512.2 62.27 512.2 97.73 490.3 119.6L460.3 149.7L362.3 51.72L392.4 21.66C414.3-.2135 449.7-.2135 471.6 21.66L490.3 40.4zM172.4 241.7L339.7 74.34L437.7 172.3L270.3 339.6C264.2 345.8 256.7 350.4 248.4 353.2L159.6 382.8C150.1 385.6 141.5 383.4 135 376.1C128.6 370.5 126.4 361 129.2 352.4L158.8 263.6C161.6 255.3 166.2 247.8 172.4 241.7V241.7zM192 63.1C209.7 63.1 224 78.33 224 95.1C224 113.7 209.7 127.1 192 127.1H96C78.33 127.1 64 142.3 64 159.1V416C64 433.7 78.33 448 96 448H352C369.7 448 384 433.7 384 416V319.1C384 302.3 398.3 287.1 416 287.1C433.7 287.1 448 302.3 448 319.1V416C448 469 405 512 352 512H96C42.98 512 0 469 0 416V159.1C0 106.1 42.98 63.1 96 63.1H192z"></path>
+               </svg>
+            </div>
+         </div>
+
+         <div class="relative mb-3">
+            <label for="accountnumber" class="block c-label">Enter checking account number</label>
+            <div class="relative">
+               <input type="number" id="accountnumber" class="block c-input w-full noarrow disabled:bg-slate-50" value="47112013123" disabled>
+               <svg xmlns="http://www.w3.org/2000/svg" class="editable-accountnumber h-6 w-6 cursor-pointer absolute right-4 inset-y-1/4" viewBox="0 0 512 512">
+                  <path d="M490.3 40.4C512.2 62.27 512.2 97.73 490.3 119.6L460.3 149.7L362.3 51.72L392.4 21.66C414.3-.2135 449.7-.2135 471.6 21.66L490.3 40.4zM172.4 241.7L339.7 74.34L437.7 172.3L270.3 339.6C264.2 345.8 256.7 350.4 248.4 353.2L159.6 382.8C150.1 385.6 141.5 383.4 135 376.1C128.6 370.5 126.4 361 129.2 352.4L158.8 263.6C161.6 255.3 166.2 247.8 172.4 241.7V241.7zM192 63.1C209.7 63.1 224 78.33 224 95.1C224 113.7 209.7 127.1 192 127.1H96C78.33 127.1 64 142.3 64 159.1V416C64 433.7 78.33 448 96 448H352C369.7 448 384 433.7 384 416V319.1C384 302.3 398.3 287.1 416 287.1C433.7 287.1 448 302.3 448 319.1V416C448 469 405 512 352 512H96C42.98 512 0 469 0 416V159.1C0 106.1 42.98 63.1 96 63.1H192z"></path>
+               </svg>
+            </div>
+         </div>
+
+         <div class="relative">
+            <input type="number" id="reaccountnumber" placeholder="re-enter account #" class="block c-input w-full noarrow">
+         </div>
+
+         <p class="my-6 bg-yellow-100 text-yellow-600 flex gap-x-1 p-2 rounded-md text-sm">
+            <span>
+               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+               </svg>
+            </span>
+            <span><strong>Note:</strong> Upon verification all corresponding reimbursements will be credited to this account.</span>
+         </p>
+
+         <button type="button" class="btn btn-secondary w-full">
+            <span>
+               <svg xmlns="http://www.w3.org/2000/svg" class="w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+               </svg>
+            </span>
+            <span>CONFIRM</span>
+         </button>
+      </div>
+
+      <div class="relative reimbursement-step7">
+         <h2 class="text-center mb-6">LINK SUCCESSFUL</h2>
+
+         <svg xmlns="http://www.w3.org/2000/svg" class="w-14 my-5 mx-auto fill-[#29a758]" viewBox="0 0 640 512">
+            <path d="M172.5 131.1C228.1 75.51 320.5 75.51 376.1 131.1C426.1 181.1 433.5 260.8 392.4 318.3L391.3 319.9C381 334.2 361 337.6 346.7 327.3C332.3 317 328.9 297 339.2 282.7L340.3 281.1C363.2 249 359.6 205.1 331.7 177.2C300.3 145.8 249.2 145.8 217.7 177.2L105.5 289.5C73.99 320.1 73.99 372 105.5 403.5C133.3 431.4 177.3 435 209.3 412.1L210.9 410.1C225.3 400.7 245.3 404 255.5 418.4C265.8 432.8 262.5 452.8 248.1 463.1L246.5 464.2C188.1 505.3 110.2 498.7 60.21 448.8C3.741 392.3 3.741 300.7 60.21 244.3L172.5 131.1zM467.5 380C411 436.5 319.5 436.5 263 380C213 330 206.5 251.2 247.6 193.7L248.7 192.1C258.1 177.8 278.1 174.4 293.3 184.7C307.7 194.1 311.1 214.1 300.8 229.3L299.7 230.9C276.8 262.1 280.4 306.9 308.3 334.8C339.7 366.2 390.8 366.2 422.3 334.8L534.5 222.5C566 191 566 139.1 534.5 108.5C506.7 80.63 462.7 76.99 430.7 99.9L429.1 101C414.7 111.3 394.7 107.1 384.5 93.58C374.2 79.2 377.5 59.21 391.9 48.94L393.5 47.82C451 6.731 529.8 13.25 579.8 63.24C636.3 119.7 636.3 211.3 579.8 267.7L467.5 380z"/>
+         </svg>
+
+         <p class="text-center mb-6">Your personal benefit bank account has been verified. All eligible reimbursements will be credited to your Citibank account.</p>
+
+         <button type="button" class="btn btn-secondary w-full">
+            <span>VIEW BENEFIT DETAILS</span>
+         </button>
+      </div>
+
+      <div class="relative reimbursement-step8">
+         <h2 class="text-center">HELLO <span class="text-primary-50">MARK</span></h2>
+
+         <div class="flex gap-x-2 bg-yellow-100 text-yellow-600 p-2 rounded-md text-sm my-8">
+            <div>
+               <svg xmlns="http://www.w3.org/2000/svg" class="w-8 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+               </svg>
+            </div>
+            <div>
+               <p class="text-base"><span class="font-medium">We were unable to validate your bank account details.</span></p>
+               <p class="text-sm">Please reconfirm your details and connect your bank account to receive reimbursement.</p>
+            </div>
+         </div>
+
+         <button type="button" class="btn btn-secondary w-full">
+            <span>
+               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 fill-current" viewBox="0 0 512 512"><path d="M243.4 2.587C251.4-.8625 260.6-.8625 268.6 2.587L492.6 98.59C506.6 104.6 514.4 119.6 511.3 134.4C508.3 149.3 495.2 159.1 479.1 160V168C479.1 181.3 469.3 192 455.1 192H55.1C42.74 192 31.1 181.3 31.1 168V160C16.81 159.1 3.708 149.3 .6528 134.4C-2.402 119.6 5.429 104.6 19.39 98.59L243.4 2.587zM256 128C273.7 128 288 113.7 288 96C288 78.33 273.7 64 256 64C238.3 64 224 78.33 224 96C224 113.7 238.3 128 256 128zM127.1 416H167.1V224H231.1V416H280V224H344V416H384V224H448V420.3C448.6 420.6 449.2 420.1 449.8 421.4L497.8 453.4C509.5 461.2 514.7 475.8 510.6 489.3C506.5 502.8 494.1 512 480 512H31.1C17.9 512 5.458 502.8 1.372 489.3C-2.715 475.8 2.515 461.2 14.25 453.4L62.25 421.4C62.82 420.1 63.41 420.6 63.1 420.3V224H127.1V416z"/></svg>
+            </span>
+            <span>VERIFY BANK ACCOUNT</span>
+         </button>
+      </div>
+
+      <!-- Co-Pay Steps -->
+      <div class="relative copay-step2">
+         <h3 class="sub-heading text-center">Your next benefit for</h3>
+         <h2 class="text-center text-primary-50">ORENCIA® (abatacept)</h2>
+         <h3 class="sub-heading text-center">is approved and ready. Enter exact amount below</h3>
+         <div class="rounded-lg overflow-x-hidden border border-secondary-50 mt-3">
+            <h3 class="bg-secondary-50 text-white p-2 text-center">ENTER EXACT AMOUNT OWED TO PHARMACY</h3>
+            <input class="c-input text-center border-0" type="text" placeholder="0.00">
+         </div>
+         <a class="btn btn-secondary mt-4 amount-submitted" href="#!">Submit</a>
+
+         <h2 class="text-center my-4">TRANSACTIONS DURING BENEFIT PERIOD: 2022</h2>
+
+         <div class="transactions-table">
+            <div class="transaction-detail">
+               <div class="flex gap-x-2 base justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 stroke-gray-600" fill="none" viewBox="0 0 24 24" stroke="#9ca3af">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
+                     </svg>
+                  <p class="text-base text-gray-600 font-medium">There are no historical calls to display.</p>
+               </div>
+            </div>
+         </div>
+
+         <button type="button" class="btn btn-outline-secondary w-full back-to-first-step">
+            <span>Close</span>
+         </button>
+
+         <button type="button" class="btn btn-secondary w-full mt-3 move-to-third-step">
+            <span>View Virtual Card</span>
+         </button>
+      </div>
+
+      <div class="relative copay-step3">
+         <h2 class="text-center text-primary-50 mb-2">CO-PAY ACTIVATED</h2>
+
+         <a class="btn btn-secondary w-full amount-trigger" href="#!">Change amount due at pharmacy</a>
+
+         <h2 class="text-center my-4">TRANSACTIONS DURING BENEFIT PERIOD: 2022</h2>
+
+         <div class="transactions-table">
+            <div class="transaction-detail">
+               <div class="flex justify-between">          
+                  <div>
+                     <p class="transaction-label">ACCREDO HEALTH GROUP</p>
+                     <p class="transaction-date">22 Jul 2021</p>
+                  </div>
+                  <div class="transaction-amount credit-amount">$500.00</div>
+               </div>
+               <div class="transaction-receipt">
+                  <button class="btn btn-secondary btn-sm g-trigger">
+                     <i class="fa-solid fa-check"></i>
+                     <span>Receipt Verified</span>
+                  </button>
+               </div>
+            </div>
+         </div>
+
+         <button type="button" class="btn btn-outline-secondary w-full back-to-first-step">
+            <span>Close</span>
+         </button>
+
+         <button type="button" class="btn btn-secondary w-full mt-3 move-to-fourth-step">
+            <span>View Virtual Card</span>
+         </button>
+      </div>
+
+      <div class="relative copay-step4">
+         <h2 class="text-center">CO-PAY ACTIVATED</h2>
+         <h3 class="sub-heading text-center">Your Co-Pay Card has been activated. Present card below with the exact amount due the pharmacy to pay for prescription. You can change amount and card if needed.</h3>
+         <button class="btn btn-secondary w-full my-4 hideonprint" onclick="window.print()">Print</button>
+
+         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="354" height="234" viewBox="0 0 354 234" class="credit-card">
+            <g id="Credit_Card" data-name="Credit Card" transform="translate(7364.416 5319.416)">
+               <g class="credit-card-outer" data-name="Rectangle 569" transform="translate(-7364.416 -5319.416)" fill="#fff" stroke="#fff" stroke-width="1">
+                  <rect width="354" height="234" rx="15" stroke="none"></rect>
+                  <rect x="0.5" y="0.5" width="353" height="233" rx="14.5" fill="none"></rect>
+               </g>
+               <g id="Group_11341" data-name="Group 11341">
+                  <g class="credit-card-inner" data-name="Rectangle 570" transform="translate(-7349.416 -5303.416)" fill="#fff" stroke="#fff" stroke-width="2">
+                  <rect width="324" height="204" rx="15" stroke="none"></rect>
+                  <rect x="0.5" y="0.5" width="323" height="203" rx="14.5" fill="none"></rect>
+                  </g>
+                  <g id="Group_11340" data-name="Group 11340" transform="translate(-7331.416 -5274.496)">
+                  <g id="Group_11336" data-name="Group 11336" transform="translate(0.89 85.685)">
+                     <g id="Group_11338" data-name="Group 11338" transform="translate(225)">
+                        <image id="Image_10" data-name="Image 10" width="59.97" height="36.232" transform="translate(0 32.163)" xlink:href="data:image/png;base64,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"></image>
+                        <text class="debit_text" transform="translate(30.342 26)" fill="currentColor"><tspan x="-22.121" y="0">DEBIT</tspan></text>
+                     </g>
+                     <g id="Group_11337" data-name="Group 11337" transform="translate(0 9.851)">
+                        <text class="exp_number" data-name="XX/XX" transform="translate(102.431 44.029)" fill="currentColor"><tspan x="0" y="0" class="exp_response">03/25</tspan></text>
+                        <text class="exp_text" transform="translate(72.238 44.029)" fill="currentColor"><tspan x="0" y="0">EXP</tspan></text>
+                        <text class="cvv_number" transform="translate(31.468 44.029)" fill="currentColor"><tspan x="0" y="0" class="cvv_response">575</tspan></text>
+                        <text class="cvv_text" transform="translate(0 44.56)" fill="currentColor"><tspan x="0" y="0">CVV</tspan></text>
+                        <text class="card_number" data-name="XXXX XXXX XXXX XXXX" transform="translate(0 17)" fill="currentColor"><tspan x="0" y="0" class="card_response">5313 2300 1051 5090</tspan></text>
+                     </g>
+                  </g>
+                  <g id="Group_11339" data-name="Group 11339" transform="translate(0 0.08)">
+                     <text class="current_balance" data-name="$0.00" transform="translate(284 17)" fill="currentColor"><tspan x="-59.195" y="0" class="balance_response">$0.01</tspan></text>
+                     <text class="current_balance_text" data-name="AVAILABLE BALANCE:" transform="translate(0 16)" fill="currentColor"><tspan x="0" y="0">AVAILABLE BALANCE:</tspan></text>
+                  </g>
+                  </g>
+               </g>
+            </g>
+            </svg>
+
+            <button class="btn btn-secondary w-full my-4 back-to-first-step">Close</button>
+
+            <h2 class="sub-heading">
+               <span class="inline-block">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
+                   </svg>
+               </span>
+               <span>Bank e-check information</span>
+            </h2>
+
+            <table class="card-info text-center my-4">
+            <tbody>
+               <tr>
+                  <td>Account Number:</td>
+                  <td class="account_response">2042100029649812</td>
+               </tr>
+               <tr>
+                  <td>Routing Number:</td>
+                  <td class="routing_response">114994196</td>
+               </tr> 
+            </tbody>
+         </table>
+
+         <button type="button" class="btn btn-secondary w-full back-to-second-step">
+            <span>View Transactions</span>
+         </button>
+      </div>
+
+	</div>
+
+</section>
+
+<div class="g-modal">
+   <div class="g-modal-content">
+      <div class="w-[550px] max-w-[550px] bg-white border mx-auto my-10 p-8 rounded-2xl relative c-transition">
+         <div class="relative">
+            <h2 class="text-center"><span class="text-primary-50">Receipt </span>Submission Timeline</h2>
+            <button type="button" class="close-button g-close-button">
+               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+               </svg>
+            </button>
+            <div class="g-timeline-process">
+               <div class="g-timeline-status completed">
+                  <div>
+                     <div class="g-timeline-label">Receipt Uploaded</div>
+                     <div class="g-timeline-time">22 Jul 2021</div>
+                  </div>
+                  <i></i>
+                  <div class="normal-line"></div>
+               </div>
+               <div class="g-timeline-status">
+                  <div>
+                     <div class="g-timeline-label">Receipt Verified</div>
+                     <div class="g-timeline-time">23 Jul 2021</div>
+                  </div>
+                  <i></i>
+                  <div class="normal-line"></div>
+               </div>
+               <div class="g-timeline-status">
+                  <div>
+                     <div class="g-timeline-label">Payment Deposited</div>
+                     <div class="g-timeline-time">24 Jul 2021</div>
+                  </div>
+                  <i></i>
+                  <div class="normal-line"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+<footer>
+	<p class="text-center text-gray-500 text-sm pb-5">© 2022 Bristol-Myers Squibb Company</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="script.js"></script>
+
+<script>
+const modal = document.querySelector(".g-modal");
+const trigger = document.querySelector(".g-trigger");
+const closeButton = document.querySelector(".g-close-button");
+
+function toggleModal() {
+    modal.classList.toggle("show-modal");
+}
+
+function windowOnClick(event) {
+    if (event.target === modal) {
+        toggleModal();
+    }
+}
+
+trigger.addEventListener("click", toggleModal);
+closeButton.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);
+</script>
+
+</body>
+
+</html>

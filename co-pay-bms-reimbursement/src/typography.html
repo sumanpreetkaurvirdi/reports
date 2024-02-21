@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>BMS Reimbursement</title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="icon" type="image/vnd.microsoft.icon" href="images/favicon.ico" />
+   </link>
+   <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="images/favicon.ico" />
+   </link>
+</head>
+
+<body>
+
+<section>
+   <div class="max-w-screen-md bg-white border mx-auto my-10 p-8 rounded-2xl relative">
+
+      <div class="step1">
+
+         <h2 class="mb-5">Heading</h2>
+
+         <h1>Heading 1</h1>
+         <h2>Heading 2</h2>
+         <h3>Heading 3</h3>
+         <h4>Heading 4</h4>
+         <h5>Heading 5</h5>
+         <h6>Heading 6</h6>
+
+         <h2 class="mb-5">Buttons</h2>
+         <h3>Solid</h3>
+         <div class="flex flex-col gap-y-3">
+
+
+            <button type="submit" class="btn btn-secondary submit-animated w-full">
+               <svg class="loader" width="24" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
+                  <g fill="none" fill-rule="evenodd">
+                     <g transform="translate(1 1)" stroke-width="2">
+                        <circle stroke-opacity=".5" cx="18" cy="18" r="18"></circle>
+                        <path d="M36 18c0-9.94-8.06-18-18-18">
+                           <animateTransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="1s" repeatCount="indefinite"></animateTransform>
+                        </path>
+                     </g>
+                  </g>
+               </svg>
+               <span class="btn-text">SUBMIT</span>
+            </button>
+
+            <button type="submit" class="btn btn-secondary w-full">SUBMIT</button>
+            <button type="submit" class="btn btn-primary w-full">SUBMIT</button>
+         </div>
+         <div class="my-5 border-t "></div>
+         <h3>Outline</h3>
+         <div class="flex flex-col gap-y-3">
+            <button type="submit" class="btn btn-outline-secondary w-full">SUBMIT</button>
+            <button type="submit" class="btn btn-outline-primary w-full">SUBMIT</button>
+         </div>
+         <div class="my-5 border-t "></div>
+         <h3>Inline</h3>
+         <div class="flex gap-x-3">
+            <button type="submit" class="btn btn-secondary">SUBMIT</button>
+            <button type="submit" class="btn btn-primary">SUBMIT</button>
+            <button type="submit" class="btn btn-outline-secondary">SUBMIT</button>
+            <button type="submit" class="btn btn-outline-primary">SUBMIT</button>
+         </div>
+         <div class="my-5 border-t "></div>
+
+         <h2 class="text-center">WELCOME, <span class="text-primary-50">MARK</span></h2>
+         <p class="sub-heading text-center">Enter the following information to access the reimbursement program</p>
+         <form action="" class="mt-6">
+            <div class="relative mb-3">
+               <label for="email" class="block c-label">Enter Email</label>
+               <input type="email" id="email" class="block c-input w-full">
+            </div>
+            <div class="relative mb-3">
+               <label for="birthdate" class="block c-label">Enter Birthdate</label>
+               <input type="text" id="birthdate" class="block c-input w-full">
+            </div>
+            <div class="relative mb-3">
+               <label for="lname" class="block c-label">Enter Last Name</label>
+               <input type="text" id="lname" class="block c-input w-full">
+            </div>
+            <button type="submit" class="btn btn-secondary w-full mt-4">SUBMIT</button>
+         </form>
+      </div>
+
+      <div class="step2 relative">
+         <h2 class="text-center mb-6">2022 REIMBURSEMENT SUMMARY</h2>
+         <div class="flex content-between divide-x py-4">
+            <div class="flex flex-col items-center w-full">
+               <span class="text-2xl font-bold">$605.29</span>
+               <span class="text-sm text-primary-50 font-bold">PENDING PAYMENT</span>
+            </div>
+            <div class="flex flex-col items-center w-full">
+               <span class="text-2xl font-bold">$12,623.10</span>
+               <span class="text-sm text-primary-50 font-bold">TOTAL BENEFITS</span>
+            </div>
+         </div>
+
+         <div class="flex content-between gap-x-4 mb-4">
+            <div class="border rounded-md w-full flex items-center p-4 gap-x-4">
+               <div class="bg-slate-100 p-2 rounded-md">
+                  <img src="images/favicon.ico" alt="pending-payment-icon">
+               </div>
+               <div class="flex flex-col">
+                  <span class="text-sm text-gray-400">PENDING PAYMENT</span>
+                  <span class="text-2xl font-bold">$605.29</span>
+               </div>
+            </div>
+            <div class="border rounded-md w-full flex items-center p-4 gap-x-4">
+               <div class="bg-slate-100 p-2 rounded-md">
+                  <img src="images/favicon.ico" alt="total-benefits-icon">
+               </div>
+               <div class="flex flex-col">
+                  <span class="text-sm text-gray-400">TOTAL BENEFITS</span>
+                  <span class="text-2xl font-bold">$12,623.10</span>
+               </div>
+            </div>
+         </div>
+
+         <h2 class="text-center">TRANSACTIONS DURING BENEFIT PERIOD: 2022</h2>
+         <div class="transactions-table">
+            <div class="transaction-detail">
+               <div class="transaction-date">22 Jul 2021</div>
+               <div class="flex justify-between">
+                  <div class="flex items-center">
+                     <img class="transaction-icon" src="images/receipt-capture.png" alt="receipt-capture">
+                     <div>
+                        <p class="transaction-type">RECEIPT CAPTURED</p>
+                        <p class="transaction-label">ALLIANCE RX WALGREENS P00B00965415</p>
+                     </div>
+                  </div>
+                  <div class="transaction-amount credit-amount">$500.00</div>
+               </div>
+            </div>
+            <div class="transaction-detail">
+               <div class="transaction-date">22 Jul 2021</div>
+               <div class="flex justify-between">
+                  <div class="flex items-center">
+                     <img class="transaction-icon" src="images/payment-sent.png" alt="payment-sent">
+                     <div>
+                        <p class="transaction-type">PAYMENT SENT</p>
+                        <p class="transaction-label">ALLIANCE RX WALGREENS P00B00965415</p>
+                     </div>
+                  </div>
+                  <div class="transaction-amount">-$500.00</div>
+               </div>
+            </div>
+            <div class="transaction-detail">
+               <div class="transaction-date">22 Jul 2021</div>
+               <div class="flex justify-between">
+                  <div class="flex items-center">
+                     <img class="transaction-icon" src="images/payment-sent.png" alt="payment-sent">
+                     <div>
+                        <p class="transaction-type">PAYMENT SENT</p>
+                        <p class="transaction-label">ALLIANCE RX WALGREENS P00B00965415</p>
+                     </div>
+                  </div>
+                  <div class="transaction-amount">-$500.00</div>
+               </div>
+            </div>
+            <div class="transaction-detail">
+               <div class="transaction-date">22 Jul 2021</div>
+               <div class="flex justify-between">
+                  <div class="flex items-center">
+                     <img class="transaction-icon" src="images/receipt-capture.png" alt="receipt-capture">
+                     <div>
+                        <p class="transaction-type">RECEIPT CAPTURED</p>
+                        <p class="transaction-label">ALLIANCE RX WALGREENS P00B00965415</p>
+                     </div>
+                  </div>
+                  <div class="transaction-amount credit-amount">$500.00</div>
+               </div>
+            </div>
+            <div class="transaction-detail">
+               <div class="transaction-date">22 Jul 2021</div>
+               <div class="flex justify-between">
+                  <div class="flex items-center">
+                     <img class="transaction-icon" src="images/payment-sent.png" alt="payment-sent">
+                     <div>
+                        <p class="transaction-type">PAYMENT SENT</p>
+                        <p class="transaction-label">ALLIANCE RX WALGREENS P00B00965415</p>
+                     </div>
+                  </div>
+                  <div class="transaction-amount">-$500.00</div>
+               </div>
+            </div>
+            <div class="transaction-detail">
+               <div class="transaction-date">22 Jul 2021</div>
+               <div class="flex justify-between">
+                  <div class="flex items-center">
+                     <img class="transaction-icon" src="images/payment-sent.png" alt="payment-sent">
+                     <div>
+                        <p class="transaction-type">PAYMENT SENT</p>
+                        <p class="transaction-label">ALLIANCE RX WALGREENS P00B00965415</p>
+                     </div>
+                  </div>
+                  <div class="transaction-amount">-$500.00</div>
+               </div>
+            </div>
+            <div class="transaction-detail">
+               <div class="transaction-date">22 Jul 2021</div>
+               <div class="flex justify-between">
+                  <div class="flex items-center">
+                     <img class="transaction-icon" src="images/receipt-capture.png" alt="receipt-capture">
+                     <div>
+                        <p class="transaction-type">RECEIPT CAPTURED</p>
+                        <p class="transaction-label">ALLIANCE RX WALGREENS P00B00965415</p>
+                     </div>
+                  </div>
+                  <div class="transaction-amount credit-amount">$500.00</div>
+               </div>
+            </div>
+            <div class="transaction-detail">
+               <div class="transaction-date">22 Jul 2021</div>
+               <div class="flex justify-between">
+                  <div class="flex items-center">
+                     <img class="transaction-icon" src="images/receipt-capture.png" alt="receipt-capture">
+                     <div>
+                        <p class="transaction-type">RECEIPT CAPTURED</p>
+                        <p class="transaction-label">ALLIANCE RX WALGREENS P00B00965415</p>
+                     </div>
+                  </div>
+                  <div class="transaction-amount credit-amount">$500.00</div>
+               </div>
+            </div>
+            <div class="transaction-detail">
+               <p class="text-red-500">There is no Reimbursement Summary</p>
+            </div>
+         </div>
+         <a href="#" class="btn btn-secondary w-full">SUBMIT NEW RECEIPT</a>
+      </div>
+
+      <div class="step3 relative">
+         <h2 class="text-center">UPLOAD RECEIPT INFO</h2>
+         <p class="sub-heading text-center">Enter details to begin the reimbursement process</p>
+         <a href="#" class="close-button">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+               <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+             </svg>
+         </a>
+
+         <form action="" class="mt-6">
+            <div class="flex gap-x-2">
+               <div class="relative mb-3">
+                  <label for="date" class="block c-label">Date of Transaction</label>
+                  <input type="text" id="date" class="block c-input w-full">
+               </div>
+               <div class="relative mb-3">
+                  <label for="amount" class="block c-label">Amount</label>
+                  <input type="number" id="amount" class="block c-input w-full">
+               </div>
+            </div>
+            <div class="flex gap-x-2">
+               <div class="relative mb-3 w-full">
+                  <label for="location" class="block c-label">Pharmacy Location</label>
+                  <input type="text" id="location" class="block c-input w-full">
+               </div>
+               <div class="w-full"></div>
+            </div>
+            <div class="flex gap-x-2">
+               <div class="relative mb-3 w-full">
+                  <label for="prescribers-lname" class="block c-label">Prescribers Last Name</label>
+                  <input type="text" id="prescribers-lname" class="block c-input w-full">
+               </div>
+               <div class="w-full"></div>
+            </div>
+            <a href="#" class="btn btn-secondary w-full mb-3">SUBMIT NEW RECEIPT</a>
+         </form>
+
+      </div>
+
+      <div class="step4 relative">
+         <h2 class="text-center">RECEIPT RECEIVED</h2>
+         <p class="sub-heading text-center">Success, your receipt has been received and upon verification <span class="text-primary-50 font-bold">$1234.56</span> will be sent to your <span class="text-primary-50 font-bold">Citibank</span> account via ACH.</p>
+         <a href="#" class="close-button">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+               <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+             </svg>
+         </a>
+
+         <img class="mx-auto my-10" src="images/invoice.png" alt="Invoice">
+
+         <a href="#" class="flex justify-center my-3 gap-x-2 items-center hover:text-primary-50">
+            <span>
+               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                </svg>
+            </span>
+            <span>EDIT BANK DETAILS</span>
+         </a>
+
+         <a href="#" class="btn btn-secondary w-full mb-3">
+            <span>
+               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 576 512"><path d="M279.6 160.4C282.4 160.1 285.2 160 288 160C341 160 384 202.1 384 256C384 309 341 352 288 352C234.1 352 192 309 192 256C192 253.2 192.1 250.4 192.4 247.6C201.7 252.1 212.5 256 224 256C259.3 256 288 227.3 288 192C288 180.5 284.1 169.7 279.6 160.4zM480.6 112.6C527.4 156 558.7 207.1 573.5 243.7C576.8 251.6 576.8 260.4 573.5 268.3C558.7 304 527.4 355.1 480.6 399.4C433.5 443.2 368.8 480 288 480C207.2 480 142.5 443.2 95.42 399.4C48.62 355.1 17.34 304 2.461 268.3C-.8205 260.4-.8205 251.6 2.461 243.7C17.34 207.1 48.62 156 95.42 112.6C142.5 68.84 207.2 32 288 32C368.8 32 433.5 68.84 480.6 112.6V112.6zM288 112C208.5 112 144 176.5 144 256C144 335.5 208.5 400 288 400C367.5 400 432 335.5 432 256C432 176.5 367.5 112 288 112z" class="fill-current"/></svg>
+            </span>
+            <span>VIEW SUMMARY</span>
+         </a>
+      </div>
+
+      <div class="step6 relative">
+         <h2>Step 6</h2>
+         <a href="#" class="back-button">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+               <path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+             </svg>
+             <span class="ml-1">Go Back</span>
+         </a>
+      </div>
+
+      <div class="hidden">
+         <h2 class="text-center">2022 REIMBURSEMENT SUMMARY</h2>
+         <!-- Transactions Table -->
+         <div class="transactions-table">
+            <div class="transaction-detail">
+               <div class="transaction-date">22 Jul 2021</div>
+               <div class="flex justify-between">
+                  <div class="flex items-center">
+                     <img class="transaction-icon" src="images/receipt-capture.png" alt="receipt-capture">
+                     <div>
+                        <p class="transaction-type">RECEIPT CAPTURED</p>
+                        <p class="transaction-label">ALLIANCE RX WALGREENS P00B00965415</p>
+                     </div>
+                  </div>
+                  <div class="transaction-amount">$500.00</div>
+               </div>
+            </div>
+            <div class="transaction-detail">
+               <div class="transaction-date">22 Jul 2021</div>
+               <div class="flex justify-between">
+                  <div class="flex items-center">
+                     <img class="transaction-icon" src="images/payment-sent.png" alt="payment-sent">
+                     <div>
+                        <p class="transaction-type">PAYMENT SENT</p>
+                        <p class="transaction-label">ALLIANCE RX WALGREENS P00B00965415</p>
+                     </div>
+                  </div>
+                  <div class="transaction-amount">$500.00</div>
+               </div>
+            </div>
+            <div class="transaction-detail">
+               <div class="transaction-date">22 Jul 2021</div>
+               <div class="flex justify-between">
+                  <div class="flex items-center">
+                     <img class="transaction-icon" src="images/payment-sent.png" alt="payment-sent">
+                     <div>
+                        <p class="transaction-type">PAYMENT SENT</p>
+                        <p class="transaction-label">ALLIANCE RX WALGREENS P00B00965415</p>
+                     </div>
+                  </div>
+                  <div class="transaction-amount">$500.00</div>
+               </div>
+            </div>
+            <div class="transaction-detail">
+               <div class="transaction-date">22 Jul 2021</div>
+               <div class="flex justify-between">
+                  <div class="flex items-center">
+                     <img class="transaction-icon" src="images/receipt-capture.png" alt="receipt-capture">
+                     <div>
+                        <p class="transaction-type">RECEIPT CAPTURED</p>
+                        <p class="transaction-label">ALLIANCE RX WALGREENS P00B00965415</p>
+                     </div>
+                  </div>
+                  <div class="transaction-amount">$500.00</div>
+               </div>
+            </div>
+            <div class="transaction-detail">
+               <div class="transaction-date">22 Jul 2021</div>
+               <div class="flex justify-between">
+                  <div class="flex items-center">
+                     <img class="transaction-icon" src="images/payment-sent.png" alt="payment-sent">
+                     <div>
+                        <p class="transaction-type">PAYMENT SENT</p>
+                        <p class="transaction-label">ALLIANCE RX WALGREENS P00B00965415</p>
+                     </div>
+                  </div>
+                  <div class="transaction-amount">$500.00</div>
+               </div>
+            </div>
+            <div class="transaction-detail">
+               <div class="transaction-date">22 Jul 2021</div>
+               <div class="flex justify-between">
+                  <div class="flex items-center">
+                     <img class="transaction-icon" src="images/payment-sent.png" alt="payment-sent">
+                     <div>
+                        <p class="transaction-type">PAYMENT SENT</p>
+                        <p class="transaction-label">ALLIANCE RX WALGREENS P00B00965415</p>
+                     </div>
+                  </div>
+                  <div class="transaction-amount">$500.00</div>
+               </div>
+            </div>
+            <div class="transaction-detail">
+               <div class="transaction-date">22 Jul 2021</div>
+               <div class="flex justify-between">
+                  <div class="flex items-center">
+                     <img class="transaction-icon" src="images/receipt-capture.png" alt="receipt-capture">
+                     <div>
+                        <p class="transaction-type">RECEIPT CAPTURED</p>
+                        <p class="transaction-label">ALLIANCE RX WALGREENS P00B00965415</p>
+                     </div>
+                  </div>
+                  <div class="transaction-amount">$500.00</div>
+               </div>
+            </div>
+            <div class="transaction-detail">
+               <div class="transaction-date">22 Jul 2021</div>
+               <div class="flex justify-between">
+                  <div class="flex items-center">
+                     <img class="transaction-icon" src="images/receipt-capture.png" alt="receipt-capture">
+                     <div>
+                        <p class="transaction-type">RECEIPT CAPTURED</p>
+                        <p class="transaction-label">ALLIANCE RX WALGREENS P00B00965415</p>
+                     </div>
+                  </div>
+                  <div class="transaction-amount">$500.00</div>
+               </div>
+            </div>
+         </div>
+         <a href="#" class="btn btn-secondary w-full mb-3">SUBMIT NEW RECEIPT</a>
+         <a href="#" class="btn btn-outline-secondary w-full">CLOSE</a>
+         <br>
+         <a href="#" class="close-button">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+               <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+             </svg>
+         </a>
+      </div>
+   </div>
+</section>
+
+<footer>
+   <p class="text-center text-gray-500 text-sm">© 2022 Bristol-Myers Squibb Company</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+
+</html>
