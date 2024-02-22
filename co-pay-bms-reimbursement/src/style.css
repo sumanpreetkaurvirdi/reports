@@ -683,7 +683,7 @@ h3, .h3 {
 
 .c-input:focus {
   --tw-border-opacity: 1;
-  border-color: rgb(198 64 190 / var(--tw-border-opacity));
+  border-color: #1c355d;
 }
 
 .c-label {
@@ -3432,7 +3432,7 @@ main.flex > div{
 .custom-table th,
 .custom-table td{
 padding: 8px 10px;
-
+font-size: 14px;
 }
 .custom-table tr:nth-child(even){
   background-color: #f7f7f7;
