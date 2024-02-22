@@ -668,7 +668,7 @@ h3, .h3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   font-size: 1rem;
-  line-height: .75rem;
+  /* line-height: .75rem; */
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
   outline: 2px solid transparent;
@@ -678,6 +678,7 @@ h3, .h3 {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
   transition-duration: 200ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  height: 48px;
 }
 
 .c-input:focus {
@@ -3260,6 +3261,7 @@ table.card-info td:not(:last-child) {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  gap:2rem;
 }
 .numeric-list-style{
   
@@ -3280,16 +3282,22 @@ table.card-info td:not(:last-child) {
 }
 .payment-list .payment-item{
   
-  align-items: center;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 30%;
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 10px;
   border: 2px solid #1c355d;
   color: #1c355d;
   cursor: pointer;
   font-weight: 600;
+}
+.payment-list .payment-item i {
+  font-size: 28px;
+  margin-bottom: 8px;
 }
 .payment-list .payment-item.active,
 .payment-list .payment-item:hover{
@@ -3306,4 +3314,218 @@ table.card-info td:not(:last-child) {
     border-radius: 10px;
     flex-flow: wrap;
     display: flex;
+}
+main.flex{
+  max-width: 1280px;
+  margin: 2rem auto;
+  justify-content: space-between;
+  flex-flow: wrap;
+  align-items: flex-start;
+  gap: 2rem;
+}
+main.flex > div{
+  width: 48%;
+}
+
+.payment-steps{
+  display: flex;
+  justify-content: space-between;
+  counter-reset: section;
+  position: relative;
+  margin-bottom: 2rem;
+  padding: 0 2rem;
+
+}
+.payment-steps::before{
+  width: 100%;
+  height: 1px;
+  background-color: #707070;
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 15px;
+  margin: auto;
+  opacity: .5;
+}
+.payment-steps .step.active{
+ color: #1c355d;
+}
+.payment-steps .step.active::after{
+  background-color: #1c355d;
+  color: white;
+}
+.payment-steps .step i{
+  display: none;
+}
+
+.payment-steps .step.complete i{
+  display: flex;
+}
+.payment-steps .step.complete span{
+  display: none;
+}
+.payment-steps .step span{
+  border: 3px solid #1c355d;
+  color: #1c355d;
+  background: white;
+}
+.payment-steps .step span, .payment-steps .step.active span, .fa-check{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  z-index: 1;
+  margin-top: 1rem;
+}
+.payment-steps .step.active span{
+  color: white;
+  background-color: #1c355d;
+}
+.fa-check{
+  border: 3px solid #29a758;
+  color: #29a758;
+  background: white;
+}
+.payment-steps .step{
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  color: #707070;
+  font-weight: 600;
+  font-size: 18px;
+
+}
+
+.radio-toolbar input[type="radio"] {
+  display: none;
+}
+.radio-toolbar{
+  padding-top: 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+.radio-toolbar .radio-label {
+  background-color: white;
+  padding: 2px 10px;
+  cursor: pointer;
+  color: #1c355d;
+  border: 2px solid #1c355d;
+  border-radius: 6px;
+}
+
+.radio-toolbar input[type="radio"]:checked+.radio-label {
+  background-color: #1c355d;
+  color: white;
+}
+.custom-table{
+  display: flex;
+  overflow: auto;
+}
+.custom-table th{
+  white-space: nowrap;
+  background: #d6d6d6;
+  font-weight: 500;
+}
+.custom-table th,
+.custom-table td{
+padding: 8px 10px;
+
+}
+.custom-table tr:nth-child(even){
+  background-color: #f7f7f7;
+}
+
+
+.no-transactions-message {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.no-transactions-message svg {
+	width: 30px;
+	stroke: #4b5563;
+	margin-right: 10px;
+}
+
+.no-transactions-text {
+	font-size: 16px;
+	font-weight: 500;
+	color: #4b5563;
+	line-height: 1.2;
+	margin: 0;
+}
+
+.transactions-benefits-amount,
+.transactions-pending-amount {
+	padding: 14px 40px;
+	border-radius: 10px;
+	color: #fff;
+}
+
+.transactions-benefits-amount {
+	background: #70ae4f;
+}
+
+.transactions-pending-amount {
+	background: #e9bc33;
+}
+
+.bank-name {
+	font-size: 20px;
+	font-weight: 500;
+}
+
+/* Transactions Header */
+.transactions-input {
+	display: flex;
+	text-align: center;
+	/* background-color: #f5f6fd; */
+	border-radius: 8px;
+	padding: 20px 5px;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.transactions-input-amount {
+	font-weight: 600;
+	font-size: 26px;
+	line-height: 1.2;
+	margin-bottom: 2px;
+}
+
+.transactions-input-text {
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.transactions-table {
+	margin-bottom: 1.5rem;
+	margin-right: -0.5rem;
+	max-height: 355px;
+	border: 1px solid #e5e7eb;
+	box-shadow: 0 0 14px rgba(0, 0, 0, .10);
+	padding: 12px 10px;
+	border-radius: 6px;
+}
+
+.transactions-table {
+	overflow-y: auto;
+	padding-right: 0.5rem;
+	scrollbar-width: 0;
+}
+
+.transactions-table::-webkit-scrollbar {
+	background-color: transparent;
+	width: 12px;
+}
+
+.transactions-table::-webkit-scrollbar-thumb {
+	border-radius: 99px;
+	border: 3px solid #fff;
+	--tw-bg-opacity: 1;
+	background-color: rgb(142 154 175 / var(--tw-bg-opacity));
 }
