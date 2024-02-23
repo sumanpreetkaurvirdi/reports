@@ -448,7 +448,7 @@ h3, .h3 {
 }
 
 .sub-heading {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.4;
 }
@@ -1305,9 +1305,10 @@ table.card-info td:not(:last-child) {
 /* Credit Card */
 
 .credit-card {
-  width: 100%;
+  width: 60%;
   font-family: 'Open Sans', sans-serif;
   height: auto;
+  margin: auto;
 }
 
 .credit-card-outer {
@@ -3283,6 +3284,10 @@ table.card-info td:not(:last-child) {
   
   list-style: number;
   margin-left: 1rem;
+  font-size: 15px;
+}
+p{
+  font-size: 15px;
 }
 .numeric-list-style > li{
   
