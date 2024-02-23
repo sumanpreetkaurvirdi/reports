@@ -103,7 +103,7 @@
                 </div>
                 <div class="w-full max-w-[800px] bg-white border mx-auto sm:p-8 p-6 rounded-2xl relative c-transition">
                     <h2 class="text-center">Insurance Information</h2>
-                    <h3 class="sub-heading text-center">Please enter your your primary care insurance plan</h3>
+                    <h3 class="sub-heading text-center">Please enter your primary care insurance plan</h3>
                     <form action="" class="mt-6 rowwise-form">
                         <div class="relative mb-3">
                             <label for="email" class="block c-label">BIN
@@ -191,41 +191,35 @@
                     </form>
                 </div>
             </div>
-            <div>
+            <div style="width: 83%;" class="m-auto">
                 <div class="w-full max-w-[800px] bg-white border mx-auto sm:p-8 p-6 rounded-2xl relative c-transition">
                     <div class="transactions-input">
-                        <div>
+                        <div class="yellow-card">
                             <div class="transactions-input-amount">$605.29</div>
                             <div class="transactions-input-text">Pending Payment</div>
                         </div>
-                        <div>
+                        <div class="green-card" style="margin: 0 auto 0 1rem;">
                             <div class="transactions-input-amount">$12,623.10</div>
                             <div class="transactions-input-text">Total Benefits</div>
                         </div>
+                        <button class="btn btn-secondary">
+                            Submit Claim
+                        </button>
                     </div>
-                    <h3 class="text-center mb-4">Transactions During Benefit
+                    <h2 class="text-center mt-4 mb-4">Transactions During Benefit
                         <br> Period: 2023
-                    </h3>
-                    <div class="bg-white border custom-table rounded-xl">
+                    </h2>
+                   <div class="bg-white border custom-table rounded-xl">
                         <table>
                             <tr>
                                 <th>
                                     Claim No.
                                 </th>
                                 <th>
-                                    Submission date
-                                </th>
-                                <th>
                                     Date of Service
                                 </th>
                                 <th>
                                     Medication
-                                </th>
-                                <th>
-                                    Outcome Reason
-                                </th>
-                                <th>
-                                    Claim Status
                                 </th>
                                 <th>
                                     Reimbursement Amount
@@ -238,11 +232,8 @@
                                 </th>
                             </tr>
                             <tr>
-                                <td>
+                                <td class="g-trigger">
                                     CLA-123
-                                </td>
-                                <td>
-                                    12/15/2023
                                 </td>
                                 <td>
                                     12/15/2023
@@ -250,19 +241,34 @@
                                 <td>
                                     Mounjaro
                                 </td>
-                                <td>
-                                    Completed
-                                </td>
-                                <td>
-                                    Approved
-                                </td>
-                                <td class="text-center">
+                                <td class="text-center green-text bold">
                                     $500
                                 </td>
                                 <td class="text-center">
                                     ACH
                                 </td>
+                                <td class="text-center">
+                                    12/15/2023
+                                </td>
+                            </tr>
+                            
+                            <tr>
                                 <td>
+                                    CLA-123
+                                </td>
+                                <td>
+                                    12/15/2023
+                                </td>
+                                <td>
+                                    Mounjaro
+                                </td>
+                                <td class="text-center green-text bold">
+                                    $500
+                                </td>
+                                <td class="text-center">
+                                    ACH
+                                </td>
+                                <td class="text-center">
                                     12/15/2023
                                 </td>
                             </tr>
@@ -274,24 +280,15 @@
                                     12/15/2023
                                 </td>
                                 <td>
-                                    12/15/2023
-                                </td>
-                                <td>
                                     Mounjaro
                                 </td>
-                                <td>
-                                    Completed
-                                </td>
-                                <td>
-                                    Approved
-                                </td>
-                                <td class="text-center">
+                                <td class="text-center green-text bold">
                                     $500
                                 </td>
                                 <td class="text-center">
                                     ACH
                                 </td>
-                                <td>
+                                <td class="text-center">
                                     12/15/2023
                                 </td>
                             </tr>
@@ -303,24 +300,15 @@
                                     12/15/2023
                                 </td>
                                 <td>
-                                    12/15/2023
-                                </td>
-                                <td>
                                     Mounjaro
                                 </td>
-                                <td>
-                                    Completed
-                                </td>
-                                <td>
-                                    Approved
-                                </td>
-                                <td class="text-center">
+                                <td class="text-center green-text bold">
                                     $500
                                 </td>
                                 <td class="text-center">
                                     ACH
                                 </td>
-                                <td>
+                                <td class="text-center">
                                     12/15/2023
                                 </td>
                             </tr>
@@ -332,111 +320,15 @@
                                     12/15/2023
                                 </td>
                                 <td>
-                                    12/15/2023
-                                </td>
-                                <td>
                                     Mounjaro
                                 </td>
-                                <td>
-                                    Completed
-                                </td>
-                                <td>
-                                    Approved
-                                </td>
-                                <td class="text-center">
+                                <td class="text-center green-text bold">
                                     $500
                                 </td>
                                 <td class="text-center">
                                     ACH
                                 </td>
-                                <td>
-                                    12/15/2023
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    CLA-123
-                                </td>
-                                <td>
-                                    12/15/2023
-                                </td>
-                                <td>
-                                    12/15/2023
-                                </td>
-                                <td>
-                                    Mounjaro
-                                </td>
-                                <td>
-                                    Completed
-                                </td>
-                                <td>
-                                    Approved
-                                </td>
                                 <td class="text-center">
-                                    $500
-                                </td>
-                                <td class="text-center">
-                                    ACH
-                                </td>
-                                <td>
-                                    12/15/2023
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    CLA-123
-                                </td>
-                                <td>
-                                    12/15/2023
-                                </td>
-                                <td>
-                                    12/15/2023
-                                </td>
-                                <td>
-                                    Mounjaro
-                                </td>
-                                <td>
-                                    Completed
-                                </td>
-                                <td>
-                                    Approved
-                                </td>
-                                <td class="text-center">
-                                    $500
-                                </td>
-                                <td class="text-center">
-                                    ACH
-                                </td>
-                                <td>
-                                    12/15/2023
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    CLA-123
-                                </td>
-                                <td>
-                                    12/15/2023
-                                </td>
-                                <td>
-                                    12/15/2023
-                                </td>
-                                <td>
-                                    Mounjaro
-                                </td>
-                                <td>
-                                    Completed
-                                </td>
-                                <td>
-                                    Approved
-                                </td>
-                                <td class="text-center">
-                                    $500
-                                </td>
-                                <td class="text-center">
-                                    ACH
-                                </td>
-                                <td>
                                     12/15/2023
                                 </td>
                             </tr>
@@ -1133,7 +1025,66 @@
                 <i>Evernsana</i>
             </p>
         </footer>
+        <div class="g-modal">
+            <div class="g-modal-content">
+               <div class="w-[550px] max-w-[550px] bg-white border mx-auto my-10 p-8 rounded-2xl relative c-transition">
+                  <div class="relative">
+                     <h2 class="text-center">Receipt Submission Timeline</h2>
+                     <button type="button" class="close-button g-close-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                           <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                     </button>
+                     <div class="g-timeline-process">
+                        <div class="g-timeline-status completed">
+                           <div>
+                              <div class="g-timeline-label">Submission Date</div>
+                              <div class="g-timeline-time">15 dec 2023</div>
+                           </div>
+                           <i></i>
+                           <div class="normal-line"></div>
+                        </div>
+                        <div class="g-timeline-status completed">
+                           <div>
+                              <div class="g-timeline-label">Outcome Reason </div>
+                              <div class="g-timeline-time">Completed</div>
+                           </div>
+                           <i></i>
+                           <div class="normal-line"></div>
+                        </div>
+                        <div class="g-timeline-status rejected">
+                           <div>
+                              <div class="g-timeline-label">Claim Status</div>
+                              <div class="g-timeline-time">Rejected</div>
+                           </div>
+                           <i></i>
+                           <div class="normal-line"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="script.js"></script>
+        <script>
+            const modal = document.querySelector(".g-modal");
+            const trigger = document.querySelector(".g-trigger");
+            const closeButton = document.querySelector(".g-close-button");
+            
+            function toggleModal() {
+                modal.classList.toggle("show-modal");
+            }
+            
+            function windowOnClick(event) {
+                if (event.target === modal) {
+                    toggleModal();
+                }
+            }
+            
+            trigger.addEventListener("click", toggleModal);
+            closeButton.addEventListener("click", toggleModal);
+            window.addEventListener("click", windowOnClick);
+            </script>
     </body>
 </html>
