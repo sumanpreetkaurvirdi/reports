@@ -3456,6 +3456,7 @@ main.flex > div{
 }
 .custom-table tr td:first-child{
   font-weight: 600;
+  text-align: left;
 }
 .custom-table tr td:first-child:hover{
   color: #1c355d;
@@ -3464,6 +3465,7 @@ main.flex > div{
 .custom-table td{
 padding: 8px 10px;
 font-size: 14px;
+text-align: center;
 }
 .custom-table tr:nth-child(even){
   background-color: #f5f6fd;
