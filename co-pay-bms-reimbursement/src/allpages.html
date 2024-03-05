@@ -157,15 +157,23 @@
                     <h2 class="text-center">OTP</h2>
                     <div class="relative mb-3">
                      
-                        <h3 class="sub-heading text-center mt-3">Enter Validation code received in Email</h3>
+                        <h3 class="sub-heading text-center mt-3 mb-3">Enter Validation code received in Email</h3>
 
                         <!-- <label for="" class="block c-label">Enter Validation code received in Email</label> -->
-                        <input
+                        <!-- <input
                             type="number"
                             id="email"
                             class="block c-input w-full mt-6"
                             placeholder="00000"
-                        >
+                        > -->
+                        <div class="otp-field">
+                            <input type="text" maxlength="1" class="c-input" />
+                            <input type="text" maxlength="1"  class="c-input" />
+                            <input class="space c-input" type="text" maxlength="1"/>
+                            <input type="text" maxlength="1" class="c-input" />
+                            <input type="text" maxlength="1" class="c-input" />
+                            <input type="text" maxlength="1" class="c-input" />
+                        </div>
                     </div>
                     <button type="button" class="btn btn-secondary w-full mt-6">Okay</button>
                 </div>
@@ -1383,4 +1391,48 @@
 
             </script>
     </body>
+    
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+    $(document).ready(function() {
+    $(".otp-field input").each(function(index) {
+        $(this).data("index", index);
+        $(this).on("keyup", handleOtp);
+        $(this).on("paste", handleOnPasteOtp);
+    });
+});
+
+function handleOtp(e) {
+    const input = $(this);
+    let value = input.val();
+    let isValidInput = value.match(/[0-9a-z]/gi);
+    input.val("");
+    input.val(isValidInput ? value[0] : "");
+
+    let fieldIndex = input.data("index");
+    const inputs = $(".otp-field input");
+    if (fieldIndex < inputs.length - 1 && isValidInput) {
+        input.next().focus();
+    }
+
+    if (e.key === "Backspace" && fieldIndex > 0) {
+        input.prev().focus();
+    }
+}
+
+function handleOnPasteOtp(e) {
+    const data = e.originalEvent.clipboardData.getData("text");
+    const value = data.split("");
+    const inputs = $(".otp-field input");
+    if (value.length === inputs.length) {
+        inputs.each(function(index) {
+            $(this).val(value[index]);
+        });
+        submit();
+    }
+}
+
+
+
+</script>
 </html>

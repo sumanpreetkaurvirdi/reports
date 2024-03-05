@@ -24,7 +24,17 @@
 ::after {
   --tw-content: '';
 }
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 /*
 1. Use a consistent sensible line-height in all browsers.
 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -3585,4 +3595,36 @@ text-align: center;
 }
 .bold{
   font-weight: bold;
+}
+
+
+/* COde for otp */
+
+.otp-field {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.otp-field input {
+ 
+  width: 54px;
+  font-size: 32px;
+  text-align: center;
+  border-radius: 5px;
+  margin: 2px;
+  font-weight: bold;
+  outline: none;
+  transition: all 0.1s;
+}
+
+
+
+.disabled {
+  opacity: 0.5;
+}
+
+.space {
+  margin-right: 1rem !important;
 }
