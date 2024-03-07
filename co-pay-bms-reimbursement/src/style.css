@@ -2134,6 +2134,9 @@ table.card-info td:not(:last-child) {
 .items-center {
   align-items: center;
 }
+.items-end {
+  align-items: end;
+}
 
 .items-baseline {
   align-items: baseline;
@@ -2142,6 +2145,7 @@ table.card-info td:not(:last-child) {
 .justify-center {
   justify-content: center;
 }
+
 
 .justify-between {
   justify-content: space-between;
