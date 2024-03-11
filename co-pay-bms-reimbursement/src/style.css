@@ -3612,15 +3612,17 @@ text-align: center;
 }
 
 .otp-field input {
- 
-  width: 54px;
-  font-size: 32px;
+    width: 45px;
+    height: 45px;
+  font-size:26px;
   text-align: center;
   border-radius: 5px;
   margin: 2px;
   font-weight: bold;
   outline: none;
   transition: all 0.1s;
+  padding: 10px 6px !important;
+
 }
 
 
@@ -3685,7 +3687,7 @@ text-align: center;
     justify-content: center;
   }
   .payment-list .payment-item{
-    width: 47%;
+    width: 46%;
     min-height: 112px;
   }
 }
