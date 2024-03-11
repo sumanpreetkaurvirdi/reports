@@ -3645,23 +3645,17 @@ text-align: center;
   width: 100%;
 }
 @media(max-width:767px){
+  
   .transactions-input{
     
     flex-flow: wrap;
-    justify-content: center;
-    gap: 10px;
+    justify-content: space-around;
+    row-gap: 10px;
 
   }
   .green-card{
     margin: 0!important;
   }
-  .yellow-card, .green-card{
-    min-width: 136px;
-  }
-  .transactions-input-amount{
-    font-size: 22px;
-  }
-  
   .rowwise-form > div{
     width: 100%;
   }
@@ -3696,6 +3690,22 @@ text-align: center;
     width: 100%;
   }
 }
+@media(max-width:1024px){
+  
+  .yellow-card, .green-card{
+    min-width: 136px;
+  }
+  .transactions-input-amount{
+    font-size: 22px;
+  }
+}
+@media (min-width:769px) {
+  .transaction-div, .welcome-div{
+
+    min-width: 768px!important;
+    margin: auto;
+
+  }  }
 @media (min-width:1024px) {
   
 main.flex > div{
