@@ -3635,11 +3635,11 @@ text-align: center;
   margin-right: 1rem !important;
 }
 .vertical-layout .payment-list{
-  width: 28%;
+  width: 30%;
   gap: 1rem;
 }
 .vertical-layout .payment-content{
-  width: 67%;
+  width: 65%;
 }
 .vertical-layout .payment-list .payment-item{
   width: 100%;
