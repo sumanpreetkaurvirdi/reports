@@ -699,11 +699,12 @@ h3, .h3 {
 .c-label {
   margin-bottom: 0.25rem;
   display: inline-block;
-  font-size: 1rem;
+  /* font-size: 1rem; */
   font-weight: 500;
   line-height: 1.75rem;
   --tw-text-opacity: 1;
   color: rgb(24 24 27 / var(--tw-text-opacity));
+  font-size: 15px;
 }
 
 /* Receipt Icon Animation */
@@ -3292,7 +3293,7 @@ table.card-info td:not(:last-child) {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  gap:2rem;
+  gap:1rem;
 }
 .numeric-list-style{
   
@@ -3357,9 +3358,8 @@ main.flex{
   flex-flow: wrap;
   align-items: flex-start;
   gap: 2rem;
-}
-main.flex > div{
-  width: 48%;
+  padding: 0 1rem;
+
 }
 
 .payment-steps{
@@ -3631,4 +3631,72 @@ text-align: center;
 
 .space {
   margin-right: 1rem !important;
+}
+.vertical-layout .payment-list{
+  width: 28%;
+  gap: 1rem;
+}
+.vertical-layout .payment-content{
+  width: 67%;
+}
+.vertical-layout .payment-list .payment-item{
+  width: 100%;
+}
+@media(max-width:767px){
+  .transactions-input{
+    
+    flex-flow: wrap;
+    justify-content: center;
+    gap: 10px;
+
+  }
+  .green-card{
+    margin: 0!important;
+  }
+  .yellow-card, .green-card{
+    min-width: 136px;
+  }
+  .transactions-input-amount{
+    font-size: 22px;
+  }
+  
+  .rowwise-form > div{
+    width: 100%;
+  }
+  .vertical-layout{
+    flex-flow: wrap;
+  }
+  .vertical-layout .payment-list,
+  .vertical-layout .payment-content{
+    width: 100%;
+  }
+  .payment-steps .step{
+    font-size: 15px;
+  }
+  .payment-list .payment-item i{
+    font-size: 20px;
+  }
+  .vertical-layout .payment-list{
+    display: flex;
+    
+  }
+  .payment-list{
+    gap: 1rem;
+    justify-content: center;
+  }
+  .payment-list .payment-item{
+    width: 47%;
+    min-height: 112px;
+  }
+}
+@media(max-width:1023px){
+  main.flex > div{
+    width: 100%;
+  }
+}
+@media (min-width:1024px) {
+  
+main.flex > div{
+  width: 48%;
+}
 }
