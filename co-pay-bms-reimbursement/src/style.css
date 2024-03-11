@@ -3720,7 +3720,6 @@ main.flex > div{
 }
 .final-cards{
   justify-content: space-around;
-  row-gap: 1rem;
 }
 }
 @media (min-width:1366px) {
@@ -3736,6 +3735,7 @@ main.flex > div{
   width: 100%;
   flex-wrap: wrap; 
   margin-bottom: 2rem;
+  row-gap: 1rem;
 }
 
 .disabled {
