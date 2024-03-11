@@ -3699,16 +3699,155 @@ text-align: center;
     font-size: 22px;
   }
 }
-@media (min-width:769px) {
+@media (min-width:768px) {
   .transaction-div, .welcome-div{
 
-    min-width: 768px!important;
+    min-width: 730px!important;
     margin: auto;
 
-  }  }
+  }  
+  .radio-group .radio-result{
+    width: calc(100% - 215px);
+  }
+}
 @media (min-width:1024px) {
   
 main.flex > div{
   width: 48%;
 }
+.final-cards > div{
+  width: 46%;
+}
+.final-cards{
+  justify-content: space-around;
+  row-gap: 1rem;
+}
+}
+@media (min-width:1366px) {
+  
+.final-cards > div{
+  width: 32%;
+}
+}
+
+
+.final-cards{
+  display: flex; 
+  width: 100%;
+  flex-wrap: wrap; 
+  margin-bottom: 2rem;
+}
+
+.disabled {
+	opacity: 0.5;
+}
+
+.space {
+	margin-right: 1rem !important;
+}
+
+
+/* Start Radio Group */
+.radio-group .radio {
+	display: flex;
+	align-items: center;
+  flex-flow: wrap;
+}
+
+.radio-group .radio+.radio {
+	margin-top: 20px;
+	padding-top: 20px;
+	border-top: 1px solid #ddd;
+	position: relative;
+}
+
+.radio-group .radio-btn {
+	width: 215px;
+	display: flex;
+	flex: none;
+	align-items: center;
+}
+
+.radio-group .radio-btn input {
+	margin-right: 10px;
+	color: #29a758;
+	width: 16px;
+	height: 16px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	padding: 0;
+	-webkit-print-color-adjust: exact;
+	print-color-adjust: exact;
+	display: inline-block;
+	vertical-align: middle;
+	background-origin: border-box;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	flex-shrink: 0;
+	background-color: #fff;
+	border-color: #6b7280;
+	border-width: 1px;
+	border-radius: 10px;
+}
+
+.radio-group .radio-btn input:checked {
+	background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
+	border-color: transparent;
+	background-color: currentColor;
+	background-size: 100% 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.radio-group .radio-btn input:checked+label {
+	color:#29a758;
+}
+
+.radio-group .radio-btn input:checked+label .payment-icon {
+	color: #29a758;
+}
+
+.radio-group .radio-btn label {
+	display: flex;
+	align-items: center;
+}
+
+.radio-group .radio-btn label .payment-icon {
+	font-size: 22px;
+	margin-right: 5px;
+	color: #1c355d;
+}
+
+.radio-group .radio-btn label .type-active {
+	font-size: 18px;
+	margin-left: 5px;
+	display: none;
+	color: #29a758;
+}
+
+input[type="radio"]:checked+label .type-active {
+	display: block;
+}
+
+/* Start Radio Group */
+
+.rotate-icon {
+	width: 1.5rem;
+	animation: mymove 1.5s linear infinite;
+}
+
+@keyframes mymove {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.btn-secondary:disabled {
+	cursor: not-allowed;
+	opacity: 0.8;
 }
