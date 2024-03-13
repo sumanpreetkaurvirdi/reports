@@ -3851,3 +3851,10 @@ input[type="radio"]:checked+label .type-active {
 	cursor: not-allowed;
 	opacity: 0.8;
 }
+.fa-circle-arrow-left{
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 22px;
+  color: #29a758;
+}
