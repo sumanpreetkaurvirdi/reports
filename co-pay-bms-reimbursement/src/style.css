@@ -3858,3 +3858,20 @@ input[type="radio"]:checked+label .type-active {
   font-size: 22px;
   color: #1d355e;
 }
+.logo-container{
+  border-radius: 10px 10px 0 0;
+  
+  background: #1d355e;
+}
+.logo-container img{
+  max-width: 120px;
+}
+.logo-container ~ h2,
+.logo-container ~ h3{
+  
+  padding: 0 26px;
+}
+.logo-container ~ .both-btns{
+  
+  padding: 0 26px 26px;
+}
