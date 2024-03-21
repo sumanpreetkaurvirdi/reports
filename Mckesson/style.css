@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+body {
+	font-family: 'DM Sans', sans-serif;
+	font-size: 18px;
+	line-height: 1.4;
+	color: #212529;
+}
+
+:root {
+	--primary-color: #1D3D68;
+	--secondary-color: #0c60a9;
+	--blue-color: #0f7cd9;
+	--bg-white: #fff;
+}
+
+.mobile-card {
+	border: 1px solid #ddd;
+	/* min-height: 760px; */
+	border-radius: 20px;
+	box-shadow: 0px 1px 20px #c2bcbc87;
+	padding: 30px;
+	background-color: #fff;
+	color: #4c4c4c;
+}
+a{
+	color: var(--primary-color);
+	text-decoration:none;
+}
+.bg-white {
+	background: var(--bg-white);
+}
+
+.text-message {
+	position: relative;
+	padding: 12px 15px;
+	background: #ddd;
+	border-radius: 10px;
+	color: #323232;
+}
+
+.text-message p {
+	margin: 0;
+}
+
+.text-message+.text-message {
+	margin-top: 15px;
+}
+
+/* Buttons */
+
+.btn {
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.btn-primary {
+	--bs-btn-color: #fff;
+	/* --bs-btn-bg: #1f2937; */
+	--bs-btn-bg: #1D3D68;
+	--bs-btn-border-color: #fff;
+	--bs-btn-hover-color: #fff;
+	--bs-btn-hover-bg: #374151;
+	--bs-btn-hover-border-color: #fff;
+	--bs-btn-focus-shadow-rgb: 49, 132, 253;
+	--bs-btn-active-color: #fff;
+	--bs-btn-active-bg: #374151;
+	--bs-btn-active-border-color: #374151;
+	--bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+	--bs-btn-disabled-color: #fff;
+	--bs-btn-disabled-bg: #1f2937;
+	--bs-btn-disabled-border-color: #1f2937;
+}
+
+.button-checkbox {
+	width: 20px;
+}
+
+/* Typography */
+h1, .h1, h2, .h2, h3, .h3,
+h4, .h4, h5, .h5, h6, .h6 {
+	margin: 0;
+	color: #212529;
+}
+
+h1, .h1 {
+	font-size: 40px;
+	font-weight: 600;
+}
+
+h2, .h2 {
+	font-size: 28px;
+	font-weight: 600;
+}
+
+h4, .h4 {
+	font-size: 20px;	
+}
+
+.heading2 {
+	font-size: 30px;
+	font-weight: 600;
+}
+
+.headin5 {
+	font-size: 16px;
+}
+
+.headin6 {
+	font-size: 14px;
+	font-weight: 400;
+}
+
+/* Form Control */
+.form-control {
+	padding: 0.6rem 0.75rem;
+	border-radius: 3px;
+	text-align: center;
+}
+
+.btn-primary {
+	padding: 0.6rem 0.75rem;
+	transition: .5s all;
+}
+.btn-primary:hover{
+	box-shadow: 0 0 10px #1d3d68;
+	border-color: var(--primary-color);
+	background-color:  var(--primary-color);
+}
+
+.text-primary {
+	color: var(--primary-color) !important;
+}
+
+.primary-bg-card {
+	background: var(--primary-color);
+	border: 1px solid #eee;
+	border-radius: 4px;
+	padding: 20px 10px;
+	color: #fff;
+}
+
+/* Credit Card with Amount */
+/* Credit Card */
+.credit-card {
+	width: 100%;
+	font-family: 'Open Sans', sans-serif;
+	height: auto;
+}
+
+.credit-card-outer {
+	fill: #e7e7e7;
+}
+
+.credit-card-inner {
+	/* fill: var(--primary-color); */
+	fill: #1f2937;
+}
+
+.current_balance {
+	font-size: 16px;
+	color: #ffffff;
+	font-weight: 600;
+}
+
+.current_balance_text {
+	font-size: 16px;
+	color: #ffffff;
+	font-weight: 600;
+}
+
+.card_number {
+	font-size: 22px;
+	color: #ffffff;
+	font-weight: 600;
+}
+
+.cvv_text {
+	font-size: 15px;
+	color: #ffffff;
+	font-weight: 300;
+}
+
+.cvv_number {
+	font-size: 15px;
+	color: #ffffff;
+	font-weight: 600;
+}
+
+.exp_text {
+	font-size: 15px;
+	color: #ffffff;
+	font-weight: 300;
+}
+
+.exp_number {
+	font-size: 15px;
+	color: #ffffff;
+	font-weight: 600;
+}
+
+.debit_text {
+	font-size: 15px;
+	color: #374151;
+	font-weight: 600;
+}
+
+.card_name {
+	font-size: 15px;
+	color: #ffffff;
+	font-weight: 500;
+}
+
+/* Transactions Table */
+
+.no-transactions-message {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.no-transactions-message svg {
+	width: 30px;
+	stroke: #302a2a;
+	margin-right: 10px;
+}
+
+.no-transactions-text {
+	font-size: 16px;
+	font-weight: 500;
+	color: #302a2a;
+	line-height: 1.2;
+	margin: 0;
+}
+
+.transactions-benefits-amount,
+.transactions-pending-amount {
+	padding: 14px 40px;
+	border-radius: 10px;
+	color: #fff;
+}
+
+.transactions-benefits-amount {
+	background: #70ae4f;
+}
+
+.transactions-pending-amount {
+	background: #e9bc33;
+}
+
+.bank-name {
+	font-size: 20px;
+	font-weight: 500;
+}
+
+/* Transactions Header */
+.transactions-input {
+	display: flex;
+	text-align: center;
+	/* background-color: #f5f6fd; */
+	border-radius: 8px;
+	padding: 20px 5px;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.transactions-input-amount {
+	font-weight: 600;
+	font-size: 26px;
+	line-height: 1.2;
+	margin-bottom: 2px;
+}
+
+.transactions-input-text {
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.transactions-table {
+	margin-bottom: 1.5rem;
+	margin-right: -0.5rem;
+	max-height: 355px;
+	padding: 12px 10px;
+	border-radius: 6px;
+	overflow-y: auto;
+	padding-right: 0.5rem;
+	scrollbar-width: 0;
+}
+
+.transactions-table::-webkit-scrollbar {
+	background-color: transparent;
+	width: 12px;
+}
+
+.transactions-table::-webkit-scrollbar-thumb {
+	border-radius: 99px;
+	border: 3px solid #fff;
+	--tw-bg-opacity: 1;
+	background-color: rgb(142 154 175 / var(--tw-bg-opacity));
+}
+
+.transaction-detail {
+	padding-bottom: .4rem;
+}
+
+.transaction-detail + .transaction-detail {
+	padding-top: .4rem;
+}
+
+.transaction-label {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	padding-bottom: 4px;
+	color: #302a2a;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.transaction-icon {
+	width: 24px;
+	margin-right: 0.75rem;
+}
+
+.transaction-date {
+	font-size: 16px;
+	line-height: 1.25;
+	font-weight: 600;
+	margin-bottom: 4px;
+}
+
+.transaction-amount {
+	text-align: right;
+	font-weight: 700;
+	flex: 0 0 100px;
+}
+
+.transaction-receipt {
+	position: relative;
+	text-align: center;
+}
+
+.transaction-receipt:after {
+	content: "";
+	top: 50%;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background-color: #ddd;
+	position: absolute;
+	z-index: 1;
+}
+
+.transaction-receipt button {
+	margin: 0 auto;
+	z-index: 2;
+	position: relative;
+	font-size: 14px;
+}
+
+.credit-amount {
+	color: #16a34a;
+}
+
+.decline-amount {
+	color: #f00;
+}
+
+/*Star Progress Css */
+.progress {
+	position: relative;
+	margin: 0 auto;
+	max-width: 250px;
+	text-align: center;
+	font-size: 42px;
+	min-height: 150px;
+	background: transparent;
+
+}
+
+.progress .number {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 34%;
+}
+
+.progress .number p {
+	font-size: 13px;
+	width: 50%;
+	margin: auto;
+}
+
+#blue_curve {
+	stroke-dasharray: 144px;
+	stroke-dashoffset: -144px;
+	transition: all .5s;
+}
+
+.fill-circle {
+	width: 200px;
+	margin: 0 auto;
+}
+
+.st0 {
+	fill: none;
+	stroke: white;
+	stroke-width: 5;
+	stroke-linecap: round;
+}
+
+.st1 {
+	fill: none;
+	stroke: var(--primary-color);
+	stroke-width: 5;
+	stroke-linecap: round;
+}
+
+/* End Progress Css */
+
+.group-input-with-lable {
+    background: var(--primary-color);
+    text-align: center;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+	overflow: hidden;
+	color: #fff;
+}
+
+.group-input-with-lable label {
+    padding: 20px;
+    font-size: 26px;
+}
+
+.group-input-with-lable input,
+.group-input-with-lable input:focus {
+	width: 100%;
+	border: none;
+	border-radius: 0;
+	color: magenta;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.main-heading {
+	margin-bottom: 15px;
+}
+
+.border-bottom {
+	border-bottom: 1px solid #ddd;
+}
