@@ -173,8 +173,9 @@
 							</div>
 							<div class="primary-bg-card my-3">
 								Certify that you are purchasing <span style="color: magenta; display: block;">{Medication trade name}</span> Any other medications or items must be purchased separately.
-								<label for="cerify" class="align-items-center d-flex gap-2 justify-content-center">
+								<label for="cerify" class="align-items-center d-flex gap-2 justify-content-center mt-1">
 									<input id="cerify" type="checkbox">I Certify
+									
 								</label>
 							</div>
 
@@ -369,48 +370,6 @@
 				}
 			});
 		});
-
-		$(".welcome-here").click(function(){
-			$(this).parents('.welcomefirst').addClass("d-none");
-			$(this).parents('.welcomefirst').siblings(".welcomesecond").removeClass("d-none");
-		})
-		$(".welcomesecond").find('.btn-primary').click(function(){
-			$(this).parents('.welcomesecond').addClass("d-none");
-			$(this).parents('.welcomesecond').siblings(".Advancebox").removeClass("d-none");
-		})
-		$(".Advancebox").find('.btn-primary').click(function(){
-			$(this).parents('.Advancebox').addClass("d-none");
-			$(this).parents('.Advancebox').siblings(".bankverification").removeClass("d-none");
-		})
-		$(".bankverification").find('.btn-primary').click(function(){
-			$(this).parents('.bankverification').addClass("d-none");
-			$(this).parents('.bankverification').siblings(".usecertification").removeClass("d-none");
-		})
-		$(".usecertification").find('.btn-primary').click(function(){
-			$(this).parents('.usecertification').addClass("d-none");
-			$(this).parents('.usecertification').siblings(".accessingfunds").removeClass("d-none");
-		})
-		$(".accessingfunds").find('.btn-primary').click(function(){
-			$(this).parents('.accessingfunds').addClass("d-none");
-			$(this).parents('.accessingfunds').siblings(".vcardpayment").removeClass("d-none");
-		})
-		$(".vcardpayment").find('.viewacc').click(function(){
-			$(this).parents('.vcardpayment').addClass("d-none");
-			$(this).parents('.vcardpayment').siblings(".transhistory").removeClass("d-none");
-		})
-		$('.amtdue').click(function(){
-			$(this).parents('.vcardpayment').addClass("d-none");
-			$(this).parents('.vcardpayment').siblings(".accessingfunds").removeClass("d-none");
-		})
-		
-		$('.view-vcard').click(function(){
-			$(this).parents('.transhistory').addClass("d-none");
-			$(this).parents('.transhistory').siblings(".vcardpayment").removeClass("d-none");
-		})
-		$(".printBtn").on("click", function() {
-                // Call the window.print() function to trigger the print dialog
-                window.print();
-            });
 	});
 
 </script>
