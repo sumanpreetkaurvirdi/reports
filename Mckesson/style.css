@@ -16,7 +16,7 @@ body {
 
 .mobile-card {
 	border: 1px solid #ddd;
-	min-height: 760px;
+	/* min-height: 760px; */
 	border-radius: 20px;
 	box-shadow: 0px 1px 20px #c2bcbc87;
 	padding: 30px;
@@ -154,8 +154,8 @@ input[type="checkbox"] {
 }
 .btn-primary:hover{
 	box-shadow: 0 0 10px #1d3d68;
-	border-color: var(--primary-color);
-	background-color:  var(--primary-color);
+	border-color: var(--primary-color)!important;
+	background-color:  var(--primary-color) !important;
 }
 
 .text-primary {
