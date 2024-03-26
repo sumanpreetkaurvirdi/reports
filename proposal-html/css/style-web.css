@@ -623,7 +623,13 @@ section[class*="slide-"] {
    right:auto;
    transform: scalex(-1);
 }
-
+.gradient-shape{
+      padding: 30px 0;
+      background-image: url(../images/slide-8-bg.png);
+      background-position: center left;
+      background-repeat: no-repeat;
+      background-size: cover;
+}
 
 /* Start Chimney */
 .chimney {
