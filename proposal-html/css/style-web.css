@@ -597,7 +597,8 @@ section[class*="slide-"] {
    min-height: 100vh;
    position: relative;
 }
-.has-vector-bg:before {
+.has-vector-bg:before ,
+.main-roofing .has-vector-bg:before {
    content: "";
    background-image: url(../images/slide-2-bg-vector.png);
    background-position: top right;
@@ -607,7 +608,22 @@ section[class*="slide-"] {
    right: 0;
    width: 679px;
    height: 1080px;
+   left:auto;
 }
+.main-roofing .has-vector-bg-left:after {
+   content: "";
+   background-image: url(../images/slide-2-bg-vector.png);
+   background-position: top right;
+   display: block;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 679px;
+   height: 1080px;
+   right:auto;
+   transform: scalex(-1);
+}
+
 
 /* Start Chimney */
 .chimney {
@@ -5199,8 +5215,12 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
 .mx-auto{
    margin:0 auto;
 }
-.main-roofing .slide-19:before {
-   background-image: url("../images/about-bg.png");
+.main-roofing .slide-19{
+   background-color: #0A4851;
+}
+.main-roofing .slide-19:after {
+   /* background-image: url("../images/about-bg.png"); */
+   content: none;
 }
 .main-roofing .slide-19 .referral-persons .title:after{
    content: none;
@@ -5324,9 +5344,9 @@ max-width: 130px;
    position: absolute;
    width: 100%;
    height: 100%;
-   background: white;
+   background: black;
    z-index: 1;
-   opacity: 0.7;
+   opacity: 0.5;
    top: 0;
 }
 .btn-green{
@@ -5350,4 +5370,16 @@ max-width: 130px;
    min-height: 114px;
    object-fit: cover;
    border-radius: 100%;
+}
+.main-roofing .about-container{
+   
+   border-radius: 30px;
+   padding: 22px 44px;
+}
+.main-roofing .slide-3 .content p {
+   max-width: 100%;
+   font-size: 20px;
+}
+.main-roofing .slide-2{
+   background: #0a4851;
 }
