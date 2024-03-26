@@ -5328,3 +5328,13 @@ max-width: 130px;
    text-align: center;
    margin-top: 15px;
 }
+.main-roofing .services-type .gurantee img {
+   border: 8px solid var(--green);
+   flex: none;
+   margin-right: 20px;
+   width: 100%;
+   max-width: 114px;
+   min-height: 114px;
+   object-fit: cover;
+   border-radius: 100%;
+}
