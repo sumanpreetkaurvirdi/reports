@@ -5285,3 +5285,15 @@ margin-right: 10px;
 .gaf-logos img{
 max-width: 130px;
 }
+.main-roofing .slide-1{
+   background-image: none;
+}
+.main-roofing .slide-1 video{
+   position: absolute;
+   width: 100%;
+   height: calc(100% - 44%);
+   left: 0;
+   object-fit: cover;
+   bottom: 0;
+   border-radius: 77% 76% 0 0;
+}
