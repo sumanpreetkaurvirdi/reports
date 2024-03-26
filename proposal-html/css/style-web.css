@@ -5175,6 +5175,9 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
 .d-flex{
    display: flex;
 }
+.flex-column{
+   flex-direction: column;
+}
 .align-center{
    align-items: center;
 }
@@ -5234,6 +5237,10 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
 .slide-after.certified-bg::after {
    background-image: url("../images/certified-bg.jpeg");
 }
+.slide-after.licence-insurance::after{
+   
+   background-image: url("../images/licence-insurance.jpeg");
+}
 .slide-before:before {
    content: "";
    background: linear-gradient(138.06deg, #97D33A 12.37%, #57B776 109.09%);
@@ -5291,9 +5298,33 @@ max-width: 130px;
 .main-roofing .slide-1 video{
    position: absolute;
    width: 100%;
-   height: calc(100% - 44%);
+   height: 100%;
    left: 0;
    object-fit: cover;
    bottom: 0;
-   border-radius: 77% 76% 0 0;
+}
+.main-roofing .slide-1 .container{
+   z-index: 2;
+}
+.main-roofing .slide-1:before {
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background: white;
+   z-index: 1;
+   opacity: 0.7;
+   top: 0;
+}
+.btn-green{
+   background-color: var(--secondary);
+   color: black;
+   padding: 8px 10px;
+   font-size: 28px;
+   font-weight: 700;
+   border-radius: 10px;
+   width: fit-content;
+   min-width: 300px;
+   text-align: center;
+   margin-top: 15px;
 }
