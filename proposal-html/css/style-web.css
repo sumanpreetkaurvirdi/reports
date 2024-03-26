@@ -5227,7 +5227,7 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
    width: 50%;
    z-index: -1;
    height: 100%;
-   background-image: url("../images/map-bg.jpeg");
+   background-image: url("../images/map-bg.png");
    background-repeat: no-repeat;
    background-size: cover;
    background-position: bottom left;
@@ -5236,17 +5236,17 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
    right: 0;
 }
 .slide-after.reality-bg::after {
-   background-image: url("../images/reality-bg.jpg");
+   background-image: url("../images/reality-bg.png");
 }
 .slide-after.roofing-sys::after {
    background-image: url("../images/roofing-sys.jpg");
 }
 .slide-after.certified-bg::after {
-   background-image: url("../images/certified-bg.jpeg");
+   background-image: url("../images/certified-bg.png");
 }
 .slide-after.licence-insurance::after{
    
-   background-image: url("../images/licence-insurance.jpeg");
+   background-image: url("../images/licence-insurance.png");
 }
 .services-type{    
    background-image: url(../images/service-bg.jpeg);
