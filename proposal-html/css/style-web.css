@@ -5200,7 +5200,7 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
    margin:0 auto;
 }
 .main-roofing .slide-19:before {
-   background-image: url("../images/about-bg.jpg");
+   background-image: url("../images/about-bg.png");
 }
 .main-roofing .slide-19 .referral-persons .title:after{
    content: none;
@@ -5249,7 +5249,7 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
    background-image: url("../images/licence-insurance.png");
 }
 .services-type{    
-   background-image: url(../images/service-bg.jpeg);
+   background-image: url("../images/service-bg.png");
    background-color: #434242 !important;
    background-blend-mode: multiply;
 
