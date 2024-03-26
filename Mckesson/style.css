@@ -307,12 +307,12 @@ input[type="checkbox"] {
 }
 
 .transactions-table {
-	margin-bottom: 1.5rem;
+	margin-bottom: 1rem;
 	margin-right: -0.5rem;
 	max-height: 355px;
 	padding: 12px 10px;
 	border-radius: 6px;
-	overflow-y: auto;
+	/* overflow-y: auto; */
 	padding-right: 0.5rem;
 	scrollbar-width: 0;
 }
@@ -362,7 +362,7 @@ input[type="checkbox"] {
 .transaction-amount {
 	text-align: right;
 	font-weight: 700;
-	flex: 0 0 100px;
+	/* flex: 0 0 100px; */
 }
 
 .transaction-receipt {
@@ -478,4 +478,69 @@ input[type="checkbox"] {
 
 .border-bottom {
 	border-bottom: 1px solid #ddd;
+}
+
+@media (max-width:991px) {
+	.fill-circle{
+		
+		width: 163px;
+
+	}
+	.progress{
+		
+		min-height: 128px;
+
+	}
+	.progress .number{
+		
+		font-size: 34px;
+		font-weight: 500;
+	}
+	.progress .number p {
+		font-size: 13px;
+		width: 64%;
+		font-weight: 200;
+	}
+	.form-label {
+		margin-bottom: .3rem;
+		font-size: 14px;
+	}
+	p{
+		margin-bottom: .5rem;
+		font-size: 14px;
+	}
+	.form-control {
+		padding: 0.4rem 0.75rem;
+	}
+	.mobile-card{
+		padding: 26px 30px;
+	}
+	.primary-bg-card {
+		padding: 12px 10px;
+		font-size: 14px;
+	}
+	.heading2 {
+		font-size: 23px;
+	}
+	.btn {
+		font-size: 16px;
+	}
+	h2{
+		font-size: 24px;
+	}
+	.h1{
+		font-size: 35px;
+	}
+	.steps{
+		font-size: 16px;
+	}
+	.group-input-with-lable label {
+		font-size: 20px;
+	}
+	.transaction-receipt button {
+		font-size: 12px;
+	}
+	.transactions-table {
+		margin-bottom: .5rem;
+	}
 }
