@@ -5209,6 +5209,13 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
    min-height: 72px;
  
 }
+.main-roofing .thanks-bg .left img{
+   width: 100%;
+   max-width: 370px;
+   min-height: 370px;
+   object-fit: cover;
+   border-radius: 100%;
+}
 .main-roofing .slide-19 .referral-persons .person .title{
    width: 100%;
 }
@@ -5240,6 +5247,12 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
 .slide-after.licence-insurance::after{
    
    background-image: url("../images/licence-insurance.jpeg");
+}
+.services-type{    
+   background-image: url(../images/service-bg.jpeg);
+   background-color: #434242 !important;
+   background-blend-mode: multiply;
+
 }
 .slide-before:before {
    content: "";
