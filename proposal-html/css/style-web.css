@@ -5210,7 +5210,7 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
    justify-content: space-between;
 }
 .mt-16{
-   margin-top: 16px;
+   margin-top: 16px!important;
 }
 .mb-10{
    margin-bottom: 10px;
@@ -5220,6 +5220,9 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
 }
 .mx-auto{
    margin:0 auto;
+}
+.pt-10{
+   padding-top: 10px;
 }
 .main-roofing .slide-19{
    background-color: #0A4851;
@@ -5276,9 +5279,14 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
 }
 .services-type{    
    background-image: url("../images/service-bg.png");
-   background-color: #434242 !important;
+   background-color: #c4c4c4 !important;
    background-blend-mode: multiply;
 
+}
+.shingles-integrity{
+   background-image: url("../images/shingles-integrity.png");
+   background-color: #c4c4c4 !important;
+   background-blend-mode: multiply;
 }
 .slide-before:before {
    content: "";
@@ -5314,13 +5322,14 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
    margin-top: 10px;
 }
 .checklisting li::before {
-background-image: url("../images/check-circle.png");
-width: 20px;
-height: 20px;
-background-size: contain;
-background-position: center;
-content: '';
-margin-right: 10px;
+   background-image: url("../images/check-circle.png");
+   min-width: 16px;
+   height: 16px;
+   background-size: contain;
+   background-position: center;
+   content: '';
+   margin: 5px 10px 0 0;
+   background-repeat: no-repeat;
 }
 .gaf-logos{
    margin-top: 36px;
@@ -5367,7 +5376,8 @@ max-width: 130px;
    text-align: center;
    margin-top: 15px;
 }
-.main-roofing .services-type .gurantee img {
+.main-roofing .services-type .gurantee img ,
+.main-roofing .shingles-integrity .gurantee img{
    border: 8px solid var(--green);
    flex: none;
    margin-right: 20px;
