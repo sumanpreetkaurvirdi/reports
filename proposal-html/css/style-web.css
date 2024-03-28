@@ -1054,7 +1054,7 @@ section[class*="slide-"] {
 .slide-7 .gurantee {
    display: flex;
    align-items: center;
-   margin-left: -57px;
+   margin-left: 50px;
 }
 .slide-7 .gurantee + .gurantee {
    margin-top: 40px;
@@ -5514,6 +5514,7 @@ border-radius: 10px;
  .custom-modal .modal-inner{
    overflow: hidden;
    border-radius: 10px;
+   max-width: 550px;
  }
  .custom-modal .modal-inner img{
    min-width: 400px;
