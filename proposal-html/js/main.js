@@ -958,3 +958,18 @@ $(document).ready(function() {
     });
    
 });
+$(document).ready(function() {
+ // Add 'active' class to target element when '.open-popup' is clicked
+ $('.open-popup').click(function(event) {
+     event.stopPropagation(); // Prevent event bubbling
+     var target = $(this).data('target');
+     $('#' + target).addClass('active');
+ });
+
+ // Remove 'active' class from '.custom-modal' elements when clicking outside of them
+ $(document).on('click', function(event) {
+     if (!$(event.target).closest('.modal-inner').length) {
+         $(".custom-modal").removeClass("active");
+     }
+ });
+});

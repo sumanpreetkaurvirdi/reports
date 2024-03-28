@@ -398,10 +398,10 @@
                         Our company is fully licensed and insured so you can have peace of mind knowing that your interests are protected.
                      </p>
                    <div class="d-flex flex-column LeftToRightDelay4">
-                     <a href="" class="btn-green">
+                     <a href="javascript:void(0)" class="btn-green">
                         Insurance
                      </a>
-                     <a href="" class="btn-green">
+                     <a href="javascript:void(0)" class="btn-green open-popup" data-target="cmodal-licence">
                         Licence
                      </a>
                    </div>
@@ -427,13 +427,13 @@
                   </div>
                   <div class="col-lg-7">
                      <div class="box-1 RightToLeft">
-                        <div class="gurantee RightToLeftDelay4">
+                        <a href="roofing.html" class="gurantee RightToLeftDelay4">
                            <img src="images/roofing.png" alt="Roofing">
                            <div class="info">
                               <h6 class="text-md font-bold title"><span class="text-green">Roofing</span> Services</h6>
                              
                            </div>
-                        </div>
+                        </a>
                         <div class="gurantee RightToLeftDelay6">
                            <img src="images/siding.png" alt="Siding">
                            <div class="info">
@@ -708,7 +708,7 @@
 		</div>
 	</div>
 
-   <div class="section9-modal d-none">
+   <div class="section7-modal d-none">
 		<div class="gurantee-box">
 			<div class="gurantee-box-inner">
 				<div class="igs">
@@ -718,7 +718,11 @@
 			<a href="javascript:void(0);" class="box-close">X</a>
 		</div>
 	</div>
-
+   <div class="custom-modal" id="cmodal-licence">
+      <div class="modal-inner">
+         <img src="images/licence.png" alt="img">
+      </div>
+   </div>
    <style>
       .indent-card .swiper-slide {
          border: 1px solid #ddd;
@@ -758,7 +762,9 @@
          section.classList.remove('daynight-toggle-active');
       }
       })
+
    </script>
+
 </body>
 
 </html>
