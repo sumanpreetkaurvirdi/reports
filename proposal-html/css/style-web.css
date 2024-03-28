@@ -5487,4 +5487,9 @@ justify-content: space-around;
 
          font-size: 13px;
       }
- 
+ .beforeafter-roof .global-box-1 img{
+   width: 100%;
+max-height: 230px;
+object-fit: cover;
+border-radius: 10px;
+ }
