@@ -5493,6 +5493,14 @@ max-height: 230px;
 object-fit: cover;
 border-radius: 10px;
  }
+ .main-roofing.main-solar  .gurantee img {
+   max-width: 85px;
+   min-height: 85px;
+   padding: 10px;
+}
+
+
+
 
 
  /* Start Modal CSS */
