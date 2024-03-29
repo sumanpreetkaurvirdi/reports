@@ -5212,6 +5212,9 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
 .justify-around{
    justify-content: space-around;
 }
+.mt-5{
+   margin-top: 5px!important;
+}
 .mt-16{
    margin-top: 16px!important;
 }
@@ -5226,6 +5229,11 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
 }
 .mx-auto{
    margin:0 auto;
+}
+.p-20{
+   
+   padding: 20px;
+
 }
 .pt-10{
    padding-top: 10px;
@@ -5256,6 +5264,11 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
 }
 .main-roofing .slide-19 .referral-persons .person .title{
    width: 100%;
+   display: flex;
+   justify-content: center;
+}
+.main-roofing .slide-19 .referral-persons .person p{
+   text-align: center;
 }
 .slide-after{
    position: relative;
@@ -5420,11 +5433,11 @@ height: 100%;
    opacity: 0.5;
    top: 0;
 }
-.btn-green{
-   background-color: var(--secondary);
+.custom-btn {
+   /* background-color: var(--secondary); */
    color: black;
-   padding: 8px 10px;
-   font-size: 28px;
+   padding: 9px 17px;
+   font-size: 20px;
    font-weight: 700;
    border-radius: 10px;
    width: fit-content;
