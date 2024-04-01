@@ -5326,13 +5326,13 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
    background-size: cover;
    background-position: center top 40%!important;
 }
-/* .tigerpaw{
-   background-image: url("../images/tigerpaw.png")!important;
+.renewable{
+   background-image: url("../images/renewable-bg.png")!important;
    background-color: #c4c4c4 !important;
    background-blend-mode: multiply;
    background-size: cover;
    background-position: center top 40%!important;
-} */
+}
 .slide-before:before {
    content: "";
    background: linear-gradient(138.06deg, #97D33A 12.37%, #57B776 109.09%);
