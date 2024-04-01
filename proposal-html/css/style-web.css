@@ -5219,7 +5219,7 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
    margin-top: 16px!important;
 }
 .mb-10{
-   margin-bottom: 10px;
+   margin-bottom: 10px!important;
 }
 .mb-0{
    margin-bottom: 0!important;
@@ -5319,6 +5319,20 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
    background-color: #c4c4c4 !important;
    background-blend-mode: multiply;
 }
+.look-forward{
+   background-image: url("../images/lookforward-bg.png")!important;
+   background-color: #c4c4c4 !important;
+   background-blend-mode: multiply;
+   background-size: cover;
+   background-position: center top 40%!important;
+}
+/* .tigerpaw{
+   background-image: url("../images/tigerpaw.png")!important;
+   background-color: #c4c4c4 !important;
+   background-blend-mode: multiply;
+   background-size: cover;
+   background-position: center top 40%!important;
+} */
 .slide-before:before {
    content: "";
    background: linear-gradient(138.06deg, #97D33A 12.37%, #57B776 109.09%);
@@ -5331,16 +5345,13 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
    z-index: -1;
 }
 .master-span{
-   position: absolute;
-   right: 0;
-   top: 52px;
    background: white;
-   font-size: 39px;
+   font-size: 29px;
    padding: 6px 10px;
    font-weight: 700;
    letter-spacing: 2px;
    text-shadow: 3px 0px #4ade4a;
-   border-radius: 5px 0 0 5px;
+   border-radius: 5px;
 }
 .checklisting{
    
