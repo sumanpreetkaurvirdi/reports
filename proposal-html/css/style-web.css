@@ -5555,3 +5555,25 @@ border-radius: 10px;
   padding: 10px;
  }
  /* ENd Modal CSS */
+
+
+
+ /* 01/April/2024 Modification */
+.slide-11 {
+   background-image: url("../images/temprature.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;
+   display: block;
+   padding: 0;
+}
+.slide-11 .temprature-bg {
+   background-image: url("../images/temprature-bg.png");
+   height: 350px;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center -120px;
+   padding-top: 50px;
+}
+
+/* 01/April/2024 Modification */
