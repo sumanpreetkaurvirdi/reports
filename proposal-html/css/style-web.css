@@ -5306,6 +5306,9 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
    
    background-image: url("../images/replacewoodrot.png");
 }
+.slide-after.workmatters::after {
+   background-image: url("../images/workmatters.png");
+}
 .services-type{    
    background-image: url("../images/service-bg.png");
    background-color: #c4c4c4 !important;
