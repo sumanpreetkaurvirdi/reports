@@ -5221,9 +5221,6 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
 .mb-10{
    margin-bottom: 10px!important;
 }
-.mb-20{
-   margin-bottom: 20px!important;
-}
 .mb-0{
    margin-bottom: 0!important;
 }
@@ -5305,9 +5302,6 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
 .slide-after.step-one::after{
    
    background-image: url("../images/replacewoodrot.png");
-}
-.slide-after.workmatters::after {
-   background-image: url("../images/workmatters.png");
 }
 .services-type{    
    background-image: url("../images/service-bg.png");
@@ -5561,8 +5555,6 @@ border-radius: 10px;
   padding: 10px;
  }
  /* ENd Modal CSS */
-
-
 
 
 /* 01/April/2024 Modification */
