@@ -5290,50 +5290,50 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
    right: 0;
 }
 .slide-after.reality-bg::after {
-   background-image: url("../images/reality-bg.png");
+   background-image: url("../images/reality-bg.jpg");
 }
 .slide-after.roofing-sys::after {
    background-image: url("../images/roofing-sys.jpg");
 }
 .slide-after.certified-bg::after {
-   background-image: url("../images/certified-bg.png");
+   background-image: url("../images/certified-bg.jpg");
 }
 .slide-after.licence-insurance::after{
    
-   background-image: url("../images/licence-insurance.png");
+   background-image: url("../images/licence-insurance.jpg");
 }
 .slide-after.step-one::after{
    
-   background-image: url("../images/replacewoodrot.png");
+   background-image: url("../images/replacewoodrot.jpg");
 }
 .slide-after.workmatters::after {
-   background-image: url("../images/workmatters.png");
+   background-image: url("../images/workmatters.jpg");
 }
 .services-type{    
-   background-image: url("../images/service-bg.png");
+   background-image: url("../images/service-bg.jpg");
    background-color: #c4c4c4 !important;
    background-blend-mode: multiply;
 
 }
 .shingles-integrity{
-   background-image: url("../images/shingles-integrity.png");
+   background-image: url("../images/shingles-integrity.jpg");
    background-color: #c4c4c4 !important;
    background-blend-mode: multiply;
 }
 .vulnerable{
-   background-image: url("../images/vulnerable.png");
+   background-image: url("../images/vulnerable.jpg");
    background-color: #c4c4c4 !important;
    background-blend-mode: multiply;
 }
 .look-forward{
-   background-image: url("../images/lookforward-bg.png")!important;
+   background-image: url("../images/lookforward-bg.jpg")!important;
    background-color: #c4c4c4 !important;
    background-blend-mode: multiply;
    background-size: cover;
    background-position: center top 40%!important;
 }
 .renewable{
-   background-image: url("../images/renewable-bg.png")!important;
+   background-image: url("../images/renewable-bg.jpg")!important;
    background-color: #c4c4c4 !important;
    background-blend-mode: multiply;
    background-size: cover;
@@ -5356,7 +5356,7 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
    padding: 6px 10px;
    font-weight: 700;
    letter-spacing: 2px;
-   text-shadow: 3px 0px #4ade4a;
+   /* text-shadow: 3px 0px #4ade4a; */
    border-radius: 5px;
 }
 .checklisting{
@@ -5391,19 +5391,19 @@ max-width: 130px;
 
 .main-roofing.roofing .slide-1.tarp-trap{
    
-   background-image: url(../images/trap-bg.png);
+   background-image: url(../images/trap-bg.jpg);
    background-size: cover;
    background-position: center;
 }
 .main-roofing.roofing .slide-1.protecthome{
    
-   background-image: url(../images/protect-home.png);
+   background-image: url(../images/protect-home.jpg);
    background-size: cover;
    background-position: center;
 }
 .main-roofing.roofing .slide-1.dripedges{
    
-   background-image: url(../images/drip-bg.png);
+   background-image: url(../images/drip-bg.jpg);
    background-size: cover;
    background-position: center;
 }
@@ -5445,9 +5445,9 @@ height: 100%;
    position: absolute;
    width: 100%;
    height: 100%;
-   background: black;
+   background: rgba(0, 0, 0, .5);
    z-index: 1;
-   opacity: 0.5;
+   /* opacity: 0.5; */
    top: 0;
 }
 .custom-btn {
@@ -5577,12 +5577,15 @@ border-radius: 10px;
    overflow: hidden;
    border-radius: 10px;
    max-width: 550px;
+   display: flex;
+   flex-direction: column;
  }
  .custom-modal .modal-inner img{
    min-width: 400px;
  }
  .custom-modal .modal-inner >div{
   padding: 10px;
+  width: 100%;
  }
  /* ENd Modal CSS */
 
