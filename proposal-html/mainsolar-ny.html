@@ -21,6 +21,8 @@
 
    <link href="css/style-web.css" rel="stylesheet">
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.6/assets/owl.carousel.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.6/assets/owl.theme.default.min.css">
    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
 
   <!-- Demo styles -->
@@ -133,12 +135,12 @@
                         </div>
                         <div class="col-md-6 ">
                            <div class="person d-flex bg-gradient-s1 RightToLeftDelay4">
-                              <a href="javascript:void(0);" class="title open-popup text-black" data-target="cmodal-proposal">
+                              <div class="title text-black">
                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                                     <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
                                  </svg>                                  
                                 Next Steps
-                              </a>
+                              </div>
                            </div>
                         </div>
                      </div>
@@ -355,7 +357,7 @@
                                        25 year workmanship warranty
                                     </li>
                                     <li class="BottomToTopDelay6">
-                                       Leak proof Guaranty
+                                       Leak proof Guarantee
                                     </li>
                                   </ul>
                                  </div>
@@ -402,7 +404,7 @@
                            25 year workmanship warranty
                         </li>
                         <li class="BottomToTopDelay6">
-                           Leak proof Guaranty
+                           Leak proof Guarantee
                         </li>
                       </ul>
                       <a href="javascript:void(0);" class="custom-btn bg-gradient-s2 open-popup mt-16" data-target="cmodal-warranty">
@@ -448,7 +450,7 @@
                                  </div>
                               </div>
                               <div class="col-md-12 mb-10 mt-16">
-                                 <a href="" class="custom-btn bg-gradient-s2">
+                                 <a href="javascript:void(0)" class="custom-btn bg-gradient-s2 open-popup" data-target="cmodal-warranty-slider">
                                     Emphase Limited Warranty
                                  </a>
                               </div>
@@ -774,6 +776,32 @@
          </p>
       </div>
    </div>
+   <div class="custom-modal" id="cmodal-warranty-slider">
+      <div id="warranty-slider" class="modal-inner d-flex flex-column bg-white p-20 owl-carousel owl-theme">
+         <div class="image">
+            <img src="images/warranty-one.jpg" alt="warranty">
+         </div>
+         <div class="image">
+            <img src="images/warranty-two.jpg" alt="warranty">
+         </div>
+         <div class="image">
+            <img src="images/warranty-three.jpg" alt="warranty">
+         </div>
+         <div class="image">
+            <img src="images/warranty-four.jpg" alt="warranty">
+         </div>
+         <div class="image">
+            <img src="images/warranty-five.jpg" alt="warranty">
+         </div>
+         <div class="image">
+            <img src="images/warranty-six.jpg" alt="warranty">
+         </div>
+         <div class="image">
+            <img src="images/warranty-seven.jpg" alt="warranty">
+         </div>
+
+      </div>
+   </div>
 
 	<div class="modal">
     <div class="modal-wrapper">
@@ -901,6 +929,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
   <script src="js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
   <!-- Initialize Swiper -->
    <script>

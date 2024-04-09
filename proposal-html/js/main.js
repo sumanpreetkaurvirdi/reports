@@ -973,3 +973,21 @@ $(document).ready(function() {
      }
  });
 });
+
+
+jQuery(document).ready(function ($) {
+	var owl = $("#warranty-slider");
+	owl.owlCarousel({
+		autoplay: false,
+		items: 1,
+		loop: true,
+		margin: 0,
+	});
+
+	$(".next").click(function () {
+		owl.trigger("owl.next");
+	});
+	$(".prev").click(function () {
+		owl.trigger("owl.prev");
+	});
+});
