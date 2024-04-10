@@ -965,7 +965,9 @@ $(document).ready(function() {
      var target = $(this).data('target');
      $('#' + target).addClass('active');
  });
-
+ $('.modal-inner .box-close').click(function() {
+   $(this).parents('.custom-modal').removeClass('active');
+});
  // Remove 'active' class from '.custom-modal' elements when clicking outside of them
  $(document).on('click', function(event) {
      if (!$(event.target).closest('.modal-inner').length) {
