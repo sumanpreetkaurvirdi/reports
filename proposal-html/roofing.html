@@ -69,7 +69,7 @@
                   <div class="col-lg-12 col about-container RightToLeftDelay1 bg-white">
                      <img class="logo ZoomIn mx-auto d-flex mb-20" src="images/infinity-home.png" alt="Infinity-home" style="max-width: 200px;
                      ">
-                     <h3 class="text-xl text-center ZoomIn">First Line Of <span Class="text-secondary">defense</span></h3>
+                     <h3 class="text-xl text-center ZoomIn">First Line of <span Class="text-secondary">defense</span></h3>
                      <div class="referral-persons row justify-center">
                         <div class="col-md-6 ">
                            <div class="person d-flex bg-gradient-s1 LeftToRightDelay1">
@@ -241,7 +241,7 @@
             <div class="container">
                <div class="row">
                   <div class="col-lg-5 LeftToRight">
-                     <h1 class="main-heading text-xl font-bold text-white">Benefits Of A Thorough  Roof Inspection</h1>
+                     <h1 class="main-heading text-xl font-bold text-white">Benefits of A Thorough  Roof Inspection</h1>
                   </div>
                   <div class="col-lg-7">
                      <div class="card card-s2 BottomToTop">
@@ -479,7 +479,7 @@
                   <div class="col text-center">
                      <img class="logo ZoomIn" src="images/infinity-home-white.png" alt="Infinity-home" style="max-width: 300px;
                      ">
-                     <h1 class="main-heading text-xl font-extralight ZoomInDelay3 text-white"> <span class="text-secondary font-bold">Beware Of The </span> <br>Tarp Trap</h1>
+                     <h1 class="main-heading text-xl font-extralight ZoomInDelay3 text-white"> <span class="text-secondary font-bold">Beware of The </span> <br>Tarp Trap</h1>
                      <div class="separator-s1 ZoomInDelay4"></div>
                      <!-- <h4 class="person-name text-md font-bold ZoomInDelay5">JANE DOE</h4>
                      <p class="font-regular ZoomInDelay6">123 MAIN STREET, NEW YORK, NY 11201</p> -->
@@ -519,9 +519,9 @@
             <div class="container">
                <div class="row">
                   <div class="col">
-                     <div class="wrapper TopToBottom">
+                     <div class="wrapper TopToBottom pb-0">
                         <img class="mx-auto mt-16 d-flex" src="images/infinity-home-white.png" alt="logo" style="max-width: 200px;">
-                           <h1 class="main-heading text-xl font-extralight ZoomInDelay3 text-white"> <span class="text-secondary font-bold">Roof Work Within </span> 2 Weeks</h1>
+                           <h1 class="main-heading text-xl font-extralight ZoomInDelay3 text-white text-center"> <span class="text-secondary font-bold">Roof Work Within </span> 2 Weeks</h1>
                     
                      </div>
                      <div class="wrapper BottomToTop text-white bottom-wrapper">
@@ -570,9 +570,9 @@
             <div class="container">
                <div class="row">
                   <div class="col">
-                     <div class="wrapper TopToBottom">
+                     <div class="wrapper TopToBottom pb-0">
                         <img class="mx-auto mt-16 d-flex" src="images/infinity-home-white.png" alt="logo" style="max-width: 200px;">
-                           <h1 class="main-heading text-xl font-extralight ZoomInDelay3 text-white">ROOF <span class="text-secondary font-bold">Installation </span> Process</h1>
+                           <h1 class="main-heading text-xl font-extralight ZoomInDelay3 text-white">Roof <span class="text-secondary font-bold">Installation </span> Process</h1>
                     
                      </div>
                      <div class="wrapper BottomToTop text-white bottom-wrapper">
@@ -820,7 +820,7 @@
             <div class="container">
                <div class="row">
                   <div class="col">
-                     <div class="wrapper TopToBottom">
+                     <div class="wrapper TopToBottom pb-0">
                         <img class="mx-auto mt-16 d-flex" src="images/infinity-home-white.png" alt="logo" style="max-width: 200px;">
                            <h1 class="main-heading text-xl font-extralight ZoomInDelay3 text-white text-center" style="    max-width: 583px;"> <span class="text-secondary font-bold">Low Slope Roofing </span> Install Process</h1>
                     
@@ -961,7 +961,7 @@
                         <div class="bg-white card-inner">
                            <div class="row">
                               <div class="col-md-12">
-                                 <img src="images/infinity-home.png" alt="logo" style="max-width: 200px;">
+                                 <!-- <img src="images/infinity-home.png" alt="logo" style="max-width: 200px;"> -->
                                  <div class="price-list">
                                     
                               <p class="BottomToTopDelay1">GAF Master Elite is a mark of roofing excellence. Only 3% of roofing contractors in North America are chosen to become Master Elite. To become one of these certified contractors a business must:</p>
@@ -1900,6 +1900,26 @@
       })
    </script>
    <!-- End Temprature Slide JS -->
+   <!-- video play pause -->
+   <script>
+      $(document).ready(function() {
+         const $videoElement = $('video');
+         const $playPauseButton = $('button');
+
+         $playPauseButton.click(function() {
+            $playPauseButton.toggleClass('playing');
+            if ($playPauseButton.hasClass('playing')) {
+               $videoElement.play();
+            } else {
+               $videoElement.pause();
+            }
+         });
+
+         $videoElement.one('ended', function() {
+            $playPauseButton.removeClass('playing');
+         });
+      });
+   </script>
 </body>
 
 </html>
