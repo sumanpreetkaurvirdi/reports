@@ -5451,7 +5451,7 @@ height: 100%;
    top: 0;
 }
 .custom-btn {
-   background-color: linear-gradient(174deg, #97D33A 12.37%, #57B776 109.09%);
+   background: linear-gradient(174deg, #97D33A 12.37%, #57B776 109.09%);
    color: #ffffff;
    padding: 9px 17px;
    font-size: 20px;
