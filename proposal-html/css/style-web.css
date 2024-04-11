@@ -5529,7 +5529,7 @@ border-radius: 10px;
  }
  .main-roofing.main-solar  .gurantee img {
    max-width: 85px;
-   min-height: 85px;
+   max-height: 85px;
    padding: 10px;
 }
 
@@ -5676,3 +5676,16 @@ border-radius: 10px;
    box-shadow: 1px 1px 1px hsl(0, 50%, 2%, .5);
 }
 /* 01/April/2024 Modification */
+
+
+
+/*Start Common css */
+.card-black-trans{
+   
+   max-width: 570px;
+   background: rgba(0, 0, 0, 0.5);
+   backdrop-filter: blur(3.5px);
+   border-radius: 45px;
+   padding: 30px 0;
+   margin-left: auto;
+}
