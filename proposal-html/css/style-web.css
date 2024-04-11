@@ -5196,7 +5196,7 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
 
 /* main roofing */
 .d-flex{
-   display: flex;
+   display: flex!important;
 }
 .flex-column{
    flex-direction: column;
