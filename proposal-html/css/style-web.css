@@ -259,7 +259,7 @@
    text-align: right;
 }
 .text-left {
-   text-align: left;
+   text-align: left!important;
 }
 
 /* Flex */
@@ -2243,6 +2243,7 @@ fill: var(--white);
    display: flex;
    align-items: center;
    gap: 5px;
+   text-align: center;
 }
 .slide-19 .referral-persons .title svg {
    max-width: 20px;
@@ -5213,6 +5214,9 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
 .justify-around{
    justify-content: space-around;
 }
+.z-1{
+   z-index: 1!important;
+}
 .mt-5{
    margin-top: 5px!important;
 }
@@ -5227,6 +5231,9 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
 }
 .mb-0{
    margin-bottom: 0!important;
+}
+.ml-50{
+   margin-left: 50px!important;
 }
 .me-10{
    margin-right: 10px;
@@ -5243,7 +5250,7 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
 
 }
 .pt-10{
-   padding-top: 10px;
+   padding-top: 10px !important;
 }
 .main-roofing .slide-19{
    background-color: #0A4851;
