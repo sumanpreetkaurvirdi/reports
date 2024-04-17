@@ -5214,6 +5214,9 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
 .justify-around{
    justify-content: space-around;
 }
+.gap-10{
+   gap: 10px;
+}
 .z-1{
    z-index: 1!important;
 }
@@ -5248,6 +5251,9 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
    
    padding: 20px;
 
+}
+.pe-20{
+   padding-right: 20px!important;
 }
 .pt-10{
    padding-top: 10px !important;
@@ -5319,6 +5325,10 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
 }
 .slide-after.workmatters::after {
    background-image: url("../images/workmatters.jpg");
+}
+
+.slide-after.bincentives::after {
+   background-image: url("../images/bincentives.jpg");
 }
 .services-type{    
    background-image: url("../images/service-bg.jpg");
