@@ -5537,11 +5537,15 @@ justify-content: space-around;
       border: 4px solid white;
       }
       .comparison .loan .item{
-         padding-bottom: 22px!important   ;
+         padding-bottom: 0px!important;
+         border-radius: 30px;
       }
       .comparison .checklisting li{
 
-         font-size: 13px;
+         font-size: 12px;
+      }
+      .comparison .checklisting{
+         margin-top: 0!important;
       }
  .beforeafter-roof .global-box-1 img{
    width: 100%;
@@ -5716,4 +5720,11 @@ border-radius: 10px;
  height: 100%;  
  border-radius: 50px;
  align-items: center;
+}
+.comparison .feature{
+   flex-direction: column;
+   align-items: flex-start !important;
+}
+.comparison .feature p{
+   width: 100%!important;
 }
