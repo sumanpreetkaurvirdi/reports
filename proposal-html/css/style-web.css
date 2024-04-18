@@ -2576,6 +2576,8 @@ fill: var(--white);
    font-size: 12px;
    max-width: 130px;
    line-height: 1.5;
+   margin-left: 5px;
+
 }
 .slide-22 .loan .info-box {
    color: var(--white);
@@ -5709,4 +5711,9 @@ border-radius: 10px;
    border-radius: 45px;
    padding: 30px 0;
    margin-left: auto;
+}
+.slide-awards .global-box-1{
+ height: 100%;  
+ border-radius: 50px;
+ align-items: center;
 }
