@@ -1296,6 +1296,7 @@ section[class*="slide-"] {
    position: absolute;
    top: -20px;
    right: -20px;
+   z-index: 2;
 }
 
 /* End Slide 9 */
@@ -5402,7 +5403,7 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
    background-size: contain;
    background-position: center;
    content: '';
-   margin: 5px 10px 0 0;
+   margin: 0px 10px 0 0;
    background-repeat: no-repeat;
 }
 .gaf-logos{
@@ -5625,10 +5626,12 @@ border-radius: 10px;
    min-width: 400px;
    max-height: 570px;
  }
+ 
  .custom-modal .modal-inner >div{
   padding: 10px;
   width: 100%;
  }
+
  /* ENd Modal CSS */
 
 

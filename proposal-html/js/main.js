@@ -983,7 +983,8 @@ jQuery(document).ready(function ($) {
 		autoplay: false,
 		items: 1,
 		loop: true,
-		margin: 0,
+		margin: 30,
+      dots: false
 	});
 
 	$(".next").click(function () {
