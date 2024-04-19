@@ -984,7 +984,8 @@ jQuery(document).ready(function ($) {
 		items: 1,
 		loop: true,
 		margin: 30,
-      dots: false
+      dots: false,
+      nav:true,
 	});
 
 	$(".next").click(function () {
