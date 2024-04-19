@@ -90,7 +90,7 @@ var swiper2 = new Swiper(".mySwiper4", {
    },
 });
 
-// Proposed Monthly Payment
+// Proposed Emphase Limited Warranty
 var swiper = new Swiper(".mySwiper5", {
    slidesPerView: 1,
    spaceBetween: 0,
