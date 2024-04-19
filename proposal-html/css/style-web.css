@@ -5543,6 +5543,7 @@ justify-content: space-around;
       .comparison .loan .item{
          padding-bottom: 0px!important;
          border-radius: 30px;
+         height: 100%;
       }
       .comparison .checklisting li{
 

@@ -995,3 +995,5 @@ jQuery(document).ready(function ($) {
 		owl.trigger("owl.prev");
 	});
 });
+
+
