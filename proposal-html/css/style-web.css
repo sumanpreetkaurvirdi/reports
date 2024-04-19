@@ -330,6 +330,9 @@ a {
 .overflow-hidden {
    overflow: hidden;
 }
+.w-100{
+   width: 100%;
+}
 
 @media (min-width:992px) {
    .hideondesktop {
