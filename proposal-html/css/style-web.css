@@ -5806,3 +5806,18 @@ body .swiper .slide-32 .main-heading {
    display: inline-block;
 }
 /* End Slide 33 */
+.swiper-button-next, .swiper-button-prev {
+   width: 40px !important;
+   height: 40px !important;
+   background: black!important;
+   border-radius: 100% !important;
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+   font-size: 14px!important;
+   color: white !important;
+   font-weight: 800 !important;
+}
+.cmodal-warranty-slider .swiper-slider{
+   display: flex !important;
+   justify-content: center !important;
+}
