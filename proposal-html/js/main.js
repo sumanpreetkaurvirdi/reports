@@ -91,14 +91,14 @@ var swiper2 = new Swiper(".mySwiper4", {
 });
 
 // Proposed Emphase Limited Warranty
-var swiper = new Swiper(".mySwiper5", {
-   slidesPerView: 1,
-   spaceBetween: 0,
-   pagination: {
-     el: ".swiper-pagination",
-     clickable: true,
-   },
-});
+// var swiper = new Swiper(".mySwiper5", {
+//    slidesPerView: 1,
+//    spaceBetween: 0,
+//    pagination: {
+//      el: ".swiper-pagination",
+//      clickable: true,
+//    },
+// });
 
 // Create a GSAP timeline
 var toptobottom = gsap.timeline();
