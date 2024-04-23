@@ -5398,6 +5398,7 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
    list-style: none;
    position: relative;
    margin-top: 10px;
+   align-items: center;
 }
 .checklisting li::before {
    background-image: url("../images/check-circle.png");
