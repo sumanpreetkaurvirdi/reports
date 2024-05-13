@@ -5371,6 +5371,11 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
    background-color: #0000009c !important;
    background-blend-mode: multiply;
 }
+.roofing-bg{
+   background-image: url("../images/roofing.jpg");
+   background-color: #6060609c !important;
+   background-blend-mode: multiply;
+}
 .look-forward{
    background-image: url("../images/lookforward-bg.jpg")!important;
    background-color: #c4c4c4 !important;
