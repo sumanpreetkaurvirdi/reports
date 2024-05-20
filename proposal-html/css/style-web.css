@@ -5862,3 +5862,8 @@ body .swiper .slide-32 .main-heading {
       display: flex;
    }
 }
+#cmodal-warranty .modal-inner{
+   
+   max-width: 90%;
+   width: 60%;
+}
