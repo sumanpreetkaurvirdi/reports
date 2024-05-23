@@ -17,6 +17,20 @@
             outline: none;
             text-decoration: none;
         }
+        :root{
+            --primaryColor:#007B5D;
+            --lightGreen: #F3FFF0;
+            --gradientColor: linear-gradient(138deg, #97D33A 12.37%, #57B776 109.09%);
+        }
+        .primarytext{
+            color: var(--primaryColor);
+        }
+        input{
+            border: none;
+            outline: none;
+            width: 100%;
+        }
+        /* Start Login Page */
         .login{
             display: flex;
             justify-content: space-between;
@@ -51,25 +65,12 @@
             width: 100%;
             height: auto;
         }
-        :root{
-            --primaryColor:#007B5D;
-            --lightGreen: #F3FFF0;
-            --gradientColor: linear-gradient(138deg, #97D33A 12.37%, #57B776 109.09%);
-        }
-        .primarytext{
-            color: var(--primaryColor);
-        }
         .input-container{
             display: flex;
             border: 1px solid #DDD;
             box-shadow: 0px 4px 18px rgba(184, 224, 207, 0.25);
             padding: 15px 18px;
             border-radius: 10px;
-        }
-        input{
-            border: none;
-            outline: none;
-            width: 100%;
         }
         .input-container svg{
             margin-right: 10px;
@@ -111,6 +112,7 @@
         }
         .login-right{
             padding: 0 8rem;
+            width: 34%;
         }
         .login-right h2{
             font-weight: 600;
@@ -175,3 +177,6 @@
         }
         
         /* OTP CSS */
+
+
+        /* ENd login page */
