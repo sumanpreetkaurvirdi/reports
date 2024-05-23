@@ -8,19 +8,31 @@
 
         p {
             margin: 0;
-            font-size: 14px;
+            font-size: 15px;
         }
         h2{
             margin: 0 0 1rem;
         }
+        h4{
+            margin: 0;
+        }
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            font-size: 15px;
+        }
         a{
             outline: none;
             text-decoration: none;
+            color: inherit;
         }
         :root{
             --primaryColor:#007B5D;
             --lightGreen: #F3FFF0;
             --gradientColor: linear-gradient(138deg, #97D33A 12.37%, #57B776 109.09%);
+            --darkGreen:#163434;
+            --darkColor:#102626;
         }
         .primarytext{
             color: var(--primaryColor);
@@ -30,7 +42,7 @@
             outline: none;
             width: 100%;
         }
-        /* Start Login Page */
+        /* Start Login CSS */
         .login{
             display: flex;
             justify-content: space-between;
@@ -179,4 +191,81 @@
         /* OTP CSS */
 
 
-        /* ENd login page */
+        /* ENd login CSS */
+
+
+        /* Start Dashboard CSS */
+        main{
+            display: flex;
+            min-height: 100vh;
+        }
+        .sidebar{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            background-color: var(--darkGreen);
+            color: #fff;
+            padding: 22px 0 0 16px;
+        }
+        .sidebar .logo{
+            display: flex;
+            margin: 2rem 0;
+        }
+        .sidebar ul li{
+            position: relative;
+            border-radius: 10px 0 0 10px;
+            transition: .5s all;
+        }
+        .sidebar ul li a{
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            gap:10px;
+            color: white;
+        }
+        .sidebar ul li:hover{
+            background-color: var(--darkColor);
+        }
+        .sidebar ul li::before{
+            content: none;
+            position: absolute;
+            height: 100%;
+            width: 4px;
+            border-radius: 10px;
+            background-color: #86CB49;
+            top: 0;
+            transition: .5s all;
+            left: -16px;
+        }
+        .sidebar ul li:hover::before{
+            content: '';
+        }
+        .sidebar .contact-info{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border-radius: 13px;
+            background-color: #274545;
+            padding: 14px 7px;
+            align-items: center;
+            margin: auto 22px 0 0;
+        }
+        .sidebar .contact-info a{
+            
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+        }
+        .sidebar .collapse-menu {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 15px;
+            border-radius: 13px;
+            background-color: #274545;
+            padding: 14px 22px;
+            width: fit-content;
+            margin: 1rem auto 1rem;
+        }
+        /* End Dashboard CSS */
