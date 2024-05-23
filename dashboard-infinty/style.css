@@ -1,0 +1,177 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+        body {
+            font-family: "Work Sans", sans-serif;
+            margin: 0;
+        }
+
+        p {
+            margin: 0;
+            font-size: 14px;
+        }
+        h2{
+            margin: 0 0 1rem;
+        }
+        a{
+            outline: none;
+            text-decoration: none;
+        }
+        .login{
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            min-height: 100vh;
+        }
+        .login::after{
+            position: absolute;
+            content: '';
+            max-width: 360px;
+            width: 100%;
+            height: 100%;
+            right: 0;
+            background: url(img/pattern.png);
+            background-repeat: no-repeat;
+        }
+        .return{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            font-weight: 500;
+            margin-bottom: 6rem;
+            cursor: pointer;
+        }
+        .infinity-login{
+            display: flex;
+            position: absolute;
+            left: 25px;
+            top: 25px;
+        }
+        .infinity-login img{
+            width: 100%;
+            height: auto;
+        }
+        :root{
+            --primaryColor:#007B5D;
+            --lightGreen: #F3FFF0;
+            --gradientColor: linear-gradient(138deg, #97D33A 12.37%, #57B776 109.09%);
+        }
+        .primarytext{
+            color: var(--primaryColor);
+        }
+        .input-container{
+            display: flex;
+            border: 1px solid #DDD;
+            box-shadow: 0px 4px 18px rgba(184, 224, 207, 0.25);
+            padding: 15px 18px;
+            border-radius: 10px;
+        }
+        input{
+            border: none;
+            outline: none;
+            width: 100%;
+        }
+        .input-container svg{
+            margin-right: 10px;
+        }
+        .green-btn, .white-btn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px 18px;
+            border-radius: 13px;
+            box-shadow: 0px 4px 18px rgba(184, 224, 207, 0.25);
+            margin-top: 2rem;
+            font-weight: 600;
+        }
+        .white-btn{
+            background: #ffffff;
+            color: #000000;
+            border: 1px solid #ddd;
+        }
+        .green-btn{
+            background: var(--gradientColor);
+            color: #ffffff;
+        }
+        .login-left{
+            background-color: var(--lightGreen);
+        }
+        .login-left, .login-right{
+            display: flex;
+            justify-content: center;
+            width: 50%;
+            flex-direction: column;
+        }
+        .login-form, .otp-form{
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            width: 100%;
+        }
+        .login-right{
+            padding: 0 8rem;
+        }
+        .login-right h2{
+            font-weight: 600;
+            font-size: 42px;
+        }
+        .separator{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            position: relative;
+            gap: 10px;
+            margin: 2rem 0 0;
+
+        }
+        .separator::before, .separator::after{
+            content: '';
+            width: 150px;
+            height: 1px;
+            background-color: #000000;
+            opacity: .2;
+        }
+
+        .timmer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .timmer> span{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        /* OTP CSS */
+        .otp-field {
+            display: flex;
+            margin: 2rem 0 1rem;
+        }
+        
+        .otp-field input {
+            width: 56px;
+            height: 48px;
+            font-size: 32px;
+            text-align: center;
+            border-radius: 5px;
+            margin: 2px;
+            border: 1px solid #ddd;
+            border-radius: 13px;
+            box-shadow: 0px 4px 18px rgba(184, 224, 207, 0.25);
+            font-weight: bold;
+            color: #000;
+            outline: none;
+            transition: all 0.1s;
+        }
+        
+        .otp-field input:focus {
+            border-color: var(--primaryColor);
+        }
+        
+        .disabled {
+            opacity: 0.5;
+        }
+        
+        /* OTP CSS */
