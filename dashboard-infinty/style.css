@@ -87,7 +87,7 @@
         .input-container svg{
             margin-right: 10px;
         }
-        .green-btn, .white-btn{
+        .green-btn, .white-btn, .black-btn{
             display: flex;
             align-items: center;
             justify-content: center;
@@ -97,6 +97,11 @@
             box-shadow: 0px 4px 18px rgba(184, 224, 207, 0.25);
             margin-top: 2rem;
             font-weight: 600;
+        }
+        .black-btn{
+                background: #000;
+                color: #fff;
+                max-width: 260px;
         }
         .white-btn{
             background: #ffffff;
@@ -251,11 +256,10 @@
             margin: auto 22px 0 0;
         }
         .sidebar .contact-info a{
-            
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 12px;
         }
         .sidebar .collapse-menu {
             display: flex;
@@ -268,4 +272,173 @@
             width: fit-content;
             margin: 1rem auto 1rem;
         }
+        .content-bar{      
+            display: flex;
+            width: calc(100% - 300px);
+            padding: 16px 90px;
+            font-weight: 700;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .content-bar .heading span{
+            font-weight: normal;
+        }
+        .content-bar .heading h3{
+            margin-top: 4px;
+        }
+        .top-bar{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .top-bar .notification{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #F2FFF0;
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            margin: 0 10px 0 auto;
+
+        }
+        .top-bar .user-info{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+        }
+        .user-wish{
+            display: flex;
+            align-items: center;
+            padding: 22px 10px;
+            border: 1px solid #ddd;
+            border-radius: 13px;
+            width: -webkit-fill-available;
+            font-weight: normal;
+            background-image: url(img/building.png);
+            background-repeat: no-repeat;
+            background-position: right top 10px;
+            margin: 4rem 0 2rem;
+
+        }
+        .user-wish h2{
+            margin-bottom: .2rem;
+        }
+
+.next-step {
+  background: #ccc;
+  color: #555;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 300;
+  display: block;
+  margin: 80px auto 0;
+  border-radius: 4px;
+  width: 150px;
+  cursor: pointer;
+}
+
+.next-step:hover {
+  background: #bbb;
+}
+
+.step-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.step {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #000;
+  min-width: 30px;
+  height: 30px;
+  font-weight: bold;
+  border-radius: 50%;
+  transition: background 1000ms ease, color 1000ms ease;
+  transition-delay: 800ms;
+  background: linear-gradient(to right, #009045 50%, #fff 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  border: 2px solid #E7F1E5;
+}
+
+.step.active {
+  background-position: left bottom;
+  color: #fff;
+}
+
+.step-separator {
+  position: relative;
+  z-index: 1;
+  background: #444;
+  height: 16px;
+  width: 100%;
+  margin: 0 -10px 0px -10px;
+  display: inline-block;
+  background: linear-gradient(to right, #70C25E 50%, #E7F1E5 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: background 1000ms ease;
+  background-color: #E7F1E5;
+}
+.step-container .step > span{
+
+    position: absolute;
+    bottom: -41px;
+    color: black;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.step-separator.active {
+  background-position: left bottom;
+}
+
+.progress-container{
+display: flex;
+justify-content: space-between;
+margin-top: 6rem;
+border-radius: 13px;
+border: 1px solid #ddd;
+padding:0 2rem;
+}
+.progress-container .progress-info{
+    display: flex;
+    width: 38%;
+}
+.progress-container .progress-info img{
+    width: 100%;
+}
+.progress-container .progress-content{
+    display: flex;
+    flex-direction: column;font-weight: normal;
+    width: 60%;
+    margin: 2rem 0;
+}
+.progress-container .progress-content span{
+color: #70C25E;
+}
+.progress-container .progress-content h2{
+    
+    margin-top: 12px;
+}
+.progress-container .progress-content .schedule-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+.progress-container .progress-content .schedule-container h3{
+    display: flex;
+    gap: 10px;
+    margin-top: 7px;
+    font-size: 14px;
+    font-weight: 600;
+}
         /* End Dashboard CSS */
