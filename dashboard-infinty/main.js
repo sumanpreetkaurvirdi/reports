@@ -83,3 +83,11 @@ $('.collapse-menu').click(function(){
     $('.sidebar').toggleClass('collapsed');  
     $(this).siblings('.contact-info').toggleClass('opacity-0');
 })
+$('.schedule-list .green-btn').click(function(){
+    $(this).addClass('d-none');
+    $(this).siblings('.signature').removeClass('d-none');
+})
+$('.signature .close').click(function(){
+    $(this).parent().addClass('d-none');
+    $(this).parent().siblings('.green-btn').removeClass('d-none');
+})
