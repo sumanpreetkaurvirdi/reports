@@ -58,6 +58,7 @@
             right: 0;
             background: url(img/pattern.png);
             background-repeat: no-repeat;
+            z-index: -1;
         }
 
         .return{
@@ -225,6 +226,7 @@
             right: 0;
             background: url(img/pattern.png);
             background-repeat: no-repeat;
+            z-index: -1;
         }
         .sidebar{
             display: flex;
@@ -783,6 +785,27 @@ font-size: 14px;
         padding: 8px 20px;
         font-size: 13px;
         font-weight: normal;
+        position: relative;
+    }
+    .pointer-box {
+        display: flex;
+        position: absolute;
+        align-items: center;
+        gap: 5px;
+        top: 20px;
+        right: -19px;
+        background: url(img/pointer-box.png);
+        padding: 36px 26px 14px;
+        justify-content: center;
+        background-size: 100% 86%;
+        z-index: 1;
+        font-size: 10px;
+        background-position: bottom;
+        background-repeat: no-repeat;
+    }
+    .pointer-box img{
+        width: 12px;
+        height: 11px;
     }
     .customer-enquiry{
         display: flex;
