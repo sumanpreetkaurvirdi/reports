@@ -76,7 +76,7 @@ $('.customer-enquiry').click(function(){
 })
 $('.black-overlay').click(function(){
     $(this).removeClass('active')
-    $('.enquiry-container').removeClass('active');
+    $('.enquiry-container, .custom-modal').removeClass('active');
 })
 $('.collapse-menu').click(function(){
     $(this).children('span').toggle();
@@ -90,4 +90,16 @@ $('.schedule-list .green-btn').click(function(){
 $('.signature .close').click(function(){
     $(this).parent().addClass('d-none');
     $(this).parent().siblings('.green-btn').removeClass('d-none');
+})
+$(' .profile-container .image span').click(function(){
+    $(this).parent().siblings('form').find('input').removeAttr('disabled');
+})
+$('.open-popup').click(function(){
+   var target= $(this).attr('data-target');
+   $('#'+ target).addClass('active');
+   $('.black-overlay').toggleClass('active');
+})
+$('.custom-modal .close, .custom-modal .black-btn').click(function(){
+    $(this).parents('.custom-modal').removeClass('active'); 
+    $('.black-overlay').removeClass('active');
 })

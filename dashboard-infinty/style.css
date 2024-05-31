@@ -41,6 +41,10 @@
             border: none;
             outline: none;
             width: 100%;
+            background-color: white;
+        }
+        input:disabled{
+            color: #16343491;
         }
         /* Start Login CSS */
         .login{
@@ -85,6 +89,7 @@
             box-shadow: 0px 4px 18px rgba(184, 224, 207, 0.25);
             padding: 15px 18px;
             border-radius: 10px;
+            background-color: white;
         }
         .input-container svg{
             margin-right: 10px;
@@ -203,6 +208,9 @@
         }
         .border-0{
             border: 0 !important;
+        }
+        .w-100{
+            width: 100% !important;
         }
         
         /* OTP CSS */
@@ -895,4 +903,95 @@ font-size: 14px;
     width: -webkit-fill-available;
     margin-top: 10px;
     }
+    .profile-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 3rem;
+    }
+    .profile-container .image{
+        display: flex;
+        position: relative;
+        width: 134px;
+        height: 134px;
+        margin-top: 2rem;
+    }
+    .profile-container .image img{
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        border: 4px solid var(--primaryColor);
+    }
+    .profile-container .image span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        background-color: var(--darkGreen);
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        cursor: pointer;
+    }
+    .profile-container form{
+        width: calc(100% - 200px);
+        row-gap: 1.5rem;
+    }
+
+    .content-bar .profile-container  form .input-container {
+        width: 27.5%;
+    }
+    .content-bar .profile-container  form .green-btn{
+        
+    margin-left: auto;
+    min-width: 200px;
+
+    }
+   .custom-modal.active{
+    display: flex;
+   }
+   .custom-modal {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    /* background: #0000005c; */
+    background: white;
+    max-width: 462px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    padding: 2rem;
+    border-radius: 13px;
+    text-align: center;
+    z-index: 999;
+}
+.custom-modal>img{
+    width: 126px;
+    height: 126px;
+}
+.custom-modal h4{
+    font-size: 20px;
+}
+.custom-modal .buttons{
+    display: flex;
+    gap: 2rem;
+}
+.custom-modal .buttons .green-btn,
+.custom-modal .buttons  .black-btn{
+    min-width: 152px;
+}
+.custom-modal .close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 99;
+}
         /* End Dashboard CSS */
