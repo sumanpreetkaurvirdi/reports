@@ -22,9 +22,9 @@ function handleOtp(e) {
         input.previousElementSibling.focus();
     }
 
-    if (fieldIndex == inputs.length - 1 && isValidInput) {
-        submit();
-    }
+    // if (fieldIndex == inputs.length - 1 && isValidInput) {
+    //     submit();
+    // }
 }
 
 function handleOnPasteOtp(e) {
@@ -32,21 +32,21 @@ function handleOnPasteOtp(e) {
     const value = data.split("");
     if (value.length === inputs.length) {
         inputs.forEach((input, index) => (input.value = value[index]));
-        submit();
+        // submit();
     }
 }
 
-function submit() {
-    console.log("Submitting...");
-    // 👇 Entered OTP
-    let otp = "";
-    inputs.forEach((input) => {
-        otp += input.value;
-        input.disabled = true;
-        input.classList.add("disabled");
-    });
-    console.log(otp);
-}
+// function submit() {
+//     console.log("Submitting...");
+//     // 👇 Entered OTP
+//     let otp = "";
+//     inputs.forEach((input) => {
+//         otp += input.value;
+//         input.disabled = true;
+//         input.classList.add("disabled");
+//     });
+//     console.log(otp);
+// }
  
 $('.otp-form').hide();
 $('.login-form .green-btn').click(function(){
