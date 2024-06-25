@@ -60,15 +60,21 @@ $('.return').click(function(){
 
 var currentStep = 1;
 
-$(document).ready(function () {
-    $(".next-step").click(function () {
-        $(".step-container .step-separator[data-step='" + currentStep + "']").addClass('active');
+// $(document).ready(function () {
+//     $(".next-step").click(function () {
+//         $(".step-container .step-separator[data-step='" + currentStep + "']").addClass('active');
 
-        currentStep++;
+//         currentStep++;
 
-        $(".step-container .step[data-step='" + currentStep + "']").addClass('active');
+//         $(".step-container .step[data-step='" + currentStep + "']").addClass('active');
 
-    });
+//     });
+// })
+$('.step').click(function(){
+    $(this).addClass('active').prev('.step-separator').addClass('active');
+    $(this).append(' <svg xmlns="http://www.w3.org/2000/svg" width="13" height="10" viewBox="0 0 13 10" fill="none"><path d="M12 1.8C12 2.0047 11.9233 2.2095 11.7698 2.3655L5.4841 8.7655C5.33125 8.9225 5.12991 9 4.92857 9C4.72723 9 4.52638 8.92188 4.37317 8.76562L1.23031 5.56563C1.07685 5.41 1 5.205 1 5C1 4.543 1.36708 4.2 1.78571 4.2C1.98676 4.2 2.1879 4.27813 2.34112 4.43438L4.92857 7.07L10.6594 1.235C10.8116 1.07825 11.0129 1 11.2143 1C11.6342 1 12 1.3425 12 1.8Z" fill="white" stroke="white"/></svg>')
+    var val= $(this).attr('data-target');
+    $('#'+ val).addClass('active').siblings().removeClass('active');
 })
 
 $('.customer-enquiry').click(function(){

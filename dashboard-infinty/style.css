@@ -251,7 +251,7 @@
             width: 300px;
             background-color: var(--darkGreen);
             color: #fff;
-            padding: 22px 0 0 16px;
+            padding: 22px 0 0 8px;
             transition: .5s all;
         }
         .sidebar .logo{
@@ -266,6 +266,7 @@
         }
         .sidebar.collapsed .logo img.logo-icon{
             display: flex;
+            max-width: 50px;
         }
         .sidebar.collapsed .logo img.main-logo{
             display: none;
@@ -297,7 +298,7 @@
             background-color: #86CB49;
             top: 0;
             transition: .5s all;
-            left: -16px;
+            left: -8px;
         }
         .sidebar ul li:hover::before , .sidebar ul li.active::before{
             content: '';
@@ -310,7 +311,7 @@
             background-color: #274545;
             padding: 14px 7px;
             align-items: center;
-            margin: 10rem 22px 0 0;
+            margin: auto 10px 0 0;
         }
         .sidebar .contact-info a{
             display: flex;
@@ -334,12 +335,18 @@
             background-color: #274545;
             padding: 14px 22px;
             width: fit-content;
-            margin: 1rem auto 0;
+            margin: 1rem auto;
             cursor: pointer;
-            transform: translate(-10px, 0px);
+            transform: translate(-5px, 0px);
+        }
+        .sidebar .collapse-menu svg{
+            transition: .5s all;
+        }
+        .sidebar.collapsed .collapse-menu svg{
+            transform: rotate(180deg);
         }
         .sidebar.collapsed {
-            width: 64px;
+            width: 60px;
         }
         .sidebar.collapsed ul li a> span{
             display: none;
@@ -528,6 +535,7 @@
   background-size: 200% 100%;
   background-position: right bottom;
   border: 2px solid #E7F1E5;
+  cursor: pointer;
 }
 
 .step.active {
@@ -567,12 +575,15 @@
 }
 
 .progress-container{
-display: flex;
+display: none;
 justify-content: space-between;
 margin-top: 6rem;
 border-radius: 13px;
 border: 1px solid #ddd;
 padding:0 2rem;
+}
+.progress-container.active{
+    display: flex;
 }
 .progress-container .progress-info{
     display: flex;
