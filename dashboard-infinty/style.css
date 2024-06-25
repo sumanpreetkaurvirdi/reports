@@ -271,9 +271,9 @@
         .sidebar.collapsed .logo img.main-logo{
             display: none;
         }
-        .sidebar.collapsed .collapse-menu{
+        /* .sidebar.collapsed .collapse-menu{
             margin: -6rem auto 0;
-        }
+        } */
         .sidebar ul li{
             position: relative;
             border-radius: 10px 0 0 10px;
