@@ -348,6 +348,12 @@
         .sidebar.collapsed {
             width: 60px;
         }
+        .sidebar.collapsed + .content-bar{
+            width: calc(100% - 60px);
+        }
+        .sidebar.collapsed + .system-bg{
+            background-size: cover;
+        }
         .sidebar.collapsed ul li a> span{
             display: none;
         }
@@ -529,8 +535,8 @@
   height: 24px;
   font-weight: bold;
   border-radius: 50%;
-  transition: background 1000ms ease, color 1000ms ease;
-  transition-delay: 800ms;
+  transition: background .5s ease, color .5s ease;
+  transition-delay: 400ms;
   background: linear-gradient(to right, #009045 50%, #fff 50%);
   background-size: 200% 100%;
   background-position: right bottom;
@@ -558,7 +564,7 @@
   background: linear-gradient(to right, #70C25E -47%, #EBDE9B 39%, #E7F1E5 50%);
   background-size: 200% 100%;
   background-position: right bottom;
-  transition: background 1000ms ease;
+  transition: background .5s ease;
   background-color: #E7F1E5;
 }
 .step-container .step > span{
