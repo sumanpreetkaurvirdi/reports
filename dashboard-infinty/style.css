@@ -46,6 +46,15 @@
         input:disabled{
             color: #16343491;
         }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
         /* Start Login CSS */
         .login{
             display: flex;

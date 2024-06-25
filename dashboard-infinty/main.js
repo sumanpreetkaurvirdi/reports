@@ -103,3 +103,6 @@ $('.custom-modal .close, .custom-modal .black-btn').click(function(){
     $(this).parents('.custom-modal').removeClass('active'); 
     $('.black-overlay').removeClass('active');
 })
+$('#name').on('input', function() {
+    $(this).val($(this).val().replace(/[^a-zA-Z]/g, ''));
+});
