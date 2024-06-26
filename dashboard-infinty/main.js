@@ -57,6 +57,10 @@ $('.return').click(function(){
     $(this).parents('form').slideUp();
     $(this).parents('form').siblings().slideDown();
 })
+$('.otp-form .green-btn').click(function(){
+    $(this).parents('.otp-form').slideUp();
+    $('.choose-login').slideDown();
+})
 
 var currentStep = 1;
 
@@ -72,16 +76,35 @@ var currentStep = 1;
 // })
 $('.step').click(function(){
     $(this).addClass('active').prev('.step-separator').addClass('active');
-
+    $(this).children('.date').addClass('active');
     // Check if the SVG is already appended
-    if ($(this).find('svg').length === 0) {
+    if ($(this).children('svg').length === 0) {
         $(this).append(' <svg xmlns="http://www.w3.org/2000/svg" width="13" height="10" viewBox="0 0 13 10" fill="none"><path d="M12 1.8C12 2.0047 11.9233 2.2095 11.7698 2.3655L5.4841 8.7655C5.33125 8.9225 5.12991 9 4.92857 9C4.72723 9 4.52638 8.92188 4.37317 8.76562L1.23031 5.56563C1.07685 5.41 1 5.205 1 5C1 4.543 1.36708 4.2 1.78571 4.2C1.98676 4.2 2.1879 4.27813 2.34112 4.43438L4.92857 7.07L10.6594 1.235C10.8116 1.07825 11.0129 1 11.2143 1C11.6342 1 12 1.3425 12 1.8Z" fill="white" stroke="white"/></svg>');
     }
 
     var val = $(this).attr('data-target');
     $('#' + val).addClass('active').siblings().removeClass('active');
+    
+    var steps = $('.step').length;
+    var index = $(this).index('.step');
+    var progress = Math.round(((index + 1) / steps) * 100);
+
+    $('#progress-text').text(progress + '% is completed');
 });
 
+// $(document).ready(function() {
+//     $('.step').click(function() {
+//         var steps = $('.step').length;
+//         var index = $(this).index('.step');
+//         var progress = Math.round(((index + 1) / steps) * 100);
+
+//         $('#progress-text').text(progress + '% is completed');
+
+//         $(this).addClass('active').prev('.step-separator').addClass('active');
+//         $(this).append(' <svg xmlns="http://www.w3.org/2000/svg" width="13" height="10" viewBox="0 0 13 10" fill="none"><path d="M12 1.8C12 2.0047 11.9233 2.2095 11.7698 2.3655L5.4841 8.7655C5.33125 8.9225 5.12991 9 4.92857 9C4.72723 9 4.52638 8.92188 4.37317 8.76562L1.23031 5.56563C1.07685 5.41 1 5.205 1 5C1 4.543 1.36708 4.2 1.78571 4.2C1.98676 4.2 2.1879 4.27813 2.34112 4.43438L4.92857 7.07L10.6594 1.235C10.8116 1.07825 11.0129 1 11.2143 1C11.6342 1 12 1.3425 12 1.8Z" fill="white" stroke="white"/></svg>')
+//         .siblings().removeClass('active').find('svg:last').remove();
+//     });
+// });
 $(function() {
     var count = 45;
     var interval = setInterval(function() {

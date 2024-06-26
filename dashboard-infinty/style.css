@@ -143,6 +143,22 @@
             max-width: 400px;
             width: 100%;
         }
+        .choose-login{
+            display: none;
+        }
+        .choose-list{
+            display: flex;
+            flex-flow: wrap;
+            justify-content: space-around;
+        }
+        .choose-login .choose-item{
+        padding: 2rem;
+        border: 2px solid var(--primaryColor);
+        border-radius: 13px;
+        cursor: pointer;
+        background-color: var(--lightGreen);
+        font-weight: 600;
+        }
         .login-right{
             padding: 0 8rem;
             width: 34%;
@@ -552,6 +568,30 @@
 .step.inprogress {
     border-color: #009045;
   }
+  .step-container .step .date {
+    background: gainsboro;
+    display: flex;
+    position: absolute;
+    bottom: -67px;
+    font-size: 12px;
+    color: black;
+    white-space: nowrap;
+    padding: 3px 8px;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-weight: 400;
+    border-radius: 10px;
+}
+.step-container .step .date svg{
+    display: none;
+}
+.step-container .step .date.active{
+    background: #DFF3D4;
+}
+.step-container .step .date.active svg{
+   display: flex;
+}
 
 .step-separator {
   position: relative;
