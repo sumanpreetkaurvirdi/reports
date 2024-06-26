@@ -52,6 +52,14 @@ $('.otp-form').hide();
 $('.login-form .green-btn').click(function(){
     $(this).parents('.login-form').slideUp();
     $('.otp-form').slideDown();
+    $(function() {
+        var count = 45;
+        var interval = setInterval(function() {
+            $('#countdown').text(count-- + 's');
+            if (count < 0) clearInterval(interval);
+        }, 1000);
+    });
+    
 })
 $('.return').click(function(){
     $(this).parents('form').slideUp();
@@ -105,13 +113,6 @@ $('.step').click(function(){
 //         .siblings().removeClass('active').find('svg:last').remove();
 //     });
 // });
-$(function() {
-    var count = 45;
-    var interval = setInterval(function() {
-        $('#countdown').text(count-- + 's');
-        if (count < 0) clearInterval(interval);
-    }, 1000);
-});
 
 
 $('.customer-enquiry, .contact-me').click(function(){
