@@ -137,11 +137,22 @@
             width: 50%;
             flex-direction: column;
         }
+        .login-right{
+            position: relative;
+        }
         .login-form, .otp-form{
             display: flex;
             flex-direction: column;
             max-width: 400px;
             width: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            height: fit-content;
+            
         }
         .choose-login{
             display: none;
@@ -179,14 +190,15 @@
             position: relative;
             gap: 10px;
             margin: 2rem 0 0;
+            color: #57A046;
 
         }
         .separator::before, .separator::after{
             content: '';
             width: 150px;
             height: 1px;
-            background-color: #000000;
-            opacity: .2;
+            opacity: .3;
+            border-bottom: 1px dashed black;
         }
 
         .timmer{
@@ -224,7 +236,9 @@
         .otp-field input:focus {
             border-color: var(--primaryColor);
         }
-        
+        .cursor-notallowed{
+            cursor: not-allowed;
+        }
         .disabled {
             opacity: 0.5;
         }
@@ -264,7 +278,8 @@
         .sidebar{
             display: flex;
             flex-direction: column;
-            width: 300px;
+            width: 20%;
+            max-width: 300px;
             background-color: var(--darkGreen);
             color: #fff;
             padding: 22px 0 0 8px;
@@ -279,6 +294,11 @@
         }
         .sidebar .logo img.logo-icon{
             display: none;
+        }
+        .sidebar ul{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
         .sidebar.collapsed .logo img.logo-icon{
             display: flex;
@@ -342,12 +362,15 @@
                 width: 10px;
                 height: 14px;
         }
+        .sidebar.collapsed .collapse-menu{
+            margin-top: auto;
+        }
         .sidebar .collapse-menu {
             display: flex;
             align-items: center;
             gap: 10px;
             font-size: 15px;
-            border-radius: 13px;
+            border-radius: 8px;
             background-color: #274545;
             padding: 14px 22px;
             width: fit-content;
@@ -375,7 +398,7 @@
         }
         .content-bar{      
             display: flex;
-            width: calc(100% - 300px);
+            width: calc(100% - 20%);
             padding: 16px 90px;
             font-weight: 700;
             flex-direction: column;
@@ -496,7 +519,38 @@
                 display: flex;
                 align-items: center;
                 gap: 10px;
+                cursor: pointer;
         }
+        .top-bar .user-info:hover svg{
+
+            transform: rotate(180deg);
+        }
+        .top-bar .user-info:hover .actions{
+            visibility: visible;
+        }
+        .top-bar .user-info .actions {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 13px;
+            padding: 8px;
+            visibility: hidden;
+            position: absolute;
+            min-width: 113px;
+            top: 50px;
+        }
+    
+    .top-bar .user-info .actions li{
+            padding: 5px 10px;
+            border-radius: 8px;
+            font-weight: 500;
+            text-align: center;
+        }
+    
+    .top-bar .user-info  .actions li:hover{
+            background: #dff3d4;
+                }
         .user-wish{
             display: flex;
             align-items: center;
@@ -568,6 +622,14 @@
 .step.inprogress {
     border-color: #009045;
   }
+  .step-container .step:first-child span,
+  .step-container .step:first-child .date{
+    left: 0;
+  } 
+  .step-container .step:last-child span,
+  .step-container .step:last-child .date{
+    right: 0;
+  } 
   .step-container .step .date {
     background: gainsboro;
     display: flex;
@@ -627,6 +689,7 @@ margin-top: 6rem;
 border-radius: 13px;
 border: 1px solid #ddd;
 padding:0 2rem;
+width: -webkit-fill-available;
 }
 .progress-container.active{
     display: flex;
@@ -637,6 +700,7 @@ padding:0 2rem;
 }
 .progress-container .progress-info img{
     width: 100%;
+    max-height: 252px;
 }
 .progress-container .progress-content{
     display: flex;
@@ -742,7 +806,7 @@ color: #70C25E;
         display: flex;
         flex-direction: column;
         width: calc(100% - 46%);
-        gap: 12px;
+        gap: 18px;
 
 }
 .system-size .detail .items{
@@ -757,6 +821,15 @@ font-size: 14px;
     font-weight: 500;
     text-transform: uppercase;
     }
+    .system-size .detail .items> span:last-child{
+        font-weight: 700;
+    }
+    .system-size .detail .items> span sub{
+        
+    font-size: 0.7em;
+    font-weight: 500;
+    margin-left: 2px;
+    }
     .system-size svg{
         width: 22px;
         height: 13px;
@@ -770,7 +843,7 @@ font-size: 14px;
         background:url(img/layers.png);
         background-position: center right;
         background-size: contain;
-        width: 366px;
+        width: 400px;
         height: calc(100% - 24px);
     }
     .green-heading{
@@ -981,12 +1054,37 @@ font-size: 14px;
         width: 134px;
         height: 134px;
         margin-top: 2rem;
+        border-radius: 100%;
+        border: 4px solid var(--primaryColor);
+        align-items: center;
+        justify-content: center;
+    
+    }
+    .profile-container .image:hover{
+        
+    background: #DFF3D4;
+    }
+    .profile-container .image #custom-dropzone{
+        display: none;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        cursor: pointer;
+    }
+    .profile-container .image #custom-dropzone.active{
+        display: flex;
+    }
+    .profile-container .image #custom-dropzone button{
+        cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    color: #007b5d;
     }
     .profile-container .image img{
         width: 100%;
         height: 100%;
         border-radius: 100%;
-        border: 4px solid var(--primaryColor);
     }
     .profile-container .image span {
         display: flex;

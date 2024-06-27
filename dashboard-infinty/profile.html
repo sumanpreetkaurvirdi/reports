@@ -226,11 +226,21 @@
                             d="M4.79437 7.27528L0.211188 2.09073C0.056535 1.91448 -0.0176987 1.68766 0.00474276 1.45995C0.0271842 1.23223 0.144472 1.02218 0.330922 0.875778C0.517371 0.729381 0.757787 0.658573 0.999522 0.678861C1.24126 0.699149 1.46461 0.80888 1.62067 0.984024L5.4994 5.37199L9.37982 0.985349C9.53572 0.809584 9.7593 0.699323 10.0014 0.678789C10.2435 0.658254 10.4844 0.729125 10.6711 0.875832C10.8578 1.02254 10.9751 1.23309 10.9972 1.46122C11.0193 1.68936 10.9443 1.91642 10.7889 2.09254L6.20364 7.27552C6.11744 7.3727 6.00966 7.45087 5.88789 7.5045C5.76613 7.55813 5.63335 7.58592 5.49894 7.58589C5.36453 7.58587 5.23177 7.55804 5.11002 7.50437C4.98828 7.4507 4.88052 7.37249 4.79437 7.27528Z"
                             fill="#333333" />
                     </svg>
+                    <ul class="actions">
+                        <li>
+                            Logout
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="profile-container">
                 <div class="image">
                     <img src="img/user-profile.png" alt="user-profile">
+                    <div id="custom-dropzone" class="dropzone">
+                        <div class="fallback">
+                            <input name="file" type="file" multiple />
+                        </div>
+                    </div>
                     <span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
                             <path d="M14.1426 6.28802L16.4373 3.99332C16.8281 3.60249 17.4618 3.60249 17.8526 3.99332L20.4405 6.58114C20.8313 6.97197 20.8313 7.60563 20.4405 7.99647L18.1458 10.2912M14.1426 6.28802L4.42789 16.0027C4.24021 16.1904 4.13477 16.445 4.13477 16.7104V19.2982C4.13477 19.851 4.58284 20.299 5.13555 20.299H7.72337C7.98879 20.299 8.24335 20.1935 8.43103 20.0059L18.1458 10.2912M14.1426 6.28802L18.1458 10.2912" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -273,7 +283,7 @@
                           </svg>
                       <input type="text" name="" id="" placeholder="Address" disabled value="Suite 329 7425 Timmy Trace, Kipmouth, NJ 01716-1830">
                     </div>
-                    <a href="javascript:void(0)" class="green-btn border-0 open-popup" data-target="save-info">
+                    <a href="javascript:void(0)" class="green-btn border-0 open-popup cursor-notallowed disabled" data-target="save-info">
                         Save
                     </a>
                 </form>
@@ -322,12 +332,29 @@
                 Hey Matt, i think i might need a few more panels, is that possible?
             </p>
             <a href="" class="black-btn">
-                ✉️  Send Message
+                Send Message
             </a>
         </div>
         <div class="black-overlay"></div>
+      
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/min/dropzone.min.js"></script>
+<script>
+    Dropzone.autoDiscover = false;
+
+    var myDropzone = new Dropzone("#custom-dropzone", {
+        url: "/file-upload",
+        maxFilesize: 2, // MB
+        acceptedFiles: ".jpg,.png,.gif",
+        addRemoveLinks: true,
+        dictRemoveFile: "Remove",
+        dictDefaultMessage: "Drop files here or click to upload",
+        headers: {
+            "My-Custom-Header": "Header-Value"
+        }
+    });
+</script>
 
 </html>

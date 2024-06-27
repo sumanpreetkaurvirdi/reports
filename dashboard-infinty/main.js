@@ -20,11 +20,13 @@ function handleOtp(e) {
 
     if (e.key === "Backspace" && fieldIndex > 0) {
         input.previousElementSibling.focus();
+        $(this).parents().find('.green-btn').addClass('disabled cursor-notallowed');
     }
 
-    // if (fieldIndex == inputs.length - 1 && isValidInput) {
-    //     submit();
-    // }
+    if (fieldIndex == inputs.length - 1 && isValidInput) {
+        // submit();
+        $(this).parents().find('.green-btn').removeClass('disabled cursor-notallowed');
+    }
 }
 
 function handleOnPasteOtp(e) {
@@ -50,8 +52,8 @@ function handleOnPasteOtp(e) {
  
 $('.otp-form').hide();
 $('.login-form .green-btn').click(function(){
-    $(this).parents('.login-form').slideUp();
-    $('.otp-form').slideDown();
+    $(this).parents('.login-form').fadeOut();
+    $('.otp-form').fadeIn();
     $(function() {
         var count = 45;
         var interval = setInterval(function() {
@@ -62,12 +64,12 @@ $('.login-form .green-btn').click(function(){
     
 })
 $('.return').click(function(){
-    $(this).parents('form').slideUp();
-    $(this).parents('form').siblings().slideDown();
+    $(this).parents('form').fadeOut();
+    $(this).parents('form').siblings('.login-form').fadeIn();
 })
 $('.otp-form .green-btn').click(function(){
-    $(this).parents('.otp-form').slideUp();
-    $('.choose-login').slideDown();
+    $(this).parents('.otp-form').fadeOut();
+    $('.choose-login').fadeIn();
 })
 
 var currentStep = 1;
@@ -122,11 +124,20 @@ $('.black-overlay').click(function(){
     $(this).removeClass('active')
     $('.enquiry-container, .custom-modal').removeClass('active');
 })
-$('.collapse-menu').click(function(){
-    $(this).children('span').toggle();
-    $('.sidebar').toggleClass('collapsed');  
-    $(this).siblings('.contact-info').toggleClass('opacity-0');
-})
+$('.collapse-menu').click(function() {
+    var $this = $(this); 
+    var $contactInfo = $this.siblings('.contact-info'); 
+    if ($contactInfo.is(':visible')) {
+        $contactInfo.hide(0); 
+    }
+    else{
+        setTimeout(function() {
+            $contactInfo.show(0); 
+        }, 200); 
+    }
+    $this.children('span').toggle();
+    $('.sidebar').toggleClass('collapsed');
+});
 $('.schedule-list .green-btn').click(function(){
     $(this).addClass('d-none');
     $(this).siblings('.signature').removeClass('d-none');
@@ -136,7 +147,10 @@ $('.signature .close').click(function(){
     $(this).parent().siblings('.green-btn').removeClass('d-none');
 })
 $(' .profile-container .image span').click(function(){
+    $(this).siblings('img').hide();
+    $(this).siblings('#custom-dropzone').toggleClass('active');
     $(this).parent().siblings('form').find('input').removeAttr('disabled');
+    $(this).parent().siblings('form').find('.green-btn').removeClass('disabled cursor-notallowed');
 })
 $('.open-popup').click(function(){
    var target= $(this).attr('data-target');
@@ -150,3 +164,32 @@ $('.custom-modal .close, .custom-modal .black-btn').click(function(){
 $('#name').on('input', function() {
     $(this).val($(this).val().replace(/[^a-zA-Z]/g, ''));
 });
+
+
+
+// start form script of referrals
+$(document).ready(function() {
+    function checkFields() {
+        var name = $('#name').val();
+        var email = $('#email').val();
+        var mobile = $('#mobile').val();
+        
+        if (name && email && mobile) {
+            $('#submit-btn').removeClass('disabled cursor-notallowed');
+            $('#submit-btn').prop('disabled', false);
+        } else {
+            $('#submit-btn').addClass('disabled cursor-notallowed');
+            $('#submit-btn').prop('disabled', true);
+        }
+    }
+
+    // Check fields on keyup and change events
+    $('#name, #email, #mobile').on('keyup change', function() {
+        checkFields();
+    });
+    
+    // Initial check to disable/enable the button if needed
+    checkFields();
+});
+
+// end form script of referrals
