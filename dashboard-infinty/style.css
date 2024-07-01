@@ -493,7 +493,12 @@
             padding: 0 0 1rem 1rem;
         
         }
-        
+        .notification-container ul li:hover{
+            color: #009045;
+        }
+        .notification-container ul li:hover svg path{
+            fill: #009045;
+        }
         .notification-container ul li:last-child{
             
             margin-bottom: 0rem;
@@ -521,7 +526,7 @@
                 gap: 10px;
                 cursor: pointer;
         }
-        .top-bar .user-info:hover svg{
+        .top-bar .user-info:hover > svg{
 
             transform: rotate(180deg);
         }
@@ -537,20 +542,28 @@
             padding: 8px;
             visibility: hidden;
             position: absolute;
-            min-width: 113px;
+            min-width: 100px;
             top: 50px;
+            right: 84px;
         }
     
-    .top-bar .user-info .actions li{
-            padding: 5px 10px;
-            border-radius: 8px;
-            font-weight: 500;
-            text-align: center;
+        .top-bar .user-info .actions li{
+                display: flex;
+                gap: 5px;
+                justify-content: center;
+                align-items: center;
+                padding: 5px 10px;
+                border-radius: 8px;
+                font-weight: 500;
+                text-align: center;
         }
     
-    .top-bar .user-info  .actions li:hover{
-            background: #dff3d4;
-                }
+        .top-bar .user-info  .actions li:hover{
+           color: #009045;
+        }
+        .top-bar .user-info  .actions li:hover svg path{
+            fill: #009045;
+        }
         .user-wish{
             display: flex;
             align-items: center;
@@ -605,7 +618,7 @@
   height: 24px;
   font-weight: bold;
   border-radius: 50%;
-  transition: background .5s ease, color .5s ease;
+  /* transition: background .5s ease, color .5s ease; */
   transition-delay: 400ms;
   background: linear-gradient(to right, #009045 50%, #fff 50%);
   background-size: 200% 100%;
