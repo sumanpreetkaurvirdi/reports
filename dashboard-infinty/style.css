@@ -315,6 +315,21 @@
             border-radius: 10px 0 0 10px;
             transition: .5s all;
         }
+        .sidebar ul li .tooltip{
+            /* display: none;  */
+            opacity: 0;
+            position: absolute;
+            right: 56px;
+            padding: 4px 8px;
+            border-radius: 5px;
+            background: var(--gradientColor);
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            height: fit-content;
+            transition: .5s all;
+            white-space: nowrap;
+        }
         .sidebar ul li a{
             padding: 12px;
             display: flex;
@@ -338,6 +353,9 @@
         }
         .sidebar ul li:hover::before , .sidebar ul li.active::before{
             content: '';
+        }
+        .sidebar.collapsed ul li:hover .tooltip{
+            opacity: 1;
         }
         .sidebar .contact-info{
             display: flex;
@@ -547,7 +565,7 @@
             right: 84px;
         }
     
-        .top-bar .user-info .actions li{
+        .top-bar .user-info .actions li a{
                 display: flex;
                 gap: 5px;
                 /* justify-content: center; */
@@ -713,7 +731,7 @@ width: -webkit-fill-available;
 }
 .progress-container .progress-info img{
     width: 100%;
-    max-height: 252px;
+    max-height: 300px;
 }
 .progress-container .progress-content{
     display: flex;
@@ -1073,10 +1091,10 @@ font-size: 14px;
         justify-content: center;
     
     }
-    .profile-container .image:hover{
+    /* .profile-container .image:hover{
         
     background: #DFF3D4;
-    }
+    } */
     .profile-container .image #custom-dropzone{
         display: none;
         width: 100%;
@@ -1084,7 +1102,42 @@ font-size: 14px;
         align-items: center;
         cursor: pointer;
     }
+    #custom-dropzone .dz-details,
+    #custom-dropzone .dz-progress,
+    #custom-dropzone .dz-error-message,
+    #custom-dropzone .dz-success-mark,
+    #custom-dropzone .dz-error-mark{
+        display: none;
+    }
+    #custom-dropzone .dz-remove{
+        
+    position: absolute;
+    z-index: 1;
+    width: 39px;
+    height: 38px;
+    background: #484343;
+    right: 0;
+    bottom: 0px;
+    border-radius: 100%;
+    opacity: 0;
+    }
+    .profile-container .image #custom-dropzone.active .dz-default .dz-button{
+        color: white;
+    }
+    .profile-container .image #custom-dropzone.active .dz-default{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        display: flex;
+        background: #00000059;
+    }
     .profile-container .image #custom-dropzone.active{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .profile-container .image #custom-dropzone .dz-image{
         display: flex;
     }
     .profile-container .image #custom-dropzone button{
@@ -1111,6 +1164,15 @@ font-size: 14px;
         bottom: 0;
         right: 0;
         cursor: pointer;
+    }
+    .profile-container .image span .cross{
+        display: none;
+    }
+    #custom-dropzone.dz-started + span .edit-pen{
+        display: none;
+    }
+    #custom-dropzone.dz-started + span .cross{
+        display: flex;
     }
     .profile-container form{
         width: calc(100% - 200px);

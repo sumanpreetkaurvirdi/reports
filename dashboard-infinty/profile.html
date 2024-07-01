@@ -34,6 +34,7 @@
                         <span>
                             Home
                         </span>
+                        <small class="tooltip">Home</small>
                     </a>
                 </li>
                 <li>
@@ -53,6 +54,7 @@
                         <span>
                             Referrals
                         </span>
+                        <small class="tooltip">Referrals</small>
                         
                     </a>
                 </li>
@@ -73,6 +75,7 @@
                         <span>
                             Your System
                         </span>
+                        <small class="tooltip">Your System</small>
                     </a>
                 </li>
                 <li  class="active">
@@ -90,6 +93,7 @@
                             </defs>
                         </svg>
                         <span>Profile</span>
+                        <small class="tooltip">Profile</small>
                     </a>
                 </li>
             </ul>
@@ -228,7 +232,9 @@
                     </svg>
                     <ul class="actions">
                         <li>
-                            Logout
+                            <a href="login.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" x="0" y="0" viewBox="0 0 1000 1000" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M500 860a376.6 376.6 0 0 1-252.69-656.15 60 60 0 0 1 80.46 89 257 257 0 0 0-84.54 190.35C243.23 624.81 358.42 740 500 740s256.77-115.19 256.77-256.77a257 257 0 0 0-84.54-190.35 60 60 0 0 1 80.46-89A376.65 376.65 0 0 1 500 860z" fill="#000000" opacity="1" data-original="#000000" class=""></path><path d="M500 461.93a60 60 0 0 1-60-60V200a60 60 0 0 1 120 0v201.93a60 60 0 0 1-60 60z" fill="#000000" opacity="1" data-original="#000000" class=""></path></g></svg>  Logout
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -242,9 +248,10 @@
                         </div>
                     </div>
                     <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none" class="edit-pen">
                             <path d="M14.1426 6.28802L16.4373 3.99332C16.8281 3.60249 17.4618 3.60249 17.8526 3.99332L20.4405 6.58114C20.8313 6.97197 20.8313 7.60563 20.4405 7.99647L18.1458 10.2912M14.1426 6.28802L4.42789 16.0027C4.24021 16.1904 4.13477 16.445 4.13477 16.7104V19.2982C4.13477 19.851 4.58284 20.299 5.13555 20.299H7.72337C7.98879 20.299 8.24335 20.1935 8.43103 20.0059L18.1458 10.2912M14.1426 6.28802L18.1458 10.2912" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
                           </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="cross" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" x="0" y="0" viewBox="0 0 365.717 365" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><g fill="#f44336"><path d="M356.34 296.348 69.727 9.734c-12.5-12.5-32.766-12.5-45.247 0L9.375 24.816c-12.5 12.504-12.5 32.77 0 45.25L295.988 356.68c12.504 12.5 32.77 12.5 45.25 0l15.082-15.082c12.524-12.48 12.524-32.75.02-45.25zm0 0" fill="#ffffff" opacity="1" data-original="#f44336" class=""></path><path d="M295.988 9.734 9.375 296.348c-12.5 12.5-12.5 32.77 0 45.25l15.082 15.082c12.504 12.5 32.77 12.5 45.25 0L356.34 70.086c12.504-12.5 12.504-32.766 0-45.246L341.258 9.758c-12.5-12.524-32.766-12.524-45.27-.024zm0 0" fill="#ffffff" opacity="1" data-original="#f44336" class=""></path></g></g></svg>
                     </span>
                 </div>
                 <form action="">
@@ -336,7 +343,11 @@
             </a>
         </div>
         <div class="black-overlay"></div>
-      
+        <!-- <div id="custom-dropzone" class="dropzone">
+            <div class="fallback">
+                <input name="file" type="file" multiple />
+            </div>
+        </div> -->
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="main.js"></script>

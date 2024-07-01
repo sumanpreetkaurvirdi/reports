@@ -148,7 +148,7 @@ $('.signature .close').click(function(){
 })
 $(' .profile-container .image span').click(function(){
     $(this).siblings('img').hide();
-    $(this).siblings('#custom-dropzone').toggleClass('active');
+    $(this).siblings('#custom-dropzone').addClass('active');
     $(this).parent().siblings('form').find('input').removeAttr('disabled');
     $(this).parent().siblings('form').find('.green-btn').removeClass('disabled cursor-notallowed');
 })
