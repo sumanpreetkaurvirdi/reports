@@ -102,6 +102,8 @@
         }
         .input-container svg{
             margin-right: 10px;
+            min-width: 14px;
+            height: 13px;
         }
         .green-btn, .white-btn, .black-btn{
             display: flex;
