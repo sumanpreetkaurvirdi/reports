@@ -1121,16 +1121,13 @@ font-size: 14px;
     border-radius: 100%;
     opacity: 0;
     }
-    .profile-container .image #custom-dropzone.active .dz-default .dz-button{
-        color: white;
-    }
     .profile-container .image #custom-dropzone.active .dz-default{
         position: absolute;
         width: 100%;
         height: 100%;
         border-radius: 100%;
         display: flex;
-        background: #00000059;
+        background: #dff3d48c;
     }
     .profile-container .image #custom-dropzone.active{
         display: flex;
@@ -1146,6 +1143,7 @@ font-size: 14px;
     border: none;
     outline: none;
     color: #007b5d;
+    font-weight: 700;
     }
     .profile-container .image img{
         width: 100%;
