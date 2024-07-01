@@ -550,7 +550,7 @@
         .top-bar .user-info .actions li{
                 display: flex;
                 gap: 5px;
-                justify-content: center;
+                /* justify-content: center; */
                 align-items: center;
                 padding: 5px 10px;
                 border-radius: 8px;
