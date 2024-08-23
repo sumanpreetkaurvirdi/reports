@@ -5270,7 +5270,13 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
 }
 .p-20{
    
-   padding: 20px;
+   padding: 20px !important;
+
+}
+
+.p-30{
+   
+   padding: 30px !important;
 
 }
 .pe-20{
@@ -5380,6 +5386,11 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
 .solar-panel{
    background-image: url("../images/solar-panel.jpg");
    background-color: #0000009c !important;
+   background-blend-mode: multiply;
+}
+.warranty-bg{
+   background-image: url("../images/warranty-bg.jpg");
+   background-color: #00000057 !important;
    background-blend-mode: multiply;
 }
 .roofing-bg{
