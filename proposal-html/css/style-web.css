@@ -5406,12 +5406,12 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
 }
 .lease-saving-bg{
    background-image: url("../images/lease-saving-bg.jpg");
-   background-color: #6060609c !important;
+   background-color: #0000009c !important;
    background-blend-mode: multiply;
 }
 .nyserda-ny{
    background-image: url("../images/nyserda-ny.jpg");
-   background-color: #6060609c !important;
+   background-color: #0000009c !important;
    background-blend-mode: multiply;
 }
 .look-forward{
