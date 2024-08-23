@@ -5344,6 +5344,14 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
 .slide-after.workmatters::after {
    background-image: url("../images/workmatters.jpg");
 }
+.slide-after.electricians::after {
+   background-image: url("../images/electricians.jpg");
+}
+
+.slide-after.monitoring-easy::after {
+   background-image: url("../images/monitoring-ease.jpg");
+}
+
 
 .slide-after.bincentives::after {
    background-image: url("../images/bincentives.jpg");
@@ -5413,6 +5421,9 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
 .checklisting{
    
    padding-left: 0;
+}
+.checklisting-white{
+   filter: invert(1) brightness(5.5);
 }
 .checklisting li{
    display: flex;
@@ -5514,6 +5525,10 @@ height: 100%;
    min-width: 300px;
    text-align: center;
    margin-top: 15px;
+}
+.custom-btn-white{
+   background: white;
+   color: black;
 }
 .main-roofing  .gurantee img{
    border: 3px solid var(--green);
@@ -5866,4 +5881,32 @@ body .swiper .slide-32 .main-heading {
    
    max-width: 90%;
    width: 60%;
+}
+.agenda{
+   background-image: url(../images/house-side-bg.jpg);
+   background-color: #0000009c !important;
+   background-blend-mode: multiply;
+}
+
+.grid-failing video{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   left: 0;
+   object-fit: cover;
+   object-position: top;
+   bottom: 0;
+}
+.agenda svg{
+   width: 20px;
+}
+.agenda a{
+   width: 100%;
+}
+.agenda a:hover{
+   color: var(--secondary) !important;
+}
+.grid-failing .card-black-trans{
+   
+   padding: 40px;
 }
