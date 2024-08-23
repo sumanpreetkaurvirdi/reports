@@ -333,6 +333,9 @@ a {
 .w-100{
    width: 100%;
 }
+.w-15{
+   width: 15px;
+}
 
 @media (min-width:992px) {
    .hideondesktop {
@@ -5384,6 +5387,17 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
    background-color: #6060609c !important;
    background-blend-mode: multiply;
 }
+.rate-hikes{
+   background-image: url("../images/rate-hikes.jpg");
+   background-color: #6060609c !important;
+   background-blend-mode: multiply;
+   background-position: top;
+}
+.nyserda-ny{
+   background-image: url("../images/nyserda-ny.jpg");
+   background-color: #6060609c !important;
+   background-blend-mode: multiply;
+}
 .look-forward{
    background-image: url("../images/lookforward-bg.jpg")!important;
    background-color: #c4c4c4 !important;
@@ -5906,7 +5920,7 @@ body .swiper .slide-32 .main-heading {
 .agenda a:hover{
    color: var(--secondary) !important;
 }
-.grid-failing .card-black-trans{
+.grid-failing .card-black-trans, .rate-hikes .card-black-trans{
    
    padding: 40px;
 }
